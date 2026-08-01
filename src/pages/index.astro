@@ -1,0 +1,262 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+const services = [
+	{
+		title: 'Cybersecurity',
+		description: 'Advanced protection for your business, employees, and critical data.',
+		icon: '🛡️',
+	},
+	{
+		title: 'Cloud Solutions',
+		description: 'Microsoft 365, Azure, cloud backups, and disaster recovery.',
+		icon: '☁️',
+	},
+	{
+		title: 'Network Management',
+		description: 'Secure, reliable, high-performance networks built to scale.',
+		icon: '🌐',
+	},
+	{
+		title: 'IT Support',
+		description: 'Responsive remote and onsite support whenever your team needs help.',
+		icon: '🎧',
+	},
+	{
+		title: 'Managed IT Services',
+		description: 'Proactive monitoring and maintenance that reduces downtime.',
+		icon: '🖥️',
+	},
+];
+---
+
+<Layout>
+	<div class="min-h-screen bg-[#020611] text-white">
+		<Navbar />
+
+		<main>
+			<section class="relative min-h-[780px] overflow-hidden pt-20 lg:min-h-[860px]">
+				<div
+					class="absolute inset-0 bg-cover bg-center bg-no-repeat lg:bg-[center_top]"
+					style="background-image: url('/images/lionshield-hero.png');"
+				></div>
+
+				<div class="absolute inset-0 bg-black/5"></div>
+
+				<div
+					class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/35 to-black/5"
+				></div>
+
+				<div
+					class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#020611] to-transparent"
+				></div>
+
+				<div
+					class="relative z-10 mx-auto grid max-w-[1580px] gap-10 px-6 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-16"
+				>
+					<div class="max-w-2xl self-center">
+						<p class="text-sm font-bold uppercase tracking-[0.28em] text-blue-400">
+							Secure. Connect. Protect.
+						</p>
+
+						<div
+							class="mt-4 h-px w-72 bg-gradient-to-r from-blue-400 to-transparent"
+						></div>
+
+						<h1
+							class="mt-7 text-5xl font-black uppercase leading-[1.02] tracking-tight sm:text-6xl lg:text-[4.35rem]"
+						>
+							Powering Business.
+							<span class="block text-yellow-400">
+								Protecting Futures.
+							</span>
+						</h1>
+
+						<p class="mt-6 max-w-xl text-lg leading-8 text-slate-200">
+							LionShield Networks delivers proactive IT support,
+							cybersecurity, cloud solutions, and network management that
+							keep your business secure, productive, and ready to grow.
+						</p>
+
+						<div class="mt-7 max-w-xl">
+							<div
+								class="group relative overflow-hidden rounded-2xl border border-cyan-300/25 bg-transparent px-5 py-4 backdrop-blur-[2px] shadow-[inset_0_0_30px_rgba(34,211,238,0.04),0_0_24px_rgba(34,211,238,0.06)]"
+							>
+								<div
+									class="pointer-events-none absolute -left-16 top-1/2 h-32 w-40 -translate-y-1/2 rounded-full bg-cyan-400/10 blur-3xl"
+								></div>
+
+								<div
+									class="pointer-events-none absolute inset-0 opacity-[0.10]"
+									style="background-image:
+										linear-gradient(rgba(34,211,238,.18) 1px, transparent 1px),
+										linear-gradient(90deg, rgba(34,211,238,.18) 1px, transparent 1px);
+										background-size: 24px 24px;"
+								></div>
+
+								<div
+									class="pointer-events-none absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-cyan-300/30 to-transparent"
+								></div>
+
+								<div class="relative z-10 flex items-center gap-5">
+									<div
+										class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-cyan-300/35 bg-transparent text-cyan-200 shadow-[inset_0_0_18px_rgba(34,211,238,0.08),0_0_18px_rgba(34,211,238,0.10)]"
+									>
+										<svg
+											viewBox="0 0 24 24"
+											aria-hidden="true"
+											class="h-8 w-8 fill-none stroke-current"
+											stroke-width="1.5"
+											stroke-linecap="round"
+										>
+											<path d="M12 3v18"></path>
+											<path d="M7 8h10"></path>
+										</svg>
+									</div>
+
+									<div>
+										<p
+											class="font-mono text-sm font-bold uppercase tracking-[0.32em] text-cyan-200"
+										>
+											John 3:16
+										</p>
+
+										<p class="mt-2 text-sm leading-6 text-slate-300/90">
+											For God so loved the world that He gave His only
+											begotten Son.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="mt-7 flex flex-col gap-4 sm:flex-row">
+							<a
+								href="/contact"
+								class="rounded-lg bg-blue-600 px-7 py-4 text-center font-bold text-white shadow-[0_0_28px_rgba(37,99,235,0.55)] transition hover:-translate-y-1 hover:bg-blue-500"
+							>
+								Free Assessment
+							</a>
+
+							<a
+								href="/client-portal"
+								class="rounded-lg border border-yellow-400 bg-black/65 px-7 py-4 text-center font-bold text-yellow-300 backdrop-blur transition hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+							>
+								Client Portal
+							</a>
+						</div>
+					</div>
+
+					<div class="self-center lg:justify-self-end lg:pl-24">
+						<div class="space-y-3">
+							{services.map((service) => (
+								<a
+									href="/services"
+									class="group relative flex w-full max-w-[520px] items-center gap-4 overflow-hidden rounded-xl border border-cyan-400/25 bg-transparent px-4 py-3 backdrop-blur-[2px] transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300/60 hover:bg-cyan-950/10 hover:shadow-[0_0_28px_rgba(34,211,238,0.16)]"
+								>
+									<div
+										class="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent"
+									></div>
+
+									<div
+										class="pointer-events-none absolute inset-0 opacity-[0.05]"
+										style="background-image:
+											linear-gradient(rgba(34,211,238,.18) 1px, transparent 1px),
+											linear-gradient(90deg, rgba(34,211,238,.18) 1px, transparent 1px);
+											background-size: 22px 22px;"
+									></div>
+
+									<div
+										class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-cyan-400/45 bg-transparent text-xl text-cyan-200 shadow-[0_0_18px_rgba(34,211,238,0.18)]"
+									>
+										{service.icon}
+									</div>
+
+									<div class="relative z-10 min-w-0">
+										<h2
+											class="text-base font-extrabold uppercase tracking-wide text-white transition-colors duration-300 group-hover:text-cyan-300"
+										>
+											{service.title}
+										</h2>
+
+										<p class="mt-1 text-sm leading-5 text-slate-200/90">
+											{service.description}
+										</p>
+									</div>
+								</a>
+							))}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="border-y border-blue-500/20 bg-[#030a18]">
+				<div
+					class="mx-auto grid max-w-[1500px] gap-8 px-6 py-9 sm:grid-cols-2 lg:grid-cols-4 lg:px-10"
+				>
+					<div>
+						<p class="font-bold uppercase text-blue-300">Trusted Partner</p>
+						<p class="mt-2 text-sm leading-6 text-slate-400">
+							Local businesses trust us to protect what matters.
+						</p>
+					</div>
+
+					<div>
+						<p class="font-bold uppercase text-blue-300">24/7 Monitoring</p>
+						<p class="mt-2 text-sm leading-6 text-slate-400">
+							We watch your systems so you can focus on your business.
+						</p>
+					</div>
+
+					<div>
+						<p class="font-bold uppercase text-blue-300">Expert Support</p>
+						<p class="mt-2 text-sm leading-6 text-slate-400">
+							Experienced professionals providing reliable assistance.
+						</p>
+					</div>
+
+					<div>
+						<p class="font-bold uppercase text-blue-300">Secure by Design</p>
+						<p class="mt-2 text-sm leading-6 text-slate-400">
+							Security is built into everything we implement.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="relative overflow-hidden px-6 py-20 text-center">
+				<div class="absolute inset-0 opacity-20">
+					<div
+						class="absolute left-1/4 top-0 h-72 w-72 rounded-full bg-blue-600 blur-3xl"
+					></div>
+				</div>
+
+				<div class="relative mx-auto max-w-4xl">
+					<p class="font-bold uppercase tracking-[0.25em] text-blue-400">
+						IT Solutions That Drive Success
+					</p>
+
+					<h2 class="mt-5 text-4xl font-black uppercase sm:text-5xl">
+						Focused on your business.
+						<span class="block text-yellow-400">
+							Protected by us.
+						</span>
+					</h2>
+
+					<p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+						Technology should be an advantage, not a worry. We handle the
+						complexity so you can focus on growing your business.
+					</p>
+
+					<a
+						href="/services"
+						class="mt-9 inline-block rounded-lg border border-blue-400 px-8 py-4 font-bold uppercase tracking-wide text-blue-300 transition hover:bg-blue-600 hover:text-white"
+					>
+						Discover Our Services →
+					</a>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
