@@ -233,42 +233,98 @@ const fullServices = [
 					</div>
 				</div>
 			</section>
+<section
+	id="services"
+	class="relative overflow-hidden bg-[#020611] px-6 py-24 lg:px-10"
+>
+	<!-- Background lighting -->
+	<div
+		class="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[150px]"
+	></div>
 
-			<section class="border-y border-blue-500/20 bg-[#030a18]">
-				<div
-					class="mx-auto grid max-w-[1500px] gap-8 px-6 py-9 sm:grid-cols-2 lg:grid-cols-4 lg:px-10"
+	<div class="relative mx-auto max-w-[1450px]">
+		<div class="mx-auto max-w-3xl text-center">
+			<p
+				class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-400"
+			>
+				Our Services
+			</p>
+
+			<h2
+				class="mt-5 text-4xl font-black uppercase leading-tight sm:text-5xl"
+			>
+				Technology solutions built
+				<span class="block text-yellow-400">
+					for modern businesses.
+				</span>
+			</h2>
+
+			<p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+				From proactive IT management to advanced cybersecurity,
+				LionShield Networks delivers enterprise-level technology with
+				responsive, personal service.
+			</p>
+		</div>
+<div
+	class="mx-auto mt-8 h-px w-40 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+></div>
+		<div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+			{fullServices.map((service) => (
+				<a
+					href="/services"
+				class="group cursor-pointer relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/10 p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_38px_rgba(34,211,238,0.12)]"
 				>
-					<div>
-						<p class="font-bold uppercase text-blue-300">Trusted Partner</p>
-						<p class="mt-2 text-sm leading-6 text-slate-400">
-							Local businesses trust us to protect what matters.
-						</p>
-					</div>
+					<!-- Digital top line -->
+					<div
+						class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-40 transition-opacity duration-300 group-hover:opacity-100"
+					></div>
 
-					<div>
-						<p class="font-bold uppercase text-blue-300">24/7 Monitoring</p>
-						<p class="mt-2 text-sm leading-6 text-slate-400">
-							We watch your systems so you can focus on your business.
-						</p>
-					</div>
+					<!-- Faint digital grid -->
+					<div
+						class="pointer-events-none absolute inset-0 opacity-[0.04]"
+						style="background-image:
+							linear-gradient(rgba(34,211,238,.18) 1px, transparent 1px),
+							linear-gradient(90deg, rgba(34,211,238,.18) 1px, transparent 1px);
+							background-size: 24px 24px;"
+					></div>
 
-					<div>
-						<p class="font-bold uppercase text-blue-300">Expert Support</p>
-						<p class="mt-2 text-sm leading-6 text-slate-400">
-							Experienced professionals providing reliable assistance.
-						</p>
-					</div>
+					<div class="relative z-10">
+						<div
+							class="relative flex h-16 w-16 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/20 shadow-[0_0_24px_rgba(34,211,238,.18)]"
+						>
+							<service.icon
+							class="h-8 w-8 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+							stroke-width={1.7}
+							/>
+						</div>
 
-					<div>
-						<p class="font-bold uppercase text-blue-300">Secure by Design</p>
-						<p class="mt-2 text-sm leading-6 text-slate-400">
-							Security is built into everything we implement.
-						</p>
-					</div>
-				</div>
-			</section>
+						<h3
+							class="mt-6 text-xl font-extrabold uppercase tracking-wide text-white transition-colors duration-300 group-hover:text-cyan-300"
+						>
+							{service.title}
+						</h3>
 
-			<section class="relative overflow-hidden px-6 py-20 text-center">
+						<p class="mt-3 leading-7 text-slate-300/90">
+							{service.description}
+						</p>
+
+						<div
+							class="mt-6 inline-flex items-center gap-2 font-semibold text-cyan-300 transition-all duration-300 group-hover:gap-3"
+						>
+							Learn More
+
+							<ArrowRight
+								class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+								stroke-width={2}
+							/>
+						</div>
+					</div>
+				</a>
+			))}
+		</div>
+	</div>
+</section>
+						<section class="relative overflow-hidden px-6 py-20 text-center">
 				<div class="absolute inset-0 opacity-20">
 					<div
 						class="absolute left-1/4 top-0 h-72 w-72 rounded-full bg-blue-600 blur-3xl"
@@ -280,7 +336,7 @@ const fullServices = [
 						IT Solutions That Drive Success
 					</p>
 
-					<h2 class="mt-5 text-4xl font-black uppercase sm:text-5xl">
+					<h2 class="mt-5 text-5xl font-black uppercase leading-tight lg:text-6xl">
 						Focused on your business.
 						<span class="block text-yellow-400">
 							Protected by us.
