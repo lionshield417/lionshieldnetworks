@@ -1,3 +1,24 @@
+---
+const pathname = Astro.url.pathname;
+
+const navItems = [
+	{ label: 'Home', href: '/' },
+	{ label: 'Services', href: '/services' },
+	{ label: 'Industries', href: '/industries' },
+	{ label: 'About Us', href: '/about' },
+	{ label: 'Contact', href: '/contact' },
+	{ label: 'Client Portal', href: '/client-portal' },
+];
+
+const isActive = (href: string) => {
+	if (href === '/') {
+		return pathname === '/';
+	}
+
+	return pathname === href || pathname.startsWith(`${href}/`);
+};
+---
+
 <header
 	class="absolute inset-x-0 top-0 z-50 border-b border-cyan-400/15 bg-black/75 backdrop-blur-xl"
 >
@@ -7,7 +28,6 @@
 		<a href="/" class="flex shrink-0 items-center gap-4">
 			<div
 				class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-yellow-400/50 bg-black shadow-[0_0_20px_rgba(250,204,21,0.18)] transition duration-300 hover:border-yellow-300/80 hover:shadow-[0_0_26px_rgba(250,204,21,0.28)]"
-				style="width: 56px; height: 56px;"
 			>
 				<img
 					src="/images/lionshield-icon.png"
@@ -15,7 +35,6 @@
 					width="56"
 					height="56"
 					class="block h-14 w-14 object-contain p-1"
-					style="width: 56px; height: 56px; object-fit: contain;"
 				/>
 			</div>
 
@@ -35,47 +54,22 @@
 		</a>
 
 		<div class="hidden items-center gap-7 lg:flex">
-			<a
-				href="/"
-				class="relative text-sm font-semibold text-cyan-400 after:absolute after:-bottom-2 after:left-0 after:h-px after:w-full after:bg-cyan-400"
-			>
-				Home
-			</a>
-
-			<a
-				href="/services"
-				class="text-sm font-semibold text-slate-200 transition hover:text-cyan-400"
-			>
-				Services
-			</a>
-
-			<a
-				href="/industries"
-				class="text-sm font-semibold text-slate-200 transition hover:text-cyan-400"
-			>
-				Industries
-			</a>
-
-			<a
-				href="/about"
-				class="text-sm font-semibold text-slate-200 transition hover:text-cyan-400"
-			>
-				About Us
-			</a>
-
-			<a
-				href="/contact"
-				class="text-sm font-semibold text-slate-200 transition hover:text-cyan-400"
-			>
-				Contact
-			</a>
-
-			<a
-				href="/client-portal"
-				class="text-sm font-semibold text-slate-200 transition hover:text-cyan-400"
-			>
-				Client Portal
-			</a>
+			{
+				navItems.map((item) => (
+					<a
+						href={item.href}
+						aria-current={isActive(item.href) ? 'page' : undefined}
+						class:list={[
+							'relative text-sm font-semibold transition duration-300',
+							isActive(item.href)
+								? 'text-cyan-400 after:absolute after:-bottom-2 after:left-0 after:h-px after:w-full after:bg-cyan-400'
+								: 'text-slate-200 hover:text-cyan-400',
+						]}
+					>
+						{item.label}
+					</a>
+				))
+			}
 		</div>
 
 		<div class="flex items-center gap-3">

@@ -5,6 +5,16 @@ import Navbar from '../components/Navbar.astro';
 import {
 	ArrowRight,
 	ShieldCheck,
+	Headphones,
+	MonitorCog,
+	Cloud,
+	Network,
+	BriefcaseBusiness,
+	Search,
+	ClipboardList,
+	Settings,
+	Shield,
+	LifeBuoy,
 } from 'lucide-astro';
 ---
 
@@ -13,41 +23,32 @@ import {
 		<Navbar />
 
 		<main>
-
 			<!-- SERVICES HERO -->
 			<section
 				class="relative min-h-[900px] overflow-hidden border-b border-cyan-400/20"
 			>
-
-				<!-- Background Image -->
 				<div class="absolute inset-0">
 					<img
 						src="/images/services-technology-illustration.png"
-                        alt=""
-                        class="absolute inset-0 h-full w-full object-contain object-[100%_center] scale-90"
+						alt=""
+						class="absolute inset-0 h-full w-full scale-90 object-contain object-[100%_center]"
 					/>
 
-					<!-- Dark Overlay -->
 					<div class="absolute inset-0 bg-[#020611]/30"></div>
 
-					<!-- Left Fade -->
 					<div
 						class="absolute inset-0 bg-gradient-to-r from-[#020611] via-[#020611]/60 via-[35%] to-transparent"
 					></div>
 
-					<!-- Bottom Fade -->
 					<div
 						class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#020611] to-transparent"
 					></div>
 				</div>
 
-				<!-- Hero Content -->
 				<div
 					class="relative z-10 mx-auto flex min-h-[900px] max-w-[1450px] items-center px-6 lg:px-10"
 				>
-
 					<div class="max-w-[620px]">
-
 						<p
 							class="text-sm font-bold uppercase tracking-[0.34em] text-cyan-400 sm:text-base"
 						>
@@ -76,7 +77,6 @@ import {
 						</p>
 
 						<div class="mt-9 flex flex-col gap-4 sm:flex-row">
-
 							<a
 								href="/contact"
 								class="inline-flex items-center justify-center rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
@@ -95,14 +95,11 @@ import {
 									stroke-width={2}
 								/>
 							</a>
-
 						</div>
 
-						<!-- Hidden Scripture -->
 						<div
 							class="mt-10 inline-flex items-center gap-3 rounded-lg border border-yellow-400/20 bg-black/50 px-5 py-3 backdrop-blur-sm"
 						>
-
 							<span class="text-lg text-yellow-400">📖</span>
 
 							<p class="text-sm font-bold text-yellow-400">
@@ -112,32 +109,181 @@ import {
 							<p class="hidden text-sm text-slate-400 lg:block">
 								Trust in the Lord with all your heart...
 							</p>
-
 						</div>
-
 					</div>
-
 				</div>
-
 			</section>
 
 			<!-- MANAGED IT SERVICES -->
+			<section
+				id="managed-it"
+				class="relative overflow-hidden border-b border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10 lg:py-24"
+			>
+				<div
+					class="pointer-events-none absolute -left-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-600/10 blur-[170px]"
+				></div>
+
+				<div
+					class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16"
+				>
+					<div>
+						<div class="flex items-center gap-4">
+							<p class="text-lg font-black tracking-[0.25em] text-cyan-400">
+								01
+							</p>
+
+							<div
+								class="h-px w-16 bg-gradient-to-r from-cyan-400 to-transparent"
+							></div>
+						</div>
+
+						<h2 class="mt-5 text-4xl font-black leading-tight sm:text-5xl">
+							Managed IT Services
+						</h2>
+
+						<p class="mt-4 max-w-xl leading-7 text-slate-300">
+							Proactive monitoring, maintenance, and support to keep your
+							business running smoothly and securely.
+						</p>
+
+						<div class="mt-7 grid gap-4 sm:grid-cols-2">
+							<div class="flex items-center gap-3">
+								<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2} />
+								<span>24/7 System Monitoring</span>
+							</div>
+
+							<div class="flex items-center gap-3">
+								<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2} />
+								<span>Help Desk Support</span>
+							</div>
+
+							<div class="flex items-center gap-3">
+								<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2} />
+								<span>Patch Management</span>
+							</div>
+
+							<div class="flex items-center gap-3">
+								<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2} />
+								<span>Asset Management</span>
+							</div>
+						</div>
+
+						<div class="mt-8 grid gap-3 sm:grid-cols-3">
+							<div class="rounded-xl border border-cyan-300/20 bg-black/25 p-4">
+								<p class="text-xs uppercase tracking-wider text-slate-400">
+									Devices Managed
+								</p>
+								<p class="mt-2 text-3xl font-black">248</p>
+							</div>
+
+							<div class="rounded-xl border border-cyan-300/20 bg-black/25 p-4">
+								<p class="text-xs uppercase tracking-wider text-slate-400">
+									Alerts Resolved
+								</p>
+								<p class="mt-2 text-3xl font-black">97%</p>
+							</div>
+
+							<div class="rounded-xl border border-cyan-300/20 bg-black/25 p-4">
+								<p class="text-xs uppercase tracking-wider text-slate-400">
+									System Uptime
+								</p>
+								<p class="mt-2 text-3xl font-black">99.99%</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/20"
+					>
+						<img
+							src="/images/managed-it-services.png"
+							alt="Managed IT services monitoring center"
+							class="min-h-[420px] w-full object-cover object-center"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<!-- CYBERSECURITY -->
+			<section
+				id="cybersecurity"
+				class="relative overflow-hidden border-b border-cyan-400/10 bg-[#020611] px-6 py-20 lg:px-10 lg:py-24"
+			>
+				<div
+					class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16"
+				>
+					<div
+						class="relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/20"
+					>
+						<img
+							src="/images/cybersecurity-services.png"
+							alt="Cybersecurity monitoring and protection"
+							class="min-h-[430px] w-full object-cover object-center"
+						/>
+					</div>
+
+					<div>
+						<div class="flex items-center gap-4">
+							<p class="text-lg font-black tracking-[0.25em] text-cyan-400">
+								02
+							</p>
+
+							<div
+								class="h-px w-16 bg-gradient-to-r from-cyan-400 to-transparent"
+							></div>
+						</div>
+
+						<h2 class="mt-5 text-4xl font-black leading-tight sm:text-5xl">
+							Cybersecurity
+							<span class="block text-yellow-400">Protection</span>
+						</h2>
+
+						<p class="mt-5 text-lg leading-8 text-slate-300">
+							Layered protection for your users, devices, email, identities,
+							cloud services, and critical business data.
+						</p>
+
+						<div class="mt-8 grid gap-4 sm:grid-cols-2">
+							<div class="flex items-center gap-3">
+								<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2} />
+								<span>Endpoint Protection</span>
+							</div>
+
+							<div class="flex items-center gap-3">
+								<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2} />
+								<span>Email Security</span>
+							</div>
+
+							<div class="flex items-center gap-3">
+								<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2} />
+								<span>Ransomware Defense</span>
+							</div>
+
+							<div class="flex items-center gap-3">
+								<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2} />
+								<span>Threat Monitoring</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+            <!-- MICROSOFT 365 & CLOUD -->
 <section
-	id="managed-it"
+	id="microsoft-365"
 	class="relative overflow-hidden border-b border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10 lg:py-24"
 >
 	<div
-		class="pointer-events-none absolute -left-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-600/10 blur-[170px]"
+		class="pointer-events-none absolute -left-40 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-blue-600/10 blur-[170px]"
 	></div>
 
 	<div
-		class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16"
+		class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16"
 	>
 		<!-- Left content -->
 		<div>
 			<div class="flex items-center gap-4">
 				<p class="text-lg font-black tracking-[0.25em] text-cyan-400">
-					01
+					03
 				</p>
 
 				<div
@@ -146,29 +292,24 @@ import {
 			</div>
 
 			<h2 class="mt-5 text-4xl font-black leading-tight sm:text-5xl">
-				Managed IT Services
+				Microsoft 365
+				<span class="block text-yellow-400">
+					& Cloud
+				</span>
 			</h2>
 
-			<p class="mt-4 max-w-xl leading-7 text-slate-300">
-				Proactive monitoring, maintenance, and support to keep your
-				business running smoothly and securely.
+			<p class="mt-5 max-w-xl text-lg leading-8 text-slate-300">
+				Secure cloud productivity, collaboration, identity management, and
+				business continuity designed around the way your team works.
 			</p>
 
-			<div class="mt-7 grid gap-4 sm:grid-cols-2">
+			<div class="mt-8 grid gap-4 sm:grid-cols-2">
 				<div class="flex items-center gap-3">
 					<ShieldCheck
 						class="h-5 w-5 shrink-0 text-cyan-300"
 						stroke-width={2}
 					/>
-					<span class="text-slate-200">24/7 System Monitoring</span>
-				</div>
-
-				<div class="flex items-center gap-3">
-					<ShieldCheck
-						class="h-5 w-5 shrink-0 text-cyan-300"
-						stroke-width={2}
-					/>
-					<span class="text-slate-200">Help Desk Support</span>
+					<span class="text-slate-200">Microsoft 365 Management</span>
 				</div>
 
 				<div class="flex items-center gap-3">
@@ -176,7 +317,7 @@ import {
 						class="h-5 w-5 shrink-0 text-cyan-300"
 						stroke-width={2}
 					/>
-					<span class="text-slate-200">Patch Management</span>
+					<span class="text-slate-200">Exchange Online</span>
 				</div>
 
 				<div class="flex items-center gap-3">
@@ -184,46 +325,31 @@ import {
 						class="h-5 w-5 shrink-0 text-cyan-300"
 						stroke-width={2}
 					/>
-					<span class="text-slate-200">Asset Management</span>
-				</div>
-			</div>
-
-			<!-- Managed IT statistics -->
-			<div class="mt-8 grid gap-3 sm:grid-cols-3">
-				<div
-					class="rounded-xl border border-cyan-300/20 bg-black/25 p-4 backdrop-blur-sm"
-				>
-					<p class="text-xs uppercase tracking-[0.16em] text-slate-400">
-						Devices Managed
-					</p>
-
-					<p class="mt-2 text-3xl font-black text-white">
-						248
-					</p>
+					<span class="text-slate-200">Microsoft Teams</span>
 				</div>
 
-				<div
-					class="rounded-xl border border-cyan-300/20 bg-black/25 p-4 backdrop-blur-sm"
-				>
-					<p class="text-xs uppercase tracking-[0.16em] text-slate-400">
-						Alerts Resolved
-					</p>
-
-					<p class="mt-2 text-3xl font-black text-white">
-						97%
-					</p>
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">SharePoint & OneDrive</span>
 				</div>
 
-				<div
-					class="rounded-xl border border-cyan-300/20 bg-black/25 p-4 backdrop-blur-sm"
-				>
-					<p class="text-xs uppercase tracking-[0.16em] text-slate-400">
-						System Uptime
-					</p>
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Entra ID & Intune</span>
+				</div>
 
-					<p class="mt-2 text-3xl font-black text-white">
-						99.99%
-					</p>
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Cloud Backup</span>
 				</div>
 			</div>
 
@@ -231,7 +357,7 @@ import {
 				href="/contact"
 				class="group mt-8 inline-flex items-center gap-3 font-bold text-cyan-300 transition-colors duration-300 hover:text-white"
 			>
-				Learn More
+				Modernize Your Workplace
 
 				<ArrowRight
 					class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -245,19 +371,992 @@ import {
 			class="relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/20 shadow-[0_0_40px_rgba(34,211,238,0.08)]"
 		>
 			<img
-				src="/images/managed-it-services.png"
-				alt="Managed IT services monitoring and support"
-				class="h-full min-h-[420px] w-full object-cover object-center"
+				src="/images/microsoft-365-cloud.png"
+				alt="Microsoft 365 and cloud services"
+				class="h-full min-h-[430px] w-full object-cover object-center"
 			/>
 
 			<div
-				class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#020611]/20 to-transparent"
+				class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#030914]/15 to-transparent"
 			></div>
 		</div>
 	</div>
 </section>
+<!-- NETWORK INFRASTRUCTURE -->
+<section
+	id="networking"
+	class="relative overflow-hidden border-b border-cyan-400/10 bg-[#020611] px-6 py-20 lg:px-10 lg:py-24"
+>
+	<div
+		class="relative mx-auto grid max-w-[1450px] items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]"
+	>
 
-		</main>
+		<!-- Image -->
+		<div
+			class="overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/20 shadow-[0_0_40px_rgba(34,211,238,0.08)]"
+		>
+			<img
+				src="/images/network-infrastructure.png"
+				alt="Enterprise Network Infrastructure"
+				class="h-full min-h-[440px] w-full object-cover object-center"
+			/>
+		</div>
+
+		<!-- Text -->
+		<div>
+
+			<div class="flex items-center gap-4">
+				<p class="text-lg font-black tracking-[0.25em] text-cyan-400">
+					04
+				</p>
+
+				<div
+					class="h-px w-16 bg-gradient-to-r from-cyan-400 to-transparent"
+				></div>
+			</div>
+
+			<h2 class="mt-5 text-4xl font-black leading-tight sm:text-5xl">
+				Network Infrastructure
+				<span class="block text-yellow-400">
+					Built for Speed.
+				</span>
+			</h2>
+
+			<p class="mt-6 text-lg leading-8 text-slate-300">
+				Reliable networking is the backbone of every successful
+				business. We design, deploy and support secure wired and
+				wireless infrastructure that keeps your organization connected
+				and productive.
+			</p>
+
+			<div class="mt-8 grid gap-4 sm:grid-cols-2">
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2}/>
+					<span>Enterprise Wi-Fi</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2}/>
+					<span>Business Switching</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2}/>
+					<span>Next-Gen Firewalls</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2}/>
+					<span>VPN Connectivity</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2}/>
+					<span>Structured Cabling</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck class="h-5 w-5 text-cyan-300" stroke-width={2}/>
+					<span>24/7 Network Monitoring</span>
+				</div>
+
+			</div>
+
+		</div>
 
 	</div>
+</section>
+<!-- BACKUP & DISASTER RECOVERY -->
+<section
+	id="backup-recovery"
+	class="relative overflow-hidden border-b border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10 lg:py-24"
+>
+	<div
+		class="pointer-events-none absolute -left-40 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-blue-600/10 blur-[170px]"
+	></div>
+
+	<div
+		class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16"
+	>
+		<!-- Left content -->
+		<div>
+			<div class="flex items-center gap-4">
+				<p class="text-lg font-black tracking-[0.25em] text-cyan-400">
+					05
+				</p>
+
+				<div
+					class="h-px w-16 bg-gradient-to-r from-cyan-400 to-transparent"
+				></div>
+			</div>
+
+			<h2 class="mt-5 text-4xl font-black leading-tight sm:text-5xl">
+				Backup & Disaster
+				<span class="block text-yellow-400">
+					Recovery
+				</span>
+			</h2>
+
+			<p class="mt-5 max-w-xl text-lg leading-8 text-slate-300">
+				Data loss can happen in seconds. Our layered backup and disaster
+				recovery solutions help protect your business from ransomware,
+				hardware failure, accidental deletion, and unexpected outages.
+			</p>
+
+			<div class="mt-8 grid gap-4 sm:grid-cols-2">
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Cloud Backups</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Ransomware Recovery</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Local & Offsite Replication</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Bare-Metal Restore</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Recovery Planning</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Backup Monitoring & Testing</span>
+				</div>
+			</div>
+
+			<a
+				href="/contact"
+				class="group mt-8 inline-flex items-center gap-3 font-bold text-cyan-300 transition-colors duration-300 hover:text-white"
+			>
+				Protect What Matters
+
+				<ArrowRight
+					class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+					stroke-width={2}
+				/>
+			</a>
+		</div>
+
+		<!-- Right image -->
+		<div
+			class="relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/20 shadow-[0_0_40px_rgba(34,211,238,0.08)]"
+		>
+			<img
+				src="/images/backup-disaster-recovery.png"
+				alt="Secure cloud backup and disaster recovery system"
+				class="h-full min-h-[440px] w-full object-cover object-center"
+			/>
+
+			<div
+				class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#030914]/15 to-transparent"
+			></div>
+		</div>
+	</div>
+</section>
+<!-- IT SUPPORT & HELP DESK -->
+<section
+	id="it-support"
+	class="relative overflow-hidden border-b border-cyan-400/10 bg-[#020611] px-6 py-20 lg:px-10 lg:py-24"
+>
+	<div
+		class="pointer-events-none absolute -right-40 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[170px]"
+	></div>
+
+	<div
+		class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16"
+	>
+		<!-- Left image -->
+		<div
+			class="relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/20 shadow-[0_0_40px_rgba(34,211,238,0.08)]"
+		>
+			<img
+				src="/images/it-help-desk.png"
+				alt="IT help desk and remote support center"
+				class="h-full min-h-[440px] w-full object-cover object-center"
+			/>
+
+			<div
+				class="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#020611]/25"
+			></div>
+		</div>
+
+		<!-- Right content -->
+		<div>
+			<div class="flex items-center gap-4">
+				<p class="text-lg font-black tracking-[0.25em] text-cyan-400">
+					06
+				</p>
+
+				<div
+					class="h-px w-16 bg-gradient-to-r from-cyan-400 to-transparent"
+				></div>
+			</div>
+
+			<h2 class="mt-5 text-4xl font-black leading-tight sm:text-5xl">
+				IT Support
+				<span class="block text-yellow-400">
+					When You Need It
+				</span>
+			</h2>
+
+			<p class="mt-5 max-w-xl text-lg leading-8 text-slate-300">
+				Fast, friendly support for users, computers, applications, and
+				devices. We help resolve issues quickly so your team can stay
+				productive and focused.
+			</p>
+
+			<div class="mt-8 grid gap-4 sm:grid-cols-2">
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Remote Help Desk</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Onsite Support</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">User Troubleshooting</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Device Support</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Application Support</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">New User Setup</span>
+				</div>
+			</div>
+
+			<a
+				href="/contact"
+				class="group mt-8 inline-flex items-center gap-3 font-bold text-cyan-300 transition-colors duration-300 hover:text-white"
+			>
+				Get Reliable Support
+
+				<ArrowRight
+					class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+					stroke-width={2}
+				/>
+			</a>
+		</div>
+	</div>
+</section>
+<!-- WHY CHOOSE LIONSHIELD -->
+<section
+	id="why-lionshield"
+	class="relative overflow-hidden border-b border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10 lg:py-28"
+>
+	<!-- Background glows -->
+	<div
+		class="pointer-events-none absolute left-1/2 top-20 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[180px]"
+	></div>
+
+	<div
+		class="pointer-events-none absolute -left-48 bottom-0 h-[440px] w-[440px] rounded-full bg-blue-600/10 blur-[160px]"
+	></div>
+
+	<div
+		class="pointer-events-none absolute -right-48 bottom-0 h-[440px] w-[440px] rounded-full bg-cyan-500/10 blur-[160px]"
+	></div>
+
+	<!-- Digital grid -->
+	<div
+		class="pointer-events-none absolute inset-0 opacity-[0.035]"
+		style="background-image:
+			linear-gradient(rgba(34,211,238,.20) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(34,211,238,.20) 1px, transparent 1px);
+			background-size: 34px 34px;"
+	></div>
+
+	<div class="relative mx-auto max-w-[1450px]">
+		<!-- Heading -->
+		<div class="mx-auto max-w-4xl text-center">
+			<p
+				class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400 sm:text-base"
+			>
+				Why Choose LionShield
+			</p>
+
+			<div
+				class="mx-auto mt-5 h-px w-40 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+			></div>
+
+			<h2
+				class="mt-7 text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl"
+			>
+				Technology backed by
+				<span class="block text-yellow-400">
+					a security-first partnership.
+				</span>
+			</h2>
+
+			<p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+				LionShield Networks combines responsive support, proactive
+				management, and strategic guidance to help keep your business
+				secure, productive, and prepared for growth.
+			</p>
+		</div>
+
+		<!-- Cards -->
+		<div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+			<!-- Security First -->
+			<div
+				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/15 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_35px_rgba(34,211,238,0.12)]"
+			>
+				<div
+					class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-40 transition-opacity duration-300 group-hover:opacity-100"
+				></div>
+
+				<div
+					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/25 text-cyan-300 shadow-[0_0_22px_rgba(34,211,238,0.15)]"
+				>
+					<ShieldCheck
+						class="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+						stroke-width={1.7}
+					/>
+				</div>
+
+				<h3 class="mt-5 text-xl font-black uppercase text-white">
+					Security First
+				</h3>
+
+				<p class="mt-3 leading-7 text-slate-300">
+					Security is built into every solution, configuration, and
+					recommendation we provide.
+				</p>
+			</div>
+
+			<!-- Fast Response -->
+			<div
+				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/15 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_35px_rgba(34,211,238,0.12)]"
+			>
+				<div
+					class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-40 transition-opacity duration-300 group-hover:opacity-100"
+				></div>
+
+				<div
+					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/25 text-cyan-300 shadow-[0_0_22px_rgba(34,211,238,0.15)]"
+				>
+					<Headphones
+						class="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+						stroke-width={1.7}
+					/>
+				</div>
+
+				<h3 class="mt-5 text-xl font-black uppercase text-white">
+					Fast Response
+				</h3>
+
+				<p class="mt-3 leading-7 text-slate-300">
+					Responsive remote and onsite assistance helps your team resolve
+					issues and return to work quickly.
+				</p>
+			</div>
+
+			<!-- Proactive Monitoring -->
+			<div
+				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/15 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_35px_rgba(34,211,238,0.12)]"
+			>
+				<div
+					class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-40 transition-opacity duration-300 group-hover:opacity-100"
+				></div>
+
+				<div
+					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/25 text-cyan-300 shadow-[0_0_22px_rgba(34,211,238,0.15)]"
+				>
+					<MonitorCog
+						class="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+						stroke-width={1.7}
+					/>
+				</div>
+
+				<h3 class="mt-5 text-xl font-black uppercase text-white">
+					Proactive Monitoring
+				</h3>
+
+				<p class="mt-3 leading-7 text-slate-300">
+					We monitor and maintain your systems to help identify problems
+					before they become disruptive outages.
+				</p>
+			</div>
+
+			<!-- Strategic Planning -->
+			<div
+				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/15 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_35px_rgba(34,211,238,0.12)]"
+			>
+				<div
+					class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-40 transition-opacity duration-300 group-hover:opacity-100"
+				></div>
+
+				<div
+					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/25 text-cyan-300 shadow-[0_0_22px_rgba(34,211,238,0.15)]"
+				>
+					<Network
+						class="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+						stroke-width={1.7}
+					/>
+				</div>
+
+				<h3 class="mt-5 text-xl font-black uppercase text-white">
+					Strategic IT Planning
+				</h3>
+
+				<p class="mt-3 leading-7 text-slate-300">
+					Technology recommendations are aligned with your goals,
+					budget, operations, and plans for future growth.
+				</p>
+			</div>
+
+			<!-- Business Continuity -->
+			<div
+				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/15 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_35px_rgba(34,211,238,0.12)]"
+			>
+				<div
+					class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-40 transition-opacity duration-300 group-hover:opacity-100"
+				></div>
+
+				<div
+					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/25 text-cyan-300 shadow-[0_0_22px_rgba(34,211,238,0.15)]"
+				>
+					<Cloud
+						class="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+						stroke-width={1.7}
+					/>
+				</div>
+
+				<h3 class="mt-5 text-xl font-black uppercase text-white">
+					Business Continuity
+				</h3>
+
+				<p class="mt-3 leading-7 text-slate-300">
+					Backup, disaster recovery, and continuity planning help keep
+					your business operating when the unexpected happens.
+				</p>
+			</div>
+
+			<!-- Trusted Partnership -->
+			<div
+				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/15 p-7 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_35px_rgba(34,211,238,0.12)]"
+			>
+				<div
+					class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-40 transition-opacity duration-300 group-hover:opacity-100"
+				></div>
+
+				<div
+					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/25 text-cyan-300 shadow-[0_0_22px_rgba(34,211,238,0.15)]"
+				>
+					<BriefcaseBusiness
+						class="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+						stroke-width={1.7}
+					/>
+				</div>
+
+				<h3 class="mt-5 text-xl font-black uppercase text-white">
+					Trusted Partnership
+				</h3>
+
+				<p class="mt-3 leading-7 text-slate-300">
+					We work as an extension of your business, providing dependable
+					support and clear technology guidance.
+				</p>
+			</div>
+		</div>
+
+		<!-- Bottom action -->
+		<div class="mt-12 text-center">
+			<a
+				href="/contact"
+				class="group inline-flex items-center justify-center gap-3 rounded-xl border border-yellow-400/70 bg-black/30 px-8 py-4 font-bold text-yellow-300 transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black hover:shadow-[0_0_30px_rgba(250,204,21,0.18)]"
+			>
+				Partner With LionShield
+
+				<ArrowRight
+					class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+					stroke-width={2}
+				/>
+			</a>
+		</div>
+	</div>
+</section>
+<!-- OUR PROCESS -->
+<section
+	id="our-process"
+	class="relative overflow-hidden bg-[#020611] px-6 py-24 lg:px-10 lg:py-32"
+>
+
+	<!-- Background Glow -->
+	<div
+		class="pointer-events-none absolute left-1/2 top-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/8 blur-[220px]"
+	></div>
+
+	<div class="relative mx-auto max-w-[1450px]">
+
+		<div class="text-center">
+
+			<p class="text-sm font-bold uppercase tracking-[0.35em] text-cyan-400">
+				Our Process
+			</p>
+
+			<div
+				class="mx-auto mt-5 h-px w-44 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+			></div>
+
+			<h2
+				class="mt-8 text-4xl font-black uppercase sm:text-5xl lg:text-6xl"
+			>
+				A proven process for
+				<span class="block text-yellow-400">
+					long-term success.
+				</span>
+			</h2>
+
+			<p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+				Every partnership begins with understanding your business and
+				continues with proactive support that keeps your technology
+				running smoothly.
+			</p>
+
+		</div>
+
+		<div
+			class="mt-20 grid gap-8 lg:grid-cols-5"
+		>
+
+			<!-- Step 1 -->
+			<div class="group text-center">
+
+				<div
+					class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/40 bg-black/25 text-cyan-300 shadow-[0_0_30px_rgba(34,211,238,0.15)] transition duration-300 group-hover:scale-110"
+				>
+					<Search class="h-10 w-10" />
+				</div>
+
+				<h3 class="mt-6 text-xl font-black">
+					Discover
+				</h3>
+
+				<p class="mt-3 text-slate-400 leading-7">
+					We evaluate your environment, identify risks, and understand
+					your business goals.
+				</p>
+
+			</div>
+
+			<!-- Step 2 -->
+			<div class="group text-center">
+
+				<div
+					class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/40 bg-black/25 text-cyan-300 shadow-[0_0_30px_rgba(34,211,238,0.15)] transition duration-300 group-hover:scale-110"
+				>
+					<ClipboardList class="h-10 w-10" />
+				</div>
+
+				<h3 class="mt-6 text-xl font-black">
+					Plan
+				</h3>
+
+				<p class="mt-3 text-slate-400 leading-7">
+					We design an IT strategy that aligns with your business and
+					budget.
+				</p>
+
+			</div>
+
+			<!-- Step 3 -->
+			<div class="group text-center">
+
+				<div
+					class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/40 bg-black/25 text-cyan-300 shadow-[0_0_30px_rgba(34,211,238,0.15)] transition duration-300 group-hover:scale-110"
+				>
+					<Settings class="h-10 w-10" />
+				</div>
+
+				<h3 class="mt-6 text-xl font-black">
+					Implement
+				</h3>
+
+				<p class="mt-3 text-slate-400 leading-7">
+					We deploy solutions with minimal disruption to your daily
+					operations.
+				</p>
+
+			</div>
+
+			<!-- Step 4 -->
+			<div class="group text-center">
+
+				<div
+					class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/40 bg-black/25 text-cyan-300 shadow-[0_0_30px_rgba(34,211,238,0.15)] transition duration-300 group-hover:scale-110"
+				>
+					<Shield class="h-10 w-10" />
+				</div>
+
+				<h3 class="mt-6 text-xl font-black">
+					Protect
+				</h3>
+
+				<p class="mt-3 text-slate-400 leading-7">
+					Continuous monitoring and layered cybersecurity help defend
+					your business.
+				</p>
+
+			</div>
+
+			<!-- Step 5 -->
+			<div class="group text-center">
+
+				<div
+					class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/40 bg-black/25 text-cyan-300 shadow-[0_0_30px_rgba(34,211,238,0.15)] transition duration-300 group-hover:scale-110"
+				>
+					<LifeBuoy class="h-10 w-10" />
+				</div>
+
+				<h3 class="mt-6 text-xl font-black">
+					Support
+				</h3>
+
+				<p class="mt-3 text-slate-400 leading-7">
+					Your dedicated technology partner for ongoing support,
+					maintenance, and growth.
+				</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+<!-- OUR PROCESS -->
+<section
+	id="our-process"
+	class="relative overflow-hidden bg-[#020611] px-6 py-24 lg:px-10 lg:py-32"
+>
+
+	<!-- Background Glow -->
+	<div
+		class="pointer-events-none absolute left-1/2 top-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/8 blur-[220px]"
+	></div>
+
+	<div class="relative mx-auto max-w-[1450px]">
+
+		<div class="text-center">
+
+			<p class="text-sm font-bold uppercase tracking-[0.35em] text-cyan-400">
+				Our Process
+			</p>
+
+			<div
+				class="mx-auto mt-5 h-px w-44 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+			></div>
+
+			<h2
+				class="mt-8 text-4xl font-black uppercase sm:text-5xl lg:text-6xl"
+			>
+				A proven process for
+				<span class="block text-yellow-400">
+					long-term success.
+				</span>
+			</h2>
+
+			<p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+				Every partnership begins with understanding your business and
+				continues with proactive support that keeps your technology
+				running smoothly.
+			</p>
+
+		</div>
+
+		<div
+			class="mt-20 grid gap-8 lg:grid-cols-5"
+		>
+
+			<!-- Step 1 -->
+			<div class="group text-center">
+
+				<div
+					class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/40 bg-black/25 text-cyan-300 shadow-[0_0_30px_rgba(34,211,238,0.15)] transition duration-300 group-hover:scale-110"
+				>
+					<Search class="h-10 w-10" />
+				</div>
+
+				<h3 class="mt-6 text-xl font-black">
+					Discover
+				</h3>
+
+				<p class="mt-3 text-slate-400 leading-7">
+					We evaluate your environment, identify risks, and understand
+					your business goals.
+				</p>
+
+			</div>
+
+			<!-- Step 2 -->
+			<div class="group text-center">
+
+				<div
+					class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/40 bg-black/25 text-cyan-300 shadow-[0_0_30px_rgba(34,211,238,0.15)] transition duration-300 group-hover:scale-110"
+				>
+					<ClipboardList class="h-10 w-10" />
+				</div>
+
+				<h3 class="mt-6 text-xl font-black">
+					Plan
+				</h3>
+
+				<p class="mt-3 text-slate-400 leading-7">
+					We design an IT strategy that aligns with your business and
+					budget.
+				</p>
+
+			</div>
+
+			<!-- Step 3 -->
+			<div class="group text-center">
+
+				<div
+					class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/40 bg-black/25 text-cyan-300 shadow-[0_0_30px_rgba(34,211,238,0.15)] transition duration-300 group-hover:scale-110"
+				>
+					<Settings class="h-10 w-10" />
+				</div>
+
+				<h3 class="mt-6 text-xl font-black">
+					Implement
+				</h3>
+
+				<p class="mt-3 text-slate-400 leading-7">
+					We deploy solutions with minimal disruption to your daily
+					operations.
+				</p>
+
+			</div>
+
+			<!-- Step 4 -->
+			<div class="group text-center">
+
+				<div
+					class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/40 bg-black/25 text-cyan-300 shadow-[0_0_30px_rgba(34,211,238,0.15)] transition duration-300 group-hover:scale-110"
+				>
+					<Shield class="h-10 w-10" />
+				</div>
+
+				<h3 class="mt-6 text-xl font-black">
+					Protect
+				</h3>
+
+				<p class="mt-3 text-slate-400 leading-7">
+					Continuous monitoring and layered cybersecurity help defend
+					your business.
+				</p>
+
+			</div>
+
+			<!-- Step 5 -->
+			<div class="group text-center">
+
+				<div
+					class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-cyan-400/40 bg-black/25 text-cyan-300 shadow-[0_0_30px_rgba(34,211,238,0.15)] transition duration-300 group-hover:scale-110"
+				>
+					<LifeBuoy class="h-10 w-10" />
+				</div>
+
+				<h3 class="mt-6 text-xl font-black">
+					Support
+				</h3>
+
+				<p class="mt-3 text-slate-400 leading-7">
+					Your dedicated technology partner for ongoing support,
+					maintenance, and growth.
+				</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+<!-- FINAL SERVICES CTA -->
+<section
+	class="relative overflow-hidden border-t border-cyan-400/15 bg-[#030914] px-6 py-24 text-center lg:px-10 lg:py-32"
+>
+	<div
+		class="pointer-events-none absolute left-1/2 top-1/2 h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/10 blur-[190px]"
+	></div>
+
+	<div
+		class="pointer-events-none absolute inset-0 opacity-[0.035]"
+		style="background-image:
+			linear-gradient(rgba(34,211,238,.20) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(34,211,238,.20) 1px, transparent 1px);
+			background-size: 34px 34px;"
+	></div>
+
+	<div class="relative mx-auto max-w-4xl">
+		<p
+			class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400 sm:text-base"
+		>
+			Your Technology. Protected.
+		</p>
+
+		<div
+			class="mx-auto mt-5 h-px w-44 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+		></div>
+
+		<h2
+			class="mt-8 text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl"
+		>
+			Ready to strengthen
+			<span class="block text-yellow-400">
+				your business technology?
+			</span>
+		</h2>
+
+		<p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+			Let’s build a secure, reliable IT environment that supports your
+			team today and grows with your business tomorrow.
+		</p>
+
+		<div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+			<a
+				href="/contact"
+				class="inline-flex items-center justify-center rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+			>
+				Schedule a Free Assessment
+			</a>
+
+			<a
+				href="/contact"
+				class="group inline-flex items-center justify-center gap-3 rounded-xl border border-yellow-400/70 bg-black/35 px-8 py-4 font-bold text-yellow-300 transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+			>
+				Contact LionShield
+
+				<ArrowRight
+					class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+					stroke-width={2}
+				/>
+			</a>
+		</div>
+	</div>
+</section>
+<!-- SERVICES SECTION NAVIGATION -->
+<nav
+	class="sticky top-0 z-40 border-y border-cyan-400/15 bg-[#020611]/95 px-4 backdrop-blur-xl"
+	aria-label="Services navigation"
+>
+	<div
+		class="mx-auto flex max-w-[1450px] items-center gap-2 overflow-x-auto py-3 lg:justify-center"
+	>
+		<a
+			href="#managed-it"
+			class="shrink-0 rounded-lg border border-cyan-300/20 px-4 py-2 text-sm font-bold text-slate-300 transition hover:border-cyan-300/60 hover:bg-cyan-500/10 hover:text-cyan-300"
+		>
+			Managed IT
+		</a>
+
+		<a
+			href="#cybersecurity"
+			class="shrink-0 rounded-lg border border-cyan-300/20 px-4 py-2 text-sm font-bold text-slate-300 transition hover:border-cyan-300/60 hover:bg-cyan-500/10 hover:text-cyan-300"
+		>
+			Cybersecurity
+		</a>
+
+		<a
+			href="#microsoft-365"
+			class="shrink-0 rounded-lg border border-cyan-300/20 px-4 py-2 text-sm font-bold text-slate-300 transition hover:border-cyan-300/60 hover:bg-cyan-500/10 hover:text-cyan-300"
+		>
+			Microsoft 365
+		</a>
+
+		<a
+			href="#networking"
+			class="shrink-0 rounded-lg border border-cyan-300/20 px-4 py-2 text-sm font-bold text-slate-300 transition hover:border-cyan-300/60 hover:bg-cyan-500/10 hover:text-cyan-300"
+		>
+			Networking
+		</a>
+
+		<a
+			href="#backup-recovery"
+			class="shrink-0 rounded-lg border border-cyan-300/20 px-4 py-2 text-sm font-bold text-slate-300 transition hover:border-cyan-300/60 hover:bg-cyan-500/10 hover:text-cyan-300"
+		>
+			Backup & Recovery
+		</a>
+
+		<a
+			href="#it-support"
+			class="shrink-0 rounded-lg border border-cyan-300/20 px-4 py-2 text-sm font-bold text-slate-300 transition hover:border-cyan-300/60 hover:bg-cyan-500/10 hover:text-cyan-300"
+		>
+			IT Support
+		</a>
+	</div>
+</nav>
+		</main>
+	</div>
+    <style>
+	html {
+		scroll-behavior: smooth;
+	}
+
+	section[id] {
+		scroll-margin-top: 90px;
+	}
+</style>
 </Layout>
