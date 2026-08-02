@@ -1,0 +1,263 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+import {
+	ArrowRight,
+	ShieldCheck,
+} from 'lucide-astro';
+---
+
+<Layout>
+	<div class="min-h-screen bg-[#020611] text-white">
+		<Navbar />
+
+		<main>
+
+			<!-- SERVICES HERO -->
+			<section
+				class="relative min-h-[900px] overflow-hidden border-b border-cyan-400/20"
+			>
+
+				<!-- Background Image -->
+				<div class="absolute inset-0">
+					<img
+						src="/images/services-technology-illustration.png"
+                        alt=""
+                        class="absolute inset-0 h-full w-full object-contain object-[100%_center] scale-90"
+					/>
+
+					<!-- Dark Overlay -->
+					<div class="absolute inset-0 bg-[#020611]/30"></div>
+
+					<!-- Left Fade -->
+					<div
+						class="absolute inset-0 bg-gradient-to-r from-[#020611] via-[#020611]/60 via-[35%] to-transparent"
+					></div>
+
+					<!-- Bottom Fade -->
+					<div
+						class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#020611] to-transparent"
+					></div>
+				</div>
+
+				<!-- Hero Content -->
+				<div
+					class="relative z-10 mx-auto flex min-h-[900px] max-w-[1450px] items-center px-6 lg:px-10"
+				>
+
+					<div class="max-w-[620px]">
+
+						<p
+							class="text-sm font-bold uppercase tracking-[0.34em] text-cyan-400 sm:text-base"
+						>
+							Managed IT Services
+						</p>
+
+						<div
+							class="mt-5 h-px w-72 bg-gradient-to-r from-cyan-400 via-blue-400 to-transparent"
+						></div>
+
+						<h1
+							class="mt-8 text-5xl font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-[4.2rem]"
+						>
+							Technology that keeps
+
+							<span class="block text-yellow-400">
+								your business moving.
+							</span>
+						</h1>
+
+						<p class="mt-7 max-w-[590px] text-lg leading-8 text-slate-300">
+							From proactive support and cybersecurity to Microsoft 365,
+							networking, and business continuity, LionShield Networks
+							delivers the technology foundation your business needs to
+							operate securely and grow confidently.
+						</p>
+
+						<div class="mt-9 flex flex-col gap-4 sm:flex-row">
+
+							<a
+								href="/contact"
+								class="inline-flex items-center justify-center rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+							>
+								Request a Free Assessment
+							</a>
+
+							<a
+								href="#managed-it"
+								class="group inline-flex items-center justify-center gap-3 rounded-xl border border-yellow-400/70 bg-black/40 px-8 py-4 font-bold text-yellow-300 transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+							>
+								Explore Our Services
+
+								<ArrowRight
+									class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+									stroke-width={2}
+								/>
+							</a>
+
+						</div>
+
+						<!-- Hidden Scripture -->
+						<div
+							class="mt-10 inline-flex items-center gap-3 rounded-lg border border-yellow-400/20 bg-black/50 px-5 py-3 backdrop-blur-sm"
+						>
+
+							<span class="text-lg text-yellow-400">📖</span>
+
+							<p class="text-sm font-bold text-yellow-400">
+								Proverbs 3:5–6
+							</p>
+
+							<p class="hidden text-sm text-slate-400 lg:block">
+								Trust in the Lord with all your heart...
+							</p>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+
+			<!-- MANAGED IT SERVICES -->
+<section
+	id="managed-it"
+	class="relative overflow-hidden border-b border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10 lg:py-24"
+>
+	<div
+		class="pointer-events-none absolute -left-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-600/10 blur-[170px]"
+	></div>
+
+	<div
+		class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16"
+	>
+		<!-- Left content -->
+		<div>
+			<div class="flex items-center gap-4">
+				<p class="text-lg font-black tracking-[0.25em] text-cyan-400">
+					01
+				</p>
+
+				<div
+					class="h-px w-16 bg-gradient-to-r from-cyan-400 to-transparent"
+				></div>
+			</div>
+
+			<h2 class="mt-5 text-4xl font-black leading-tight sm:text-5xl">
+				Managed IT Services
+			</h2>
+
+			<p class="mt-4 max-w-xl leading-7 text-slate-300">
+				Proactive monitoring, maintenance, and support to keep your
+				business running smoothly and securely.
+			</p>
+
+			<div class="mt-7 grid gap-4 sm:grid-cols-2">
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">24/7 System Monitoring</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Help Desk Support</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Patch Management</span>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<ShieldCheck
+						class="h-5 w-5 shrink-0 text-cyan-300"
+						stroke-width={2}
+					/>
+					<span class="text-slate-200">Asset Management</span>
+				</div>
+			</div>
+
+			<!-- Managed IT statistics -->
+			<div class="mt-8 grid gap-3 sm:grid-cols-3">
+				<div
+					class="rounded-xl border border-cyan-300/20 bg-black/25 p-4 backdrop-blur-sm"
+				>
+					<p class="text-xs uppercase tracking-[0.16em] text-slate-400">
+						Devices Managed
+					</p>
+
+					<p class="mt-2 text-3xl font-black text-white">
+						248
+					</p>
+				</div>
+
+				<div
+					class="rounded-xl border border-cyan-300/20 bg-black/25 p-4 backdrop-blur-sm"
+				>
+					<p class="text-xs uppercase tracking-[0.16em] text-slate-400">
+						Alerts Resolved
+					</p>
+
+					<p class="mt-2 text-3xl font-black text-white">
+						97%
+					</p>
+				</div>
+
+				<div
+					class="rounded-xl border border-cyan-300/20 bg-black/25 p-4 backdrop-blur-sm"
+				>
+					<p class="text-xs uppercase tracking-[0.16em] text-slate-400">
+						System Uptime
+					</p>
+
+					<p class="mt-2 text-3xl font-black text-white">
+						99.99%
+					</p>
+				</div>
+			</div>
+
+			<a
+				href="/contact"
+				class="group mt-8 inline-flex items-center gap-3 font-bold text-cyan-300 transition-colors duration-300 hover:text-white"
+			>
+				Learn More
+
+				<ArrowRight
+					class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+					stroke-width={2}
+				/>
+			</a>
+		</div>
+
+		<!-- Right image -->
+		<div
+			class="relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/20 shadow-[0_0_40px_rgba(34,211,238,0.08)]"
+		>
+			<img
+				src="/images/managed-it-services.png"
+				alt="Managed IT services monitoring and support"
+				class="h-full min-h-[420px] w-full object-cover object-center"
+			/>
+
+			<div
+				class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#020611]/20 to-transparent"
+			></div>
+		</div>
+	</div>
+</section>
+
+		</main>
+
+	</div>
+</Layout>
