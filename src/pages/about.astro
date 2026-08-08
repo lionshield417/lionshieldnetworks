@@ -1,0 +1,163 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+import {
+	ArrowRight,
+	ShieldCheck,
+} from 'lucide-astro';
+---
+
+<Layout>
+	<div class="min-h-screen bg-[#020611] text-white">
+		<Navbar />
+
+		<main>
+			<!-- ABOUT HERO -->
+			<section
+				class="relative min-h-[760px] overflow-hidden border-b border-cyan-400/20 px-6 pb-20 pt-36 lg:px-10 lg:pt-40"
+			>
+				<!-- Background glows -->
+				<div
+					class="pointer-events-none absolute right-[8%] top-[22%] h-[520px] w-[520px] rounded-full bg-cyan-500/10 blur-[170px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute left-[35%] top-[45%] h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[180px]"
+				></div>
+
+				<!-- Digital grid -->
+				<div
+					class="pointer-events-none absolute inset-0 opacity-[0.035]"
+					style="background-image:
+						linear-gradient(rgba(34,211,238,.20) 1px, transparent 1px),
+						linear-gradient(90deg, rgba(34,211,238,.20) 1px, transparent 1px);
+						background-size: 34px 34px;"
+				></div>
+
+				<div
+					class="relative mx-auto grid min-h-[600px] max-w-[1450px] items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]"
+				>
+					<!-- Left content -->
+					<div class="relative z-10 max-w-[650px]">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.34em] text-cyan-400 sm:text-base"
+						>
+							About LionShield Networks
+						</p>
+
+						<div
+							class="mt-5 h-px w-72 bg-gradient-to-r from-cyan-400 via-blue-400 to-transparent"
+						></div>
+
+						<h1
+							class="mt-8 text-5xl font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-[4.3rem]"
+						>
+							Technology built on
+							<span class="block text-yellow-400">
+								trust and protection.
+							</span>
+						</h1>
+
+						<p class="mt-7 max-w-[620px] text-lg leading-8 text-slate-300">
+							LionShield Networks helps businesses stay secure,
+							productive, and prepared through dependable IT support,
+							cybersecurity, cloud solutions, and strategic technology
+							guidance.
+						</p>
+
+						<div class="mt-9 flex flex-col gap-4 sm:flex-row">
+							<a
+								href="/contact"
+								class="group inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+							>
+								Meet LionShield
+
+								<ArrowRight
+									class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+									stroke-width={2}
+								/>
+							</a>
+
+							<a
+								href="#our-story"
+								class="inline-flex items-center justify-center rounded-xl border border-yellow-400/70 bg-black/35 px-8 py-4 font-bold text-yellow-300 transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+							>
+								Our Story
+							</a>
+						</div>
+					</div>
+
+					<!-- Right visual -->
+					<div
+						class="relative min-h-[500px] overflow-hidden rounded-3xl border border-cyan-300/20 bg-black/20 shadow-[0_0_50px_rgba(34,211,238,0.08)]"
+					>
+						<div
+							class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/5 to-black"
+						></div>
+
+						<div
+							class="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-300/20 shadow-[0_0_60px_rgba(34,211,238,0.12)]"
+						></div>
+
+						<div
+							class="absolute left-1/2 top-1/2 flex h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[42%_42%_48%_48%/24%_24%_70%_70%] border border-cyan-300/40 bg-cyan-400/5"
+						>
+							<ShieldCheck
+								class="h-28 w-28 text-cyan-300"
+								stroke-width={1.2}
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- OUR STORY -->
+			<section
+				id="our-story"
+				class="relative bg-[#030914] px-6 py-20 lg:px-10 lg:py-28"
+			>
+				<div
+					class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-2"
+				>
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Our Story
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase leading-tight sm:text-5xl"
+						>
+							Technology with
+							<span class="block text-yellow-400">
+								purpose behind it.
+							</span>
+						</h2>
+					</div>
+
+					<div class="space-y-5 text-lg leading-8 text-slate-300">
+						<p>
+							LionShield Networks was built around a simple idea:
+							business technology should be reliable, secure, and easy to
+							understand.
+						</p>
+
+						<p>
+							We focus on helping organizations reduce risk, improve
+							productivity, and make better technology decisions without
+							the confusion that often comes with IT.
+						</p>
+
+						<p>
+							Our goal is to become a trusted technology partner that
+							helps protect your business today while preparing it for
+							what comes next.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
