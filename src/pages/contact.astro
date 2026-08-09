@@ -1,0 +1,389 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+import {
+	ArrowRight,
+	Mail,
+	Phone,
+	MapPin,
+	Clock3,
+	ShieldCheck,
+} from 'lucide-astro';
+---
+
+<Layout>
+	<div class="min-h-screen bg-[#020611] text-white">
+		<Navbar />
+
+		<main>
+			<!-- CONTACT HERO -->
+			<section
+				class="relative overflow-hidden border-b border-cyan-400/20 px-6 pb-20 pt-36 lg:px-10 lg:pb-24 lg:pt-40"
+			>
+				<div
+					class="pointer-events-none absolute left-1/2 top-20 h-[620px] w-[620px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[190px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[170px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute inset-0 opacity-[0.035]"
+					style="background-image:
+						linear-gradient(rgba(34,211,238,.20) 1px, transparent 1px),
+						linear-gradient(90deg, rgba(34,211,238,.20) 1px, transparent 1px);
+						background-size: 34px 34px;"
+				></div>
+
+				<div
+					class="relative mx-auto grid max-w-[1450px] items-start gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20"
+				>
+					<!-- Left side -->
+					<div class="pt-4">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.34em] text-cyan-400 sm:text-base"
+						>
+							Contact LionShield
+						</p>
+
+						<div
+							class="mt-5 h-px w-72 bg-gradient-to-r from-cyan-400 via-blue-400 to-transparent"
+						></div>
+
+						<h1
+							class="mt-8 text-5xl font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-6xl lg:text-[4.2rem]"
+						>
+							Let’s strengthen
+							<span class="block text-yellow-400">
+								your technology.
+							</span>
+						</h1>
+
+						<p class="mt-7 max-w-[610px] text-lg leading-8 text-slate-300">
+							Whether you need managed IT, cybersecurity, Microsoft 365,
+							networking, backup, or ongoing support, LionShield Networks
+							is ready to help.
+						</p>
+
+						<div class="mt-10 space-y-5">
+							<div class="flex items-start gap-4">
+								<div
+									class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300"
+								>
+									<Phone class="h-6 w-6" stroke-width={1.8} />
+								</div>
+
+								<div>
+									<p class="font-bold text-white">Phone</p>
+									<p class="mt-1 text-slate-300">
+										Add your business phone number
+									</p>
+								</div>
+							</div>
+
+							<div class="flex items-start gap-4">
+								<div
+									class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300"
+								>
+									<Mail class="h-6 w-6" stroke-width={1.8} />
+								</div>
+
+								<div>
+									<p class="font-bold text-white">Email</p>
+									<p class="mt-1 text-slate-300">
+										Add your business email address
+									</p>
+								</div>
+							</div>
+
+							<div class="flex items-start gap-4">
+								<div
+									class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300"
+								>
+									<MapPin class="h-6 w-6" stroke-width={1.8} />
+								</div>
+
+								<div>
+									<p class="font-bold text-white">Service Area</p>
+									<p class="mt-1 text-slate-300">
+										Long Island and surrounding business communities
+									</p>
+								</div>
+							</div>
+
+							<div class="flex items-start gap-4">
+								<div
+									class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300"
+								>
+									<Clock3 class="h-6 w-6" stroke-width={1.8} />
+								</div>
+
+								<div>
+									<p class="font-bold text-white">Business Hours</p>
+									<p class="mt-1 text-slate-300">
+										Monday–Friday, 8:00 AM–6:00 PM
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Contact Form -->
+					<div
+						class="relative overflow-hidden rounded-3xl border border-cyan-300/20 bg-black/20 p-6 shadow-[0_0_50px_rgba(34,211,238,0.08)] backdrop-blur-md sm:p-8"
+					>
+						<div
+							class="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-600/5"
+						></div>
+
+						<div class="relative">
+							<p
+								class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-400"
+							>
+								Free Assessment
+							</p>
+
+							<h2 class="mt-4 text-3xl font-black text-white sm:text-4xl">
+								Tell us how we can help.
+							</h2>
+
+							<p class="mt-4 leading-7 text-slate-300">
+								Send us a few details and we’ll follow up to discuss your
+								technology needs.
+							</p>
+
+							<form class="mt-8 space-y-5">
+								<div class="grid gap-5 sm:grid-cols-2">
+									<div>
+										<label
+											for="name"
+											class="mb-2 block text-sm font-bold text-slate-200"
+										>
+											Name
+										</label>
+
+										<input
+											id="name"
+											name="name"
+											type="text"
+											class="w-full rounded-xl border border-cyan-300/20 bg-[#06111e] px-4 py-3 text-white outline-none transition focus:border-cyan-300/60 focus:ring-2 focus:ring-cyan-400/10"
+										/>
+									</div>
+
+									<div>
+										<label
+											for="company"
+											class="mb-2 block text-sm font-bold text-slate-200"
+										>
+											Company
+										</label>
+
+										<input
+											id="company"
+											name="company"
+											type="text"
+											class="w-full rounded-xl border border-cyan-300/20 bg-[#06111e] px-4 py-3 text-white outline-none transition focus:border-cyan-300/60 focus:ring-2 focus:ring-cyan-400/10"
+										/>
+									</div>
+								</div>
+
+								<div class="grid gap-5 sm:grid-cols-2">
+									<div>
+										<label
+											for="email"
+											class="mb-2 block text-sm font-bold text-slate-200"
+										>
+											Email
+										</label>
+
+										<input
+											id="email"
+											name="email"
+											type="email"
+											class="w-full rounded-xl border border-cyan-300/20 bg-[#06111e] px-4 py-3 text-white outline-none transition focus:border-cyan-300/60 focus:ring-2 focus:ring-cyan-400/10"
+										/>
+									</div>
+
+									<div>
+										<label
+											for="phone"
+											class="mb-2 block text-sm font-bold text-slate-200"
+										>
+											Phone
+										</label>
+
+										<input
+											id="phone"
+											name="phone"
+											type="tel"
+											class="w-full rounded-xl border border-cyan-300/20 bg-[#06111e] px-4 py-3 text-white outline-none transition focus:border-cyan-300/60 focus:ring-2 focus:ring-cyan-400/10"
+										/>
+									</div>
+								</div>
+
+								<div>
+									<label
+										for="service"
+										class="mb-2 block text-sm font-bold text-slate-200"
+									>
+										What can we help with?
+									</label>
+
+									<select
+										id="service"
+										name="service"
+										class="w-full rounded-xl border border-cyan-300/20 bg-[#06111e] px-4 py-3 text-white outline-none transition focus:border-cyan-300/60 focus:ring-2 focus:ring-cyan-400/10"
+									>
+										<option>Managed IT Services</option>
+										<option>Cybersecurity</option>
+										<option>Microsoft 365 & Cloud</option>
+										<option>Network Infrastructure</option>
+										<option>Backup & Disaster Recovery</option>
+										<option>IT Support</option>
+										<option>Other</option>
+									</select>
+								</div>
+
+								<div>
+									<label
+										for="message"
+										class="mb-2 block text-sm font-bold text-slate-200"
+									>
+										Message
+									</label>
+
+									<textarea
+										id="message"
+										name="message"
+										rows="6"
+										class="w-full resize-none rounded-xl border border-cyan-300/20 bg-[#06111e] px-4 py-3 text-white outline-none transition focus:border-cyan-300/60 focus:ring-2 focus:ring-cyan-400/10"
+									></textarea>
+								</div>
+
+								<button
+									type="submit"
+									class="group inline-flex w-full items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500 sm:w-auto"
+								>
+									Request My Free Assessment
+
+									<ArrowRight
+										class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+										stroke-width={2}
+									/>
+								</button>
+                                <p
+	                                id="form-status"
+	                                class="mt-4 hidden text-sm font-semibold"
+                                ></p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- TRUST STRIP -->
+			<section
+				class="border-b border-cyan-400/10 bg-[#030914] px-6 py-12 lg:px-10"
+			>
+				<div
+					class="mx-auto grid max-w-[1450px] gap-6 text-center sm:grid-cols-2 lg:grid-cols-4"
+				>
+					<div>
+						<ShieldCheck
+							class="mx-auto h-7 w-7 text-cyan-300"
+							stroke-width={1.8}
+						/>
+						<p class="mt-3 font-black uppercase text-yellow-400">
+							Security First
+						</p>
+					</div>
+
+					<div>
+						<ShieldCheck
+							class="mx-auto h-7 w-7 text-cyan-300"
+							stroke-width={1.8}
+						/>
+						<p class="mt-3 font-black uppercase text-yellow-400">
+							Fast Response
+						</p>
+					</div>
+
+					<div>
+						<ShieldCheck
+							class="mx-auto h-7 w-7 text-cyan-300"
+							stroke-width={1.8}
+						/>
+						<p class="mt-3 font-black uppercase text-yellow-400">
+							Proactive Support
+						</p>
+					</div>
+
+					<div>
+						<ShieldCheck
+							class="mx-auto h-7 w-7 text-cyan-300"
+							stroke-width={1.8}
+						/>
+						<p class="mt-3 font-black uppercase text-yellow-400">
+							Trusted Partnership
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
+<script>
+	const form = document.querySelector('#contact-form');
+	const status = document.querySelector('#form-status');
+
+	if (form instanceof HTMLFormElement && status instanceof HTMLParagraphElement) {
+		form.addEventListener('submit', async (event) => {
+			event.preventDefault();
+
+			status.classList.remove(
+				'hidden',
+				'text-green-400',
+				'text-red-400'
+			);
+
+			status.textContent = 'Sending...';
+
+			const formData = new FormData(form);
+
+			const payload = {
+				name: formData.get('name'),
+				company: formData.get('company'),
+				email: formData.get('email'),
+				phone: formData.get('phone'),
+				service: formData.get('service'),
+				message: formData.get('message'),
+			};
+
+			try {
+				const response = await fetch('/api/contact', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify(payload),
+				});
+
+				if (!response.ok) {
+					throw new Error('Request failed');
+				}
+
+				form.reset();
+
+				status.classList.add('text-green-400');
+				status.textContent =
+					'Thank you. Your request has been received and our team will be in touch shortly.';
+			} catch (error) {
+				status.classList.add('text-red-400');
+				status.textContent =
+					'Something went wrong. Please try again or contact support@lionshieldnetworks.com.';
+			}
+		});
+	}
+</script>
