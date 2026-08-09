@@ -261,7 +261,11 @@ import {
 										class="w-full resize-none rounded-xl border border-cyan-300/20 bg-[#06111e] px-4 py-3 text-white outline-none transition focus:border-cyan-300/60 focus:ring-2 focus:ring-cyan-400/10"
 									></textarea>
 								</div>
-
+                                     <div
+	                                     class="cf-turnstile"
+	                                     data-sitekey={import.meta.env.PUBLIC_TURNSTILE_SITE_KEY}
+	                                     data-theme="dark"
+                                    ></div>
 								<button
 									type="submit"
 									class="group inline-flex w-full items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500 sm:w-auto"
@@ -370,6 +374,7 @@ import {
 				phone: formData.get('phone'),
 				service: formData.get('service'),
 				message: formData.get('message'),
+                turnstileToken: formData.get('cf-turnstile-response'),
 			};
 
 			try {
@@ -391,6 +396,12 @@ import {
 
 				form.reset();
 
+                const turnstile = (window as any).turnstile;
+
+                if (turnstile) {
+	            turnstile.reset();
+            }
+
 				status.classList.add('text-green-400');
 				status.textContent =
 					'Thank you! Your request has been received. We will be in touch shortly.';
@@ -410,4 +421,9 @@ import {
 		});
 	}
 </script>
+<script
+	src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+	async
+	defer
+></script>
 </Layout>

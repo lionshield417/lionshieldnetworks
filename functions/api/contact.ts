@@ -2,6 +2,7 @@ interface Env {
 	MS_TENANT_ID: string;
 	MS_CLIENT_ID: string;
 	MS_CLIENT_SECRET: string;
+    TURNSTILE_SECRET_KEY: string;
 }
 
 interface ContactForm {
@@ -11,6 +12,7 @@ interface ContactForm {
 	phone?: string;
 	service?: string;
 	message?: string;
+    turnstileToken?: string;
 }
 
 function escapeHtml(value: string) {
@@ -32,6 +34,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 		const phone = body.phone?.trim() || '';
 		const service = body.service?.trim() || '';
 		const message = body.message?.trim() || '';
+        const turnstileToken = body.turnstileToken?.trim() || '';
 
 		if (!name || !email || !message) {
 			return Response.json(
@@ -42,6 +45,15 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 				{ status: 400 }
 			);
 		}
+        if (!turnstileToken) {
+	return Response.json(
+		{
+			success: false,
+			message: 'Please complete the security check.',
+		},
+		{ status: 400 }
+	);
+}
 
 		// Get Microsoft Graph access token
 		const tokenResponse = await fetch(
@@ -59,6 +71,33 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 				}),
 			}
 		);
+        const turnstileResponse = await fetch(
+	'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+	{
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+		},
+		body: new URLSearchParams({
+			secret: context.env.TURNSTILE_SECRET_KEY,
+			response: turnstileToken,
+		}),
+	}
+);
+
+const turnstileResult = (await turnstileResponse.json()) as {
+	success: boolean;
+};
+
+if (!turnstileResult.success) {
+	return Response.json(
+		{
+			success: false,
+			message: 'Security verification failed. Please try again.',
+		},
+		{ status: 400 }
+	);
+}
 
 		if (!tokenResponse.ok) {
 			const errorText = await tokenResponse.text();
