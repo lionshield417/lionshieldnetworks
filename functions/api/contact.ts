@@ -64,6 +64,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 	return Response.json(
 		{
 			success: false,
+			tenantReceivedByFunction: context.env.MS_TENANT_ID,
+			clientIdReceivedByFunction: context.env.MS_CLIENT_ID,
 			message: errorText,
 		},
 		{ status: 500 }
@@ -124,13 +126,18 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 		);
 
 		if (!graphResponse.ok) {
-			console.error('GRAPH ERROR:', await graphResponse.text());
+	const graphError = await graphResponse.text();
 
-			return Response.json(
-				{ success: false, message: 'Microsoft Graph could not send the email.' },
-				{ status: 500 }
-			);
-		}
+	console.error('GRAPH ERROR:', graphError);
+
+	return Response.json(
+		{
+			success: false,
+			message: graphError,
+		},
+		{ status: 500 }
+	);
+}
 
 		return Response.json({
 			success: true,
