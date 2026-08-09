@@ -35,11 +35,15 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
 		if (!name || !email || !message) {
 			return Response.json(
-				{ success: false, message: 'Name, email, and message are required.' },
+				{
+					success: false,
+					message: 'Name, email, and message are required.',
+				},
 				{ status: 400 }
 			);
 		}
 
+		// Get Microsoft Graph access token
 		const tokenResponse = await fetch(
 			`https://login.microsoftonline.com/${context.env.MS_TENANT_ID}/oauth2/v2.0/token`,
 			{
@@ -57,27 +61,26 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 		);
 
 		if (!tokenResponse.ok) {
-	const errorText = await tokenResponse.text();
+			const errorText = await tokenResponse.text();
 
-	console.error('TOKEN ERROR:', errorText);
+			console.error('TOKEN ERROR:', errorText);
 
-	return Response.json(
-		{
-			success: false,
-			tenantReceivedByFunction: context.env.MS_TENANT_ID,
-			clientIdReceivedByFunction: context.env.MS_CLIENT_ID,
-			message: errorText,
-		},
-		{ status: 500 }
-	);
-}
+			return Response.json(
+				{
+					success: false,
+					message: 'Unable to authenticate email service.',
+				},
+				{ status: 500 }
+			);
+		}
 
 		const tokenData = (await tokenResponse.json()) as {
 			access_token: string;
 		};
 
+		// Send email through Microsoft Graph
 		const graphResponse = await fetch(
-			'https://graph.microsoft.com/v1.0/users/jsoto@lionshieldnetworks.com/sendMail',
+			'https://graph.microsoft.com/v1.0/users/support@lionshieldnetworks.com/sendMail',
 			{
 				method: 'POST',
 				headers: {
@@ -107,7 +110,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 						toRecipients: [
 							{
 								emailAddress: {
-									address: 'jsoto@lionshieldnetworks.com',
+									address: 'support@lionshieldnetworks.com',
 								},
 							},
 						],
@@ -126,18 +129,18 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 		);
 
 		if (!graphResponse.ok) {
-	const graphError = await graphResponse.text();
+			const graphError = await graphResponse.text();
 
-	console.error('GRAPH ERROR:', graphError);
+			console.error('GRAPH ERROR:', graphError);
 
-	return Response.json(
-		{
-			success: false,
-			message: graphError,
-		},
-		{ status: 500 }
-	);
-}
+			return Response.json(
+				{
+					success: false,
+					message: 'Unable to send your request.',
+				},
+				{ status: 500 }
+			);
+		}
 
 		return Response.json({
 			success: true,
@@ -147,7 +150,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 		console.error('CONTACT FORM ERROR:', error);
 
 		return Response.json(
-			{ success: false, message: 'Something went wrong.' },
+			{
+				success: false,
+				message: 'Something went wrong.',
+			},
 			{ status: 500 }
 		);
 	}
