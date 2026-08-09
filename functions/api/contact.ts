@@ -77,7 +77,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 		};
 
 		const graphResponse = await fetch(
-			'https://graph.microsoft.com/v1.0/users/support@lionshieldnetworks.com/sendMail',
+			'https://graph.microsoft.com/v1.0/users/jsoto@lionshieldnetworks.com/sendMail',
 			{
 				method: 'POST',
 				headers: {
