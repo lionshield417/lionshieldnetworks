@@ -57,13 +57,18 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 		);
 
 		if (!tokenResponse.ok) {
-			console.error('TOKEN ERROR:', await tokenResponse.text());
+    const errorText = await tokenResponse.text();
 
-			return Response.json(
-				{ success: false, message: 'Microsoft authentication failed.' },
-				{ status: 500 }
-			);
-		}
+    console.error("TOKEN ERROR:", errorText);
+
+    return Response.json(
+        {
+            success: false,
+            message: errorText,
+        },
+        { status: 500 }
+    );
+}
 
 		const tokenData = (await tokenResponse.json()) as {
 			access_token: string;
