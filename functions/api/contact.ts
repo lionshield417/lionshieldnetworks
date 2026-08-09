@@ -56,18 +56,18 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 			}
 		);
 
-		if (!tokenResponse.ok) {
-    const errorText = await tokenResponse.text();
+		iif (!tokenResponse.ok) {
+	const errorText = await tokenResponse.text();
 
-    console.error("TOKEN ERROR:", errorText);
+	console.error('TOKEN ERROR:', errorText);
 
-    return Response.json(
-        {
-            success: false,
-            message: errorText,
-        },
-        { status: 500 }
-    );
+	return Response.json(
+		{
+			success: false,
+			message: errorText,
+		},
+		{ status: 500 }
+	);
 }
 
 		const tokenData = (await tokenResponse.json()) as {
