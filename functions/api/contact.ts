@@ -56,7 +56,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 			}
 		);
 
-		iif (!tokenResponse.ok) {
+		if (!tokenResponse.ok) {
 	const errorText = await tokenResponse.text();
 
 	console.error('TOKEN ERROR:', errorText);
