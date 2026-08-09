@@ -154,7 +154,7 @@ import {
 								technology needs.
 							</p>
 
-							<form class="mt-8 space-y-5">
+							<form id="contact-form" class="mt-8 space-y-5">
 								<div class="grid gap-5 sm:grid-cols-2">
 									<div>
 										<label
@@ -333,6 +333,83 @@ import {
 			</section>
 		</main>
 	</div>
+    <script>
+	const form = document.querySelector('#contact-form');
+	const status = document.querySelector('#form-status');
+
+	if (
+		form instanceof HTMLFormElement &&
+		status instanceof HTMLParagraphElement
+	) {
+		form.addEventListener('submit', async (event) => {
+			event.preventDefault();
+
+			const submitButton = form.querySelector(
+				'button[type="submit"]'
+			);
+
+			if (submitButton instanceof HTMLButtonElement) {
+				submitButton.disabled = true;
+				submitButton.textContent = 'Sending...';
+			}
+
+			status.classList.remove(
+				'hidden',
+				'text-green-400',
+				'text-red-400'
+			);
+
+			status.textContent = 'Sending your request...';
+
+			const formData = new FormData(form);
+
+			const payload = {
+				name: formData.get('name'),
+				company: formData.get('company'),
+				email: formData.get('email'),
+				phone: formData.get('phone'),
+				service: formData.get('service'),
+				message: formData.get('message'),
+			};
+
+			try {
+				const response = await fetch('/api/contact', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify(payload),
+				});
+
+				const result = await response.json();
+
+				if (!response.ok) {
+					throw new Error(
+						result.message || 'Unable to send request.'
+					);
+				}
+
+				form.reset();
+
+				status.classList.add('text-green-400');
+				status.textContent =
+					'Thank you! Your request has been received. We will be in touch shortly.';
+			} catch (error) {
+				console.error(error);
+
+				status.classList.add('text-red-400');
+				status.textContent =
+					'We could not send your request. Please try again or email support@lionshieldnetworks.com.';
+			} finally {
+				if (submitButton instanceof HTMLButtonElement) {
+					submitButton.disabled = false;
+					submitButton.textContent =
+						'Request My Free Assessment';
+				}
+			}
+		});
+	}
+</script>
 </Layout>
 <script>
 	const form = document.querySelector('#contact-form');
