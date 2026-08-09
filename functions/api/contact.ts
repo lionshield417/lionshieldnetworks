@@ -1,13 +1,142 @@
-export const onRequest = async () => {
-	return new Response(
-		JSON.stringify({
-			success: true,
-			message: "API is working!",
-		}),
-		{
-			headers: {
-				"Content-Type": "application/json",
-			},
+interface Env {
+	MS_TENANT_ID: string;
+	MS_CLIENT_ID: string;
+	MS_CLIENT_SECRET: string;
+}
+
+interface ContactForm {
+	name?: string;
+	company?: string;
+	email?: string;
+	phone?: string;
+	service?: string;
+	message?: string;
+}
+
+function escapeHtml(value: string) {
+	return value
+		.replace(/&/g, '&amp;')
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;')
+		.replace(/"/g, '&quot;')
+		.replace(/'/g, '&#039;');
+}
+
+export const onRequestPost: PagesFunction<Env> = async (context) => {
+	try {
+		const body = (await context.request.json()) as ContactForm;
+
+		const name = body.name?.trim() || '';
+		const company = body.company?.trim() || '';
+		const email = body.email?.trim() || '';
+		const phone = body.phone?.trim() || '';
+		const service = body.service?.trim() || '';
+		const message = body.message?.trim() || '';
+
+		if (!name || !email || !message) {
+			return Response.json(
+				{ success: false, message: 'Name, email, and message are required.' },
+				{ status: 400 }
+			);
 		}
-	);
+
+		const tokenResponse = await fetch(
+			`https://login.microsoftonline.com/${context.env.MS_TENANT_ID}/oauth2/v2.0/token`,
+			{
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded',
+				},
+				body: new URLSearchParams({
+					client_id: context.env.MS_CLIENT_ID,
+					client_secret: context.env.MS_CLIENT_SECRET,
+					scope: 'https://graph.microsoft.com/.default',
+					grant_type: 'client_credentials',
+				}),
+			}
+		);
+
+		if (!tokenResponse.ok) {
+			console.error('TOKEN ERROR:', await tokenResponse.text());
+
+			return Response.json(
+				{ success: false, message: 'Microsoft authentication failed.' },
+				{ status: 500 }
+			);
+		}
+
+		const tokenData = (await tokenResponse.json()) as {
+			access_token: string;
+		};
+
+		const graphResponse = await fetch(
+			'https://graph.microsoft.com/v1.0/users/support@lionshieldnetworks.com/sendMail',
+			{
+				method: 'POST',
+				headers: {
+					Authorization: `Bearer ${tokenData.access_token}`,
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					message: {
+						subject: `New LionShield Website Lead - ${
+							service || 'General Inquiry'
+						}`,
+						body: {
+							contentType: 'HTML',
+							content: `
+								<h2>New LionShield Website Inquiry</h2>
+
+								<p><strong>Name:</strong> ${escapeHtml(name)}</p>
+								<p><strong>Company:</strong> ${escapeHtml(company || 'Not provided')}</p>
+								<p><strong>Email:</strong> ${escapeHtml(email)}</p>
+								<p><strong>Phone:</strong> ${escapeHtml(phone || 'Not provided')}</p>
+								<p><strong>Service:</strong> ${escapeHtml(service || 'General Inquiry')}</p>
+
+								<p><strong>Message:</strong></p>
+								<p>${escapeHtml(message).replace(/\n/g, '<br />')}</p>
+							`,
+						},
+						toRecipients: [
+							{
+								emailAddress: {
+									address: 'support@lionshieldnetworks.com',
+								},
+							},
+						],
+						replyTo: [
+							{
+								emailAddress: {
+									address: email,
+									name,
+								},
+							},
+						],
+					},
+					saveToSentItems: true,
+				}),
+			}
+		);
+
+		if (!graphResponse.ok) {
+			console.error('GRAPH ERROR:', await graphResponse.text());
+
+			return Response.json(
+				{ success: false, message: 'Microsoft Graph could not send the email.' },
+				{ status: 500 }
+			);
+		}
+
+		return Response.json({
+			success: true,
+			message: 'Your request has been received.',
+		});
+	} catch (error) {
+		console.error('CONTACT FORM ERROR:', error);
+
+		return Response.json(
+			{ success: false, message: 'Something went wrong.' },
+			{ status: 500 }
+		);
+	}
 };
