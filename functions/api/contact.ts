@@ -107,7 +107,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 						toRecipients: [
 							{
 								emailAddress: {
-									address: 'support@lionshieldnetworks.com',
+									address: 'jsoto@lionshieldnetworks.com',
 								},
 							},
 						],
