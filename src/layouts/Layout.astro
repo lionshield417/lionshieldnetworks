@@ -10,6 +10,19 @@ import '../styles/global.css';
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>LionShield Networks | Managed IT & Cybersecurity</title>
+		<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XJ7T3629LD"></script>
+
+<script is:inline>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag(...args) {
+		window.dataLayer.push(args);
+	}
+
+	gtag('js', new Date());
+	gtag('config', 'G-XJ7T3629LD');
+</script>
 	</head>
 	<body>
 		<slot />
