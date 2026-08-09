@@ -16,12 +16,22 @@ import '../styles/global.css';
 <script is:inline>
 	window.dataLayer = window.dataLayer || [];
 
-	function gtag(...args) {
-		window.dataLayer.push(args);
-	}
+	function gtag() {
+	dataLayer.push(arguments);
+}
 
-	gtag('js', new Date());
-	gtag('config', 'G-XJ7T3629LD');
+	window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+	dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-XJ7T3629LD', {
+	send_page_view: true,
+	debug_mode: true,
+});
 </script>
 	</head>
 	<body>
