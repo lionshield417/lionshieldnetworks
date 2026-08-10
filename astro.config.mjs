@@ -5,13 +5,16 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://lionshieldnetworks.com',
+	site: 'https://lionshieldnetworks.com',
 
-  integrations: [
-    sitemap(),
-  ],
+	integrations: [
+		sitemap({
+			filter: (page) =>
+				page !== 'https://lionshieldnetworks.com/client-portal/',
+		}),
+	],
 
-  vite: {
-    plugins: [tailwindcss()]
-  }
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });
