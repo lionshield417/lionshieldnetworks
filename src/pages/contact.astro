@@ -399,6 +399,17 @@ import {
 
 				form.reset();
 
+                /* GA4 - successful contact form lead */
+                const gtag = (window as any).gtag;
+
+                if (typeof gtag === 'function') {
+	                gtag('event', 'generate_lead', {
+		                event_category: 'lead',
+		                event_label: 'free_assessment_form',
+		                service_requested: payload.service,
+	                });
+                }
+
                 const turnstile = (window as any).turnstile;
 
                 if (turnstile) {
