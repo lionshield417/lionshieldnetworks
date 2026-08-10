@@ -80,9 +80,15 @@ import {
 
 								<div>
 									<p class="font-bold text-white">Phone</p>
-									<p class="mt-1 text-slate-300">
-										Add your business phone number
-									</p>
+	                                <a
+		                                href="tel:+17182150681"
+		                                class="track-phone mt-1 inline-block text-slate-300 transition hover:text-cyan-300"
+	                                >
+		                                718-215-0681
+	                                </a>
+	                                <p class="mt-1 text-sm font-semibold text-yellow-400">
+		                                24/7 Emergency Support Available
+	                                </p>
 								</div>
 							</div>
 
@@ -95,9 +101,12 @@ import {
 
 								<div>
 									<p class="font-bold text-white">Email</p>
-									<p class="mt-1 text-slate-300">
-										Add your business email address
-									</p>
+	                                <a
+		                                href="mailto:support@lionshieldnetworks.com"
+		                                class="mt-1 inline-block text-slate-300 transition hover:text-cyan-300"
+	                                >
+		                                support@lionshieldnetworks.com
+	                                </a>
 								</div>
 							</div>
 
@@ -111,7 +120,7 @@ import {
 								<div>
 									<p class="font-bold text-white">Service Area</p>
 									<p class="mt-1 text-slate-300">
-										Long Island and surrounding business communities
+										Long Island, New York City, Scarsdale, NY and Northern New Jersey
 									</p>
 								</div>
 							</div>
@@ -434,6 +443,20 @@ import {
 			}
 		});
 	}
+</script>
+<script>
+	document.querySelectorAll('.track-phone').forEach((link) => {
+		link.addEventListener('click', () => {
+			const gtag = (window as any).gtag;
+
+			if (typeof gtag === 'function') {
+				gtag('event', 'phone_click', {
+					event_category: 'lead',
+					event_label: 'contact_page',
+				});
+			}
+		});
+	});
 </script>
 <script
 	src="https://challenges.cloudflare.com/turnstile/v0/api.js"
