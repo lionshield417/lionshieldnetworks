@@ -1,0 +1,638 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+import {
+	ArrowRight,
+	ShieldCheck,
+	MonitorCog,
+	Cloud,
+	Network,
+	DatabaseBackup,
+	Headphones,
+	MapPin,
+	Clock3,
+	PhoneCall,
+	CheckCircle2,
+	Building2,
+} from 'lucide-astro';
+
+const services = [
+	{
+		title: 'Managed IT Services',
+		description:
+			'Proactive monitoring, maintenance, help desk support, patching, and complete technology management.',
+		icon: MonitorCog,
+	},
+	{
+		title: 'Cybersecurity',
+		description:
+			'Layered protection for endpoints, email, identities, users, networks, and sensitive business data.',
+		icon: ShieldCheck,
+	},
+	{
+		title: 'Microsoft 365 & Cloud',
+		description:
+			'Microsoft 365 management, Exchange Online, Teams, SharePoint, OneDrive, Azure, and cloud security.',
+		icon: Cloud,
+	},
+	{
+		title: 'Network Infrastructure',
+		description:
+			'Business Wi-Fi, switching, firewalls, VPNs, structured cabling, and secure network design.',
+		icon: Network,
+	},
+	{
+		title: 'Backup & Disaster Recovery',
+		description:
+			'Cloud backup, business continuity, ransomware recovery, disaster recovery, and backup monitoring.',
+		icon: DatabaseBackup,
+	},
+	{
+		title: 'IT Support',
+		description:
+			'Responsive remote and onsite support for users, computers, applications, and business systems.',
+		icon: Headphones,
+	},
+];
+
+const benefits = [
+	'Proactive system monitoring',
+	'Remote and onsite support',
+	'Cybersecurity protection',
+	'Microsoft 365 management',
+	'Network and Wi-Fi support',
+	'Backup and disaster recovery',
+	'Strategic technology planning',
+	'24/7 emergency support',
+];
+
+const areas = [
+	'Scarsdale',
+	'White Plains',
+	'Yonkers',
+	'New Rochelle',
+	'Rye',
+	'Harrison',
+	'Mamaroneck',
+	'Bronxville',
+	'Mount Vernon',
+	'Tarrytown',
+	'Westchester County',
+	'Lower Westchester',
+];
+---
+
+<Layout
+	title="Managed IT Services Westchester | LionShield Networks"
+	description="LionShield Networks provides managed IT services, cybersecurity, Microsoft 365 support, network management, backup, disaster recovery, and responsive IT support for businesses throughout Scarsdale and Westchester County."
+>
+	<div class="min-h-screen bg-[#020611] text-white">
+		<Navbar />
+
+		<main>
+			<!-- HERO -->
+			<section
+				class="relative overflow-hidden border-b border-cyan-400/20 px-6 pb-24 pt-36 lg:px-10 lg:pb-28 lg:pt-40"
+			>
+				<div
+					class="pointer-events-none absolute left-1/2 top-16 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[210px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute -right-32 top-24 h-[520px] w-[520px] rounded-full bg-blue-600/10 blur-[180px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute inset-0 opacity-[0.035]"
+					style="background-image:
+						linear-gradient(rgba(34,211,238,.22) 1px, transparent 1px),
+						linear-gradient(90deg, rgba(34,211,238,.22) 1px, transparent 1px);
+						background-size: 34px 34px;"
+				></div>
+
+				<div
+					class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[1.05fr_.95fr] lg:gap-20"
+				>
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.34em] text-cyan-400 sm:text-base"
+						>
+							Managed IT Services Westchester
+						</p>
+
+						<div
+							class="mt-5 h-px w-72 bg-gradient-to-r from-cyan-400 via-blue-400 to-transparent"
+						></div>
+
+						<h1
+							class="mt-8 max-w-[850px] text-5xl font-black uppercase leading-[0.97] tracking-[-0.04em] sm:text-6xl lg:text-[4.4rem]"
+						>
+							Westchester IT support
+							<span class="block text-yellow-400">
+								built for business.
+							</span>
+						</h1>
+
+						<p class="mt-7 max-w-[760px] text-lg leading-8 text-slate-300">
+							LionShield Networks provides managed IT services,
+							cybersecurity, Microsoft 365 support, networking, backup,
+							and responsive technical support for businesses throughout
+							Scarsdale and Westchester County.
+						</p>
+
+						<div class="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-slate-300">
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
+								Proactive Monitoring
+							</span>
+
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
+								Onsite & Remote Support
+							</span>
+
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
+								24/7 Emergency Support
+							</span>
+						</div>
+
+						<div class="mt-10 flex flex-col gap-4 sm:flex-row">
+							<a
+								href="/contact"
+								class="group inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+							>
+								Request a Free IT Assessment
+								<ArrowRight
+									class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+									stroke-width={2}
+								/>
+							</a>
+
+							<a
+								href="tel:+17182150681"
+								class="track-phone inline-flex items-center justify-center gap-3 rounded-xl border border-yellow-400/55 bg-black/40 px-8 py-4 font-bold text-yellow-300 transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+							>
+								<PhoneCall class="h-5 w-5" stroke-width={2} />
+								718-215-0681
+							</a>
+						</div>
+					</div>
+
+					<div
+						class="relative overflow-hidden rounded-3xl border border-cyan-300/20 bg-black/25 p-8 shadow-[0_0_60px_rgba(34,211,238,0.08)] backdrop-blur-xl"
+					>
+						<div
+							class="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/8 via-transparent to-blue-600/8"
+						></div>
+
+						<div class="relative">
+							<div
+								class="flex h-16 w-16 items-center justify-center rounded-2xl border border-yellow-400/40 bg-yellow-400/5 text-yellow-300"
+							>
+								<Building2 class="h-8 w-8" stroke-width={1.8} />
+							</div>
+
+							<h2 class="mt-7 text-3xl font-black text-white">
+								Local technology support for Westchester businesses.
+							</h2>
+
+							<p class="mt-5 leading-7 text-slate-300">
+								We help organizations across Westchester reduce downtime,
+								strengthen cybersecurity, support employees, and build
+								reliable technology environments that can scale with growth.
+							</p>
+
+							<div class="mt-8 grid gap-4 sm:grid-cols-2">
+								<div class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4">
+									<p class="font-bold text-cyan-300">Security</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Protect users, devices, email, and business data.
+									</p>
+								</div>
+
+								<div class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4">
+									<p class="font-bold text-cyan-300">Support</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Responsive assistance for employees and systems.
+									</p>
+								</div>
+
+								<div class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4">
+									<p class="font-bold text-cyan-300">Reliability</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Proactive management helps reduce disruptions.
+									</p>
+								</div>
+
+								<div class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4">
+									<p class="font-bold text-cyan-300">Strategy</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Technology planning aligned with your business goals.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- SERVICES -->
+			<section class="px-6 py-24 lg:px-10 lg:py-28">
+				<div class="mx-auto max-w-[1450px]">
+					<div class="mx-auto max-w-4xl text-center">
+						<p class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400">
+							Westchester IT Services
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+						>
+							Complete technology management
+							<span class="block text-yellow-400">
+								for Westchester businesses.
+							</span>
+						</h2>
+
+						<p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+							From employee support and Microsoft 365 to cybersecurity,
+							networking, backup, and business continuity, LionShield
+							Networks manages the technology your organization depends on.
+						</p>
+					</div>
+
+					<div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+						{
+							services.map((service) => (
+								<div
+									class="group relative overflow-hidden rounded-2xl border border-cyan-300/15 bg-[#040a14] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:shadow-[0_0_35px_rgba(34,211,238,0.08)]"
+								>
+									<div class="relative">
+										<div class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300 transition duration-300 group-hover:text-yellow-300">
+											<service.icon class="h-7 w-7" stroke-width={1.7} />
+										</div>
+
+										<h3 class="mt-6 text-2xl font-black text-white">
+											{service.title}
+										</h3>
+
+										<p class="mt-4 leading-7 text-slate-400">
+											{service.description}
+										</p>
+
+										<a
+											href="/services"
+											class="mt-6 inline-flex items-center gap-2 font-bold text-cyan-300 transition hover:text-yellow-300"
+										>
+											Explore Service
+											<ArrowRight class="h-4 w-4" stroke-width={2} />
+										</a>
+									</div>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</section>
+
+			<!-- WHY MANAGED IT -->
+			<section
+				class="border-y border-cyan-400/10 bg-[#030914] px-6 py-24 lg:px-10"
+			>
+				<div
+					class="mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-2 lg:gap-20"
+				>
+					<div>
+						<p class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400">
+							Why Managed IT
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+						>
+							Technology that supports
+							<span class="block text-yellow-400">
+								your business before problems happen.
+							</span>
+						</h2>
+
+						<p class="mt-6 text-lg leading-8 text-slate-300">
+							Waiting for technology to fail can create downtime,
+							security risk, employee frustration, and unexpected costs.
+						</p>
+
+						<p class="mt-5 leading-8 text-slate-400">
+							LionShield Networks takes a proactive approach through
+							continuous monitoring, maintenance, security management,
+							user support, and strategic planning.
+						</p>
+					</div>
+
+					<div class="grid gap-4 sm:grid-cols-2">
+						{
+							benefits.map((benefit) => (
+								<div
+									class="flex items-center gap-3 rounded-xl border border-cyan-300/15 bg-black/20 px-5 py-4"
+								>
+									<ShieldCheck
+										class="h-5 w-5 shrink-0 text-cyan-300"
+										stroke-width={2}
+									/>
+									<span class="font-semibold text-slate-200">
+										{benefit}
+									</span>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</section>
+
+			<!-- SERVICE AREA -->
+			<section class="px-6 py-24 lg:px-10">
+				<div class="mx-auto max-w-[1450px]">
+					<div
+						class="grid items-center gap-12 lg:grid-cols-[.8fr_1.2fr]"
+					>
+						<div>
+							<div
+								class="flex h-14 w-14 items-center justify-center rounded-xl border border-yellow-400/35 bg-yellow-400/5 text-yellow-300"
+							>
+								<MapPin class="h-7 w-7" stroke-width={1.8} />
+							</div>
+
+							<p
+								class="mt-7 text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+							>
+								Serving Westchester County
+							</p>
+
+							<h2
+								class="mt-4 text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+							>
+								Local IT support across
+								<span class="block text-yellow-400">
+									Scarsdale & Westchester.
+								</span>
+							</h2>
+
+							<p class="mt-6 max-w-[650px] leading-8 text-slate-300">
+								We provide remote and onsite technology support for
+								businesses throughout Scarsdale, White Plains, and
+								surrounding Westchester communities.
+							</p>
+						</div>
+
+						<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+							{
+								areas.map((area) => (
+									<div
+										class="rounded-xl border border-cyan-300/15 bg-black/20 px-5 py-5 text-center font-bold text-slate-200"
+									>
+										{area}
+									</div>
+								))
+							}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- EMERGENCY SUPPORT -->
+			<section
+				class="border-y border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10"
+			>
+				<div
+					class="mx-auto max-w-[1450px] overflow-hidden rounded-3xl border border-yellow-400/25 bg-gradient-to-r from-yellow-400/[0.05] via-[#07101d] to-cyan-500/[0.05] p-8 sm:p-10"
+				>
+					<div
+						class="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center"
+					>
+						<div class="flex items-start gap-5">
+							<div
+								class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-yellow-400/40 bg-yellow-400/5 text-yellow-300"
+							>
+								<Clock3 class="h-7 w-7" stroke-width={1.8} />
+							</div>
+
+							<div>
+								<p
+									class="text-sm font-bold uppercase tracking-[0.28em] text-yellow-300"
+								>
+									24/7 Emergency IT Support
+								</p>
+
+								<h2 class="mt-2 text-3xl font-black text-white">
+									Critical technology issue after hours?
+								</h2>
+
+								<p class="mt-3 max-w-[760px] leading-7 text-slate-300">
+									Emergency support is available around the clock for
+									critical technology issues that cannot wait until the
+									next business day.
+								</p>
+							</div>
+						</div>
+
+						<a
+							href="tel:+17182150681"
+							class="track-phone inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-yellow-400 px-7 py-4 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-yellow-300"
+						>
+							<PhoneCall class="h-5 w-5" stroke-width={2} />
+							Call 718-215-0681
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ -->
+			<section class="px-6 py-24 lg:px-10">
+				<div class="mx-auto max-w-[1050px]">
+					<div class="text-center">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Westchester Managed IT FAQs
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em]"
+						>
+							Common IT questions,
+							<span class="text-yellow-400">answered.</span>
+						</h2>
+					</div>
+
+					<div class="mt-12 space-y-5">
+						<details
+							class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary class="cursor-pointer font-black text-white">
+								Do you provide onsite IT support in Westchester?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. LionShield Networks provides remote and onsite
+								IT support for businesses throughout Scarsdale and
+								Westchester County.
+							</p>
+						</details>
+
+						<details
+							class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary class="cursor-pointer font-black text-white">
+								Can you support businesses with multiple locations?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. We support multi-location environments including
+								networking, Microsoft 365, cybersecurity, user support,
+								and centralized IT management.
+							</p>
+						</details>
+
+						<details
+							class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary class="cursor-pointer font-black text-white">
+								Can LionShield manage Microsoft 365?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. We provide Microsoft 365 management, security,
+								migrations, Exchange Online, Teams, SharePoint,
+								OneDrive, Entra ID, and ongoing user support.
+							</p>
+						</details>
+
+						<details
+							class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary class="cursor-pointer font-black text-white">
+								Do you provide emergency IT support?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. 24/7 emergency support is available for critical
+								technology issues that cannot wait until normal business hours.
+							</p>
+						</details>
+					</div>
+				</div>
+			</section>
+
+			<!-- FINAL CTA -->
+			<section class="px-6 pb-28 pt-12 lg:px-10">
+				<div
+					class="relative mx-auto max-w-[1250px] overflow-hidden rounded-3xl border border-cyan-300/20 bg-[#06111e] p-8 text-center shadow-[0_0_60px_rgba(34,211,238,0.08)] sm:p-12"
+				>
+					<div
+						class="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/10 blur-[150px]"
+					></div>
+
+					<div class="relative">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Your Westchester IT Partner
+						</p>
+
+						<h2
+							class="mx-auto mt-5 max-w-[900px] text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+						>
+							Ready for IT that
+							<span class="block text-yellow-400">
+								supports your growth?
+							</span>
+						</h2>
+
+						<p
+							class="mx-auto mt-6 max-w-[760px] text-lg leading-8 text-slate-300"
+						>
+							Schedule a complimentary technology assessment and discover
+							how LionShield Networks can strengthen security, reliability,
+							support, and business continuity.
+						</p>
+
+						<a
+							href="/contact"
+							class="group mt-9 inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+						>
+							Request My Free Assessment
+							<ArrowRight
+								class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+								stroke-width={2}
+							/>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<!-- Westchester Managed IT Service Structured Data -->
+	<script type="application/ld+json" is:inline>
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Managed IT Services Westchester",
+		"url": "https://lionshieldnetworks.com/managed-it-services-westchester/",
+		"description": "Managed IT services, cybersecurity, Microsoft 365 support, networking, backup, disaster recovery, and business IT support for organizations throughout Scarsdale and Westchester County.",
+		"provider": {
+			"@type": "ProfessionalService",
+			"name": "LionShield Networks",
+			"url": "https://lionshieldnetworks.com",
+			"telephone": "+1-718-215-0681",
+			"email": "support@lionshieldnetworks.com"
+		},
+		"areaServed": [
+			{
+				"@type": "AdministrativeArea",
+				"name": "Westchester County, NY"
+			},
+			{
+				"@type": "City",
+				"name": "Scarsdale, NY"
+			},
+			{
+				"@type": "City",
+				"name": "White Plains, NY"
+			},
+			{
+				"@type": "City",
+				"name": "New Rochelle, NY"
+			},
+			{
+				"@type": "City",
+				"name": "Yonkers, NY"
+			}
+		],
+		"serviceType": [
+			"Managed IT Services",
+			"Cybersecurity",
+			"Microsoft 365 Support",
+			"Network Management",
+			"Backup and Disaster Recovery",
+			"Business IT Support"
+		]
+	}
+	</script>
+
+	<!-- GA4 Phone Click Tracking -->
+	<script>
+		document.querySelectorAll('.track-phone').forEach((link) => {
+			link.addEventListener('click', () => {
+				const gtag = (window as any).gtag;
+
+				if (typeof gtag === 'function') {
+					gtag('event', 'phone_click', {
+						event_category: 'lead',
+						event_label: 'westchester_managed_it_page',
+					});
+				}
+			});
+		});
+	</script>
+</Layout>
