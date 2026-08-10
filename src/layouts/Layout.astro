@@ -11,6 +11,8 @@ const {
 	description =
 		'LionShield Networks provides managed IT services, cybersecurity, Microsoft 365, cloud solutions, networking, backup, and IT support for businesses throughout Long Island, New York City, and Northern New Jersey.',
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -35,7 +37,7 @@ const {
 
 		<link
 			rel="canonical"
-			href={Astro.url.href}
+			href={canonicalURL}
 		/>
 
 		<!-- Open Graph -->
@@ -56,7 +58,7 @@ const {
 
 		<meta
 			property="og:url"
-			content={Astro.url.href}
+			content={canonicalURL}
 		/>
 
 		<meta
