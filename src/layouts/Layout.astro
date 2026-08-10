@@ -1,35 +1,238 @@
 ---
 import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = 'Managed IT Services & Cybersecurity | LionShield Networks',
+	description =
+		'LionShield Networks provides managed IT services, cybersecurity, Microsoft 365, cloud solutions, networking, backup, and IT support for businesses throughout Long Island, New York City, and Northern New Jersey.',
+} = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+
+		<!-- Favicons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+
 		<meta name="generator" content={Astro.generator} />
-		<title>Managed IT Services & Cybersecurity | Long Island, NY | LionShield Networks</title>
+
+		<!-- Primary SEO -->
+		<title>{title}</title>
+
+		<meta
+			name="description"
+			content={description}
+		/>
+
+		<link
+			rel="canonical"
+			href={Astro.url.href}
+		/>
+
+		<!-- Open Graph -->
+		<meta
+			property="og:title"
+			content={title}
+		/>
+
+		<meta
+			property="og:description"
+			content={description}
+		/>
+
+		<meta
+			property="og:type"
+			content="website"
+		/>
+
+		<meta
+			property="og:url"
+			content={Astro.url.href}
+		/>
+
+		<meta
+			property="og:site_name"
+			content="LionShield Networks"
+		/>
+
+		<meta
+			property="og:image"
+			content="https://lionshieldnetworks.com/images/lionshield-social.jpg"
+		/>
+
+		<meta
+			property="og:image:width"
+			content="1200"
+		/>
+
+		<meta
+			property="og:image:height"
+			content="630"
+		/>
+
+		<meta
+			property="og:image:alt"
+			content="LionShield Networks - Managed IT & Cybersecurity"
+		/>
+
+		<!-- Twitter / X -->
+		<meta
+			name="twitter:card"
+			content="summary_large_image"
+		/>
+
+		<meta
+			name="twitter:title"
+			content={title}
+		/>
+
+		<meta
+			name="twitter:description"
+			content={description}
+		/>
+
+		<meta
+			name="twitter:image"
+			content="https://lionshieldnetworks.com/images/lionshield-social.jpg"
+		/>
+
 		<!-- Google Analytics -->
-<script
-	async
-	src="https://www.googletagmanager.com/gtag/js?id=G-XJ7T3629LD"
-></script>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-XJ7T3629LD"
+		></script>
 
-<script is:inline>
-	window.dataLayer = window.dataLayer || [];
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
 
-	function gtag() {
-		dataLayer.push(arguments);
-	}
+			function gtag() {
+				dataLayer.push(arguments);
+			}
 
-	gtag('js', new Date());
+			gtag('js', new Date());
+			gtag('config', 'G-XJ7T3629LD');
+		</script>
 
-	gtag('config', 'G-XJ7T3629LD', {
-		debug_mode: true,
-	});
-</script>
-			</head>
+		<!-- LionShield Networks Local Business Structured Data -->
+		<script type="application/ld+json" is:inline>
+			{
+				"@context": "https://schema.org",
+				"@type": "ProfessionalService",
+
+				"name": "LionShield Networks",
+
+				"url": "https://lionshieldnetworks.com",
+
+				"logo": "https://lionshieldnetworks.com/images/lionshield-icon.png",
+
+				"image": "https://lionshieldnetworks.com/images/lionshield-icon.png",
+
+				"telephone": "+1-718-215-0681",
+
+				"email": "support@lionshieldnetworks.com",
+
+				"description": "Managed IT services, cybersecurity, Microsoft 365, cloud solutions, network infrastructure, backup, disaster recovery, and IT support for businesses in New York and New Jersey.",
+
+				"priceRange": "$$",
+
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "New York City",
+					"addressRegion": "NY",
+					"addressCountry": "US"
+				},
+
+				"areaServed": [
+					{
+						"@type": "Place",
+						"name": "Long Island, NY"
+					},
+					{
+						"@type": "City",
+						"name": "Scarsdale, NY"
+					},
+					{
+						"@type": "City",
+						"name": "Alpine, NJ"
+					},
+					{
+						"@type": "City",
+						"name": "Edgewater, NJ"
+					}
+				],
+
+				"openingHoursSpecification": [
+					{
+						"@type": "OpeningHoursSpecification",
+
+						"dayOfWeek": [
+							"Monday",
+							"Tuesday",
+							"Wednesday",
+							"Thursday",
+							"Friday"
+						],
+
+						"opens": "08:00",
+						"closes": "18:00"
+					}
+				],
+
+				"contactPoint": [
+					{
+						"@type": "ContactPoint",
+
+						"telephone": "+1-718-215-0681",
+
+						"contactType": "customer service",
+
+						"areaServed": "US",
+
+						"availableLanguage": "English"
+					},
+
+					{
+						"@type": "ContactPoint",
+
+						"telephone": "+1-718-215-0681",
+
+						"contactType": "emergency support",
+
+						"areaServed": "US",
+
+						"availableLanguage": "English",
+
+						"hoursAvailable": {
+							"@type": "OpeningHoursSpecification",
+
+							"dayOfWeek": [
+								"Monday",
+								"Tuesday",
+								"Wednesday",
+								"Thursday",
+								"Friday",
+								"Saturday",
+								"Sunday"
+							],
+
+							"opens": "00:00",
+							"closes": "23:59"
+						}
+					}
+				]
+			}
+		</script>
+	</head>
+
 	<body>
 		<slot />
 	</body>
@@ -43,85 +246,3 @@ import '../styles/global.css';
 		height: 100%;
 	}
 </style>
-<script type="application/ld+json" is:inline>
-{
-	"@context": "https://schema.org",
-	"@type": "ProfessionalService",
-	"name": "LionShield Networks",
-	"url": "https://lionshieldnetworks.com",
-	"logo": "https://lionshieldnetworks.com/images/lionshield-icon.png",
-	"image": "https://lionshieldnetworks.com/images/lionshield-icon.png",
-	"telephone": "+1-718-215-0681",
-	"email": "support@lionshieldnetworks.com",
-	"description": "Managed IT services, cybersecurity, Microsoft 365, cloud solutions, network infrastructure, backup, disaster recovery, and IT support for businesses in New York and New Jersey.",
-	"priceRange": "$$",
-	"address": {
-		"@type": "PostalAddress",
-		"addressLocality": "New York City",
-		"addressRegion": "NY",
-		"addressCountry": "US"
-	},
-	"areaServed": [
-		{
-			"@type": "Place",
-			"name": "Long Island, NY"
-		},
-		{
-			"@type": "City",
-			"name": "Scarsdale, NY"
-		},
-		{
-			"@type": "City",
-			"name": "Alpine, NJ"
-		},
-		{
-			"@type": "City",
-			"name": "Edgewater, NJ"
-		}
-	],
-	"openingHoursSpecification": [
-		{
-			"@type": "OpeningHoursSpecification",
-			"dayOfWeek": [
-				"Monday",
-				"Tuesday",
-				"Wednesday",
-				"Thursday",
-				"Friday"
-			],
-			"opens": "08:00",
-			"closes": "18:00"
-		}
-	],
-	"contactPoint": [
-		{
-			"@type": "ContactPoint",
-			"telephone": "+1-718-215-0681",
-			"contactType": "customer service",
-			"areaServed": "US",
-			"availableLanguage": "English"
-		},
-		{
-			"@type": "ContactPoint",
-			"telephone": "+1-718-215-0681",
-			"contactType": "emergency support",
-			"areaServed": "US",
-			"availableLanguage": "English",
-			"hoursAvailable": {
-				"@type": "OpeningHoursSpecification",
-				"dayOfWeek": [
-					"Monday",
-					"Tuesday",
-					"Wednesday",
-					"Thursday",
-					"Friday",
-					"Saturday",
-					"Sunday"
-				],
-				"opens": "00:00",
-				"closes": "23:59"
-			}
-		}
-	]
-}
-</script>
