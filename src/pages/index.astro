@@ -255,7 +255,7 @@ const locations = [
 
 							<a
 								href="tel:+17182150681"
-								class="inline-flex items-center justify-center gap-3 rounded-xl border border-yellow-400/55 bg-black/40 px-7 py-4 font-bold text-yellow-300 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+								class="track-phone inline-flex items-center justify-center gap-3 rounded-xl border border-yellow-400/55 bg-black/40 px-7 py-4 font-bold text-yellow-300 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
 							>
 								<PhoneCall class="h-5 w-5" stroke-width={2} />
 								718-215-0681
@@ -649,7 +649,7 @@ const locations = [
 
 						<a
 							href="tel:+17182150681"
-							class="inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-yellow-400 px-7 py-4 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-yellow-300"
+							class="track-phone inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-yellow-400 px-7 py-4 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-yellow-300"
 						>
 							<PhoneCall class="h-5 w-5" stroke-width={2} />
 							Call 718-215-0681
@@ -716,4 +716,18 @@ const locations = [
 			</section>
 		</main>
 	</div>
+	<script>
+	document.querySelectorAll('.track-phone').forEach((link) => {
+		link.addEventListener('click', () => {
+			const gtag = (window as any).gtag;
+
+			if (typeof gtag === 'function') {
+				gtag('event', 'phone_click', {
+					event_category: 'lead',
+					event_label: '718-215-0681',
+				});
+			}
+		});
+	});
+</script>
 </Layout>
