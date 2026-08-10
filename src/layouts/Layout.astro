@@ -4,13 +4,15 @@ import '../styles/global.css';
 interface Props {
 	title?: string;
 	description?: string;
+	noindex?: boolean;
 }
 
 const {
 	title = 'Managed IT Services & Cybersecurity | LionShield Networks',
 	description =
 		'LionShield Networks provides managed IT services, cybersecurity, Microsoft 365, cloud solutions, networking, backup, and IT support for businesses throughout Long Island, New York City, and Northern New Jersey.',
-} = Astro.props;
+	noindex = false
+	} = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -34,7 +36,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 			name="description"
 			content={description}
 		/>
-
+		{
+			noindex && (
+				<meta name="robots" content="noindex" />
+			)
+		}
 		<link
 			rel="canonical"
 			href={canonicalURL}
