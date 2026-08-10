@@ -16,59 +16,35 @@ import {
 	HardHat,
 	HandHeart,
 	BriefcaseBusiness,
+	Clock3,
+	MapPin,
+	PhoneCall,
+	CheckCircle2,
 } from 'lucide-astro';
 
 const services = [
 	{
-		title: 'Cybersecurity',
-		description: "Protect your business from today's advanced threats.",
-		icon: ShieldCheck,
-	},
-	{
-		title: 'Cloud Solutions',
-		description: 'Microsoft 365, Azure, cloud backups, and secure cloud services.',
-		icon: Cloud,
-	},
-	{
-		title: 'Network Management',
-		description: 'Reliable, secure, high-performance networks built to scale.',
-		icon: Network,
-	},
-	{
-		title: 'IT Support',
-		description: 'Fast, friendly, expert support when your team needs help.',
-		icon: Headphones,
-	},
-	{
-		title: 'Backup & DR',
-		description: 'Keep your data protected and your business running.',
-		icon: DatabaseBackup,
-	},
-];
-
-const fullServices = [
-	{
 		title: 'Managed IT Services',
 		description:
-			'Proactive monitoring, maintenance, help desk support, and complete technology management.',
+			'Proactive monitoring, help desk support, maintenance, and complete technology management.',
 		icon: MonitorCog,
 	},
 	{
 		title: 'Cybersecurity',
 		description:
-			'Endpoint security, email protection, ransomware defense, and continuous threat monitoring.',
+			'Layered protection for users, endpoints, email, identities, networks, and business data.',
 		icon: ShieldCheck,
 	},
 	{
 		title: 'Microsoft 365 & Cloud',
 		description:
-			'Microsoft 365, Azure, cloud migration, collaboration, and secure cloud backups.',
+			'Microsoft 365, Azure, cloud migrations, secure collaboration, and cloud backup.',
 		icon: Cloud,
 	},
 	{
 		title: 'Network Infrastructure',
 		description:
-			'Firewalls, switching, business Wi-Fi, VPNs, and secure network design.',
+			'Secure firewalls, business Wi-Fi, switching, VPNs, and scalable network design.',
 		icon: Network,
 	},
 	{
@@ -84,6 +60,83 @@ const fullServices = [
 		icon: Headphones,
 	},
 ];
+
+const industries = [
+	{
+		title: 'Healthcare',
+		description:
+			'Secure technology, endpoint protection, backup, and dependable support for healthcare organizations.',
+		icon: HeartPulse,
+	},
+	{
+		title: 'Law Firms',
+		description:
+			'Secure document access, email protection, Microsoft 365, backup, and remote-work solutions.',
+		icon: Scale,
+	},
+	{
+		title: 'Financial Services',
+		description:
+			'Protected client information, secure cloud services, business continuity, and proactive IT.',
+		icon: Landmark,
+	},
+	{
+		title: 'Construction',
+		description:
+			'Jobsite connectivity, cloud collaboration, mobile workforce support, and network management.',
+		icon: HardHat,
+	},
+	{
+		title: 'Nonprofits',
+		description:
+			'Cost-conscious managed IT, Microsoft 365, cybersecurity, and dependable technology support.',
+		icon: HandHeart,
+	},
+	{
+		title: 'Professional Services',
+		description:
+			'Reliable, secure technology for growing offices that depend on productivity and uptime.',
+		icon: BriefcaseBusiness,
+	},
+];
+
+const advantages = [
+	{
+		title: 'Security First',
+		description:
+			'Cybersecurity is built into the technology strategy instead of treated as an add-on.',
+		icon: ShieldCheck,
+	},
+	{
+		title: 'Proactive IT',
+		description:
+			'Continuous monitoring and maintenance help identify issues before they interrupt your business.',
+		icon: MonitorCog,
+	},
+	{
+		title: 'Responsive Support',
+		description:
+			'Your team gets practical, professional assistance when technology problems arise.',
+		icon: Headphones,
+	},
+	{
+		title: '24/7 Emergency Support',
+		description:
+			'Critical technology issues do not always happen during regular business hours.',
+		icon: Clock3,
+	},
+];
+
+const locations = [
+	'Long Island',
+	'Nassau County',
+	'Suffolk County',
+	'New York City',
+	'Scarsdale & Westchester',
+	'Alpine, NJ',
+	'Edgewater, NJ',
+	'Northern New Jersey',
+];
 ---
 
 <Layout
@@ -94,168 +147,196 @@ const fullServices = [
 		<Navbar />
 
 		<main>
-			<!-- HERO SECTION -->
+			<!-- HERO -->
 			<section
-				class="relative flex min-h-[820px] xl:min-h-[900px] flex-col overflow-hidden border-b border-cyan-400/20 pt-20"
+				class="relative flex min-h-[820px] flex-col overflow-hidden border-b border-cyan-400/20 pt-20 xl:min-h-[900px]"
 			>
-				<!-- Hero image -->
+				<!-- Hero artwork -->
 				<div class="absolute inset-0 overflow-hidden">
-	<img
-		src="/images/lionshield-hero.png"
-		alt=""
-		class="absolute inset-0 h-full w-full object-contain object-center"
-	/>
-</div>
+					<img
+						src="/images/lionshield-hero.png"
+						alt=""
+						class="absolute inset-0 h-full w-full object-contain object-center"
+					/>
+				</div>
 
-				<!-- Main dark overlay -->
+				<!-- Main overlays -->
 				<div
-					class="absolute inset-0 bg-gradient-to-r from-[#020611] via-[#020611]/80 to-[#020611]/10 lg:via-[#020611]/35"
-				></div>
-
-				<!-- Top and bottom shading -->
-				<div
-					class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#020611] to-transparent"
+					class="absolute inset-0 bg-gradient-to-r from-[#020611] via-[#020611]/85 to-[#020611]/15 lg:via-[#020611]/55"
 				></div>
 
 				<div
-					class="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-[#020611] via-[#020611]/90 to-transparent"
+					class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[#020611] via-[#020611]/80 to-transparent"
 				></div>
 
-				<!-- Blue lighting -->
 				<div
-					class="pointer-events-none absolute -left-20 top-40 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[150px]"
+					class="absolute inset-x-0 bottom-0 h-[380px] bg-gradient-to-t from-[#020611] via-[#020611]/95 to-transparent"
+				></div>
+
+				<!-- Ambient lighting -->
+				<div
+					class="pointer-events-none absolute -left-32 top-32 h-[560px] w-[560px] rounded-full bg-blue-600/10 blur-[170px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute right-0 top-40 h-[500px] w-[500px] rounded-full bg-cyan-500/5 blur-[180px]"
+				></div>
+
+				<!-- Subtle digital grid -->
+				<div
+					class="pointer-events-none absolute inset-0 opacity-[0.025]"
+					style="background-image:
+						linear-gradient(rgba(34,211,238,.25) 1px, transparent 1px),
+						linear-gradient(90deg, rgba(34,211,238,.25) 1px, transparent 1px);
+						background-size: 40px 40px;"
 				></div>
 
 				<!-- Hero content -->
 				<div
-					class="relative z-10 mx-auto flex w-full max-w-[1580px] flex-1 items-center px-8 pt-24 pb-16 lg:px-16"				>
-					<div class="max-w-[480px]">
+					class="relative z-10 mx-auto flex w-full max-w-[1580px] flex-1 items-center px-6 pb-20 pt-24 sm:px-8 lg:px-16"
+				>
+					<div class="max-w-[680px]">
 						<p
-							class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-400 sm:text-base"
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400 sm:text-base"
 						>
 							Managed IT & Cybersecurity
 						</p>
 
 						<div
-							class="mt-4 h-px w-72 bg-gradient-to-r from-cyan-400 via-blue-400 to-transparent"
+							class="mt-5 h-px w-72 bg-gradient-to-r from-cyan-400 via-blue-400 to-transparent"
 						></div>
 
 						<h1
-							class="mt-5 max-w-[520px] text-5xl font-black leading-[1.05] tracking-[-0.03em] lg:text-[2rem]"
+							class="mt-7 text-5xl font-black uppercase leading-[0.96] tracking-[-0.045em] sm:text-6xl lg:text-[4.6rem]"
 						>
 							Technology that
 							<span class="block">protects your</span>
-							<span class="block text-yellow-400">business.</span>
+							<span class="block text-yellow-400">
+								business.
+							</span>
 						</h1>
 
-						<p
-							class="mt-5 max-w-[420px] text-lg leading-8 text-slate-200"
-						>
-							LionShield Networks delivers proactive IT support,
-							cybersecurity, cloud solutions, network management, and
-							Microsoft 365 services for growing businesses.
+						<p class="mt-7 max-w-[610px] text-lg leading-8 text-slate-200">
+							LionShield Networks delivers security-first managed IT,
+							cybersecurity, Microsoft 365, cloud, networking, and responsive
+							support for businesses across New York and New Jersey.
 						</p>
 
-								
-						
+						<div
+							class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-semibold text-slate-300"
+						>
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
+								Proactive Monitoring
+							</span>
 
-						<!-- Hero buttons -->
-						<div class="mt-8 flex flex-col gap-4 sm:flex-row">
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
+								Security-First IT
+							</span>
+
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
+								24/7 Emergency Support
+							</span>
+						</div>
+
+						<div class="mt-9 flex flex-col gap-4 sm:flex-row">
 							<a
 								href="/contact"
-								class="inline-flex items-center justify-center rounded-lg border border-cyan-300/70 bg-blue-600 px-7 py-4 text-center font-bold text-white shadow-[0_0_28px_rgba(37,99,235,0.55)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+								class="group inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-7 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.50)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
 							>
 								Request a Free Assessment
-							</a>
-
-							<a
-								href="/client-portal"
-								class="group inline-flex items-center justify-center gap-3 rounded-lg border border-yellow-400 bg-black/55 px-7 py-4 text-center font-bold text-white backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
-							>
-								Client Portal
-
 								<ArrowRight
-									class="h-5 w-5 text-yellow-400 transition duration-300 group-hover:translate-x-1 group-hover:text-black"
+									class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
 									stroke-width={2}
 								/>
 							</a>
+
+							<a
+								href="tel:+17182150681"
+								class="inline-flex items-center justify-center gap-3 rounded-xl border border-yellow-400/55 bg-black/40 px-7 py-4 font-bold text-yellow-300 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+							>
+								<PhoneCall class="h-5 w-5" stroke-width={2} />
+								718-215-0681
+							</a>
+						</div>
+
+						<div
+							class="mt-8 inline-flex items-center gap-3 rounded-xl border border-cyan-300/15 bg-black/25 px-5 py-3 text-sm text-slate-300 backdrop-blur-md"
+						>
+							<MapPin class="h-5 w-5 text-cyan-300" stroke-width={1.8} />
+							Serving Long Island, NYC, Westchester & Northern New Jersey
 						</div>
 					</div>
 				</div>
 
-				<!-- Bottom service bar -->
+				<!-- Capability bar -->
 				<div
-					class="relative z-20 border-t border-cyan-400/20 bg-[#020611]/90 backdrop-blur-md"
+					class="relative z-20 border-t border-cyan-400/20 bg-[#020611]/90 backdrop-blur-xl"
 				>
 					<div
-						class="mx-auto grid max-w-[1580px] grid-cols-1 px-6 sm:grid-cols-2 lg:grid-cols-5 lg:px-10"
+						class="mx-auto grid max-w-[1580px] grid-cols-1 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-10"
 					>
 						{
-							services.map((service, index) => (
-								<a
-									href="/services"
+							advantages.map((item, index) => (
+								<div
 									class:list={[
-										'group relative flex min-h-[130px] items-center gap-4 px-4 py-6 transition duration-300 hover:bg-cyan-500/5 lg:px-6',
-										index < services.length - 1
-											? 'border-b border-cyan-400/15 sm:border-r lg:border-b-0'
+										'flex min-h-[125px] items-center gap-4 px-5 py-6',
+										index < advantages.length - 1
+											? 'border-b border-cyan-400/10 sm:border-r lg:border-b-0'
 											: '',
 									]}
 								>
-									<div
-										class="flex h-16 w-16 shrink-0 items-center justify-center text-blue-400 transition duration-300 group-hover:scale-110 group-hover:text-cyan-300"
-									>
-										<service.icon class="h-12 w-12" stroke-width={1.5} />
+									<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-300/20 bg-cyan-500/5 text-cyan-300">
+										<item.icon class="h-7 w-7" stroke-width={1.7} />
 									</div>
 
-									<div class="min-w-0">
-										<h2
-											class="text-sm font-black uppercase tracking-wide text-white transition duration-300 group-hover:text-cyan-300"
-										>
-											{service.title}
-										</h2>
-
-										<p class="mt-2 text-sm leading-5 text-slate-300">
-											{service.description}
+									<div>
+										<p class="font-black uppercase text-white">
+											{item.title}
+										</p>
+										<p class="mt-1 text-sm leading-5 text-slate-400">
+											{item.description}
 										</p>
 									</div>
-								</a>
+								</div>
 							))
 						}
 					</div>
 				</div>
 			</section>
 
-			<!-- SERVICES SECTION -->
+			<!-- SERVICES -->
 			<section
 				id="services"
-				class="relative overflow-hidden bg-[#020611] px-6 py-20 lg:px-10"
+				class="relative overflow-hidden px-6 py-24 lg:px-10 lg:py-28"
 			>
 				<div
-					class="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[150px]"
+					class="pointer-events-none absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[160px]"
 				></div>
 
 				<div class="relative mx-auto max-w-[1450px]">
 					<div class="mx-auto max-w-3xl text-center">
 						<p
-	class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-400"
->
-	Our Services
-</p>
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Our Services
+						</p>
 
-<h2
-	class="mt-5 text-4xl font-black uppercase leading-tight sm:text-5xl"
->
-	Technology solutions built
-	<span class="block text-yellow-400">
-		for modern businesses.
-	</span>
-</h2>
+						<h2
+							class="mt-5 text-4xl font-black uppercase leading-tight tracking-[-0.03em] sm:text-5xl"
+						>
+							Complete technology management.
+							<span class="block text-yellow-400">
+								One trusted partner.
+							</span>
+						</h2>
 
-<p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-	From proactive IT management to advanced cybersecurity,
-	LionShield Networks delivers enterprise-level technology with
-	responsive, personal service.
-</p>
+						<p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+							From day-to-day support to advanced cybersecurity, LionShield
+							Networks manages the technology your business depends on.
+						</p>
 					</div>
 
 					<div
@@ -264,325 +345,373 @@ const fullServices = [
 
 					<div class="mt-14 grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
 						{
-	fullServices.map((service) => (
-		<a
-			href="/services"
-			class="group relative cursor-pointer overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/10 p-7 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_38px_rgba(34,211,238,0.12)]"
-		>
-			<div
-				class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-40 transition-opacity duration-300 group-hover:opacity-100"
-			></div>
+							services.map((service) => (
+								<a
+									href="/services"
+									class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/15 p-7 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_38px_rgba(34,211,238,0.12)]"
+								>
+									<div class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent opacity-40 transition-opacity duration-300 group-hover:opacity-100"></div>
 
-			<div
-				class="pointer-events-none absolute inset-0 opacity-[0.04]"
-				style="background-image:
-					linear-gradient(rgba(34,211,238,.18) 1px, transparent 1px),
-					linear-gradient(90deg, rgba(34,211,238,.18) 1px, transparent 1px);
-					background-size: 24px 24px;"
-			></div>
+									<div
+										class="pointer-events-none absolute inset-0 opacity-[0.04]"
+										style="background-image:
+											linear-gradient(rgba(34,211,238,.18) 1px, transparent 1px),
+											linear-gradient(90deg, rgba(34,211,238,.18) 1px, transparent 1px);
+											background-size: 24px 24px;"
+									></div>
 
-			<div class="relative z-10">
-				<div
-					class="relative flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/20 text-cyan-200 shadow-[0_0_24px_rgba(34,211,238,.18)]"
-				>
-					<service.icon
-						class="h-8 w-8 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
-						stroke-width={1.7}
-					/>
-				</div>
+									<div class="relative z-10">
+										<div
+											class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/20 text-cyan-200 shadow-[0_0_24px_rgba(34,211,238,.18)]"
+										>
+											<service.icon
+												class="h-8 w-8 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+												stroke-width={1.7}
+											/>
+										</div>
 
-				<h3
-					class="mt-5 text-xl font-extrabold uppercase tracking-wide text-white transition-colors duration-300 group-hover:text-cyan-300"
-				>
-					{service.title}
-				</h3>
+										<h3
+											class="mt-6 text-xl font-extrabold uppercase tracking-wide text-white transition-colors duration-300 group-hover:text-cyan-300"
+										>
+											{service.title}
+										</h3>
 
-				<p class="mt-2 leading-7 text-slate-300/90">
-					{service.description}
-				</p>
+										<p class="mt-3 leading-7 text-slate-300/90">
+											{service.description}
+										</p>
 
-				<div
-					class="mt-5 inline-flex items-center gap-2 font-semibold text-cyan-300 transition-all duration-300 group-hover:gap-3"
-				>
-					Learn More
+										<div
+											class="mt-6 inline-flex items-center gap-2 font-semibold text-cyan-300 transition-all duration-300 group-hover:gap-3"
+										>
+											Explore Service
 
-					<ArrowRight
-						class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-						stroke-width={2}
-					/>
-				</div>
-			</div>
-		</a>
-	))
-}
+											<ArrowRight
+												class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+												stroke-width={2}
+											/>
+										</div>
+									</div>
+								</a>
+							))
+						}
+					</div>
+
+					<div class="mt-12 text-center">
+						<a
+							href="/services"
+							class="group inline-flex items-center gap-3 rounded-xl border border-cyan-300/30 bg-cyan-500/5 px-8 py-4 font-bold uppercase tracking-[0.14em] text-cyan-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/60 hover:bg-cyan-500/10 hover:text-white"
+						>
+							View All Services
+
+							<ArrowRight
+								class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+								stroke-width={2}
+							/>
+						</a>
 					</div>
 				</div>
 			</section>
-			<!-- WHO WE HELP -->
-<section
-	id="industries"
-	class="relative overflow-hidden bg-[#020611] px-6 py-20 lg:px-10 lg:py-24"
->
-	<!-- Background lighting -->
-	<div
-		class="pointer-events-none absolute -left-40 top-1/2 h-[480px] w-[480px] -translate-y-1/2 rounded-full bg-blue-600/10 blur-[160px]"
-	></div>
 
-	<div
-		class="pointer-events-none absolute -right-40 top-1/2 h-[480px] w-[480px] -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[160px]"
-	></div>
-
-	<div class="relative mx-auto max-w-[1450px]">
-		<!-- Section heading -->
-		<div class="mx-auto max-w-3xl text-center">
-			<p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-400">
-	Industries We Serve
-</p>
-
-<h2
-	class="mt-5 text-4xl font-black uppercase leading-tight sm:text-5xl"
->
-	Supporting the industries
-	<span class="block text-yellow-400">
-		that keep Long Island running.
-	</span>
-</h2>
-
-<p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-	From healthcare and legal firms to financial services, construction,
-	nonprofits, and professional offices, LionShield Networks delivers
-	secure, dependable IT solutions tailored to the way you work.
-</p>
-			<div
-				class="mx-auto mt-8 h-px w-40 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
-			></div>
-		</div>
-
-		<!-- Industry cards -->
-		<div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-			<!-- Healthcare -->
-			<a
-				href="/industries"
-				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/10 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.10)]"
+			<!-- WHY LIONSHIELD -->
+			<section
+				class="border-y border-cyan-400/10 bg-[#030914] px-6 py-24 lg:px-10"
 			>
 				<div
-					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/20 text-cyan-300"
+					class="mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[.9fr_1.1fr] lg:gap-20"
 				>
-					<HeartPulse
-	class="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
-	stroke-width={1.7}
-/>
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Why LionShield Networks
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase leading-tight tracking-[-0.03em] sm:text-5xl"
+						>
+							Your IT should create
+							<span class="block text-yellow-400">
+								confidence, not complexity.
+							</span>
+						</h2>
+
+						<p class="mt-6 text-lg leading-8 text-slate-300">
+							Technology should help your business operate securely,
+							efficiently, and reliably. We take a proactive approach to IT so
+							your team can stay focused on the work that matters.
+						</p>
+
+						<a
+							href="/about"
+							class="group mt-8 inline-flex items-center gap-3 font-bold text-cyan-300 transition hover:text-yellow-300"
+						>
+							Learn About LionShield
+							<ArrowRight
+								class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+								stroke-width={2}
+							/>
+						</a>
+					</div>
+
+					<div class="grid gap-5 sm:grid-cols-2">
+						{
+							advantages.map((item) => (
+								<div class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-300/35">
+									<item.icon
+										class="h-8 w-8 text-cyan-300"
+										stroke-width={1.7}
+									/>
+
+									<h3 class="mt-5 text-xl font-black text-white">
+										{item.title}
+									</h3>
+
+									<p class="mt-3 leading-7 text-slate-400">
+										{item.description}
+									</p>
+								</div>
+							))
+						}
+					</div>
 				</div>
+			</section>
 
-				<h3 class="mt-5 text-xl font-extrabold uppercase text-white">
-					Healthcare
-				</h3>
-
-				<p class="mt-3 leading-7 text-slate-300">
-					Secure, compliant IT solutions for medical practices, clinics, and healthcare providers.
-				</p>
-			</a>
-
-			<!-- Legal -->
-			<a
-				href="/contact"
-				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/10 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.10)]"
+			<!-- INDUSTRIES -->
+			<section
+				id="industries"
+				class="relative overflow-hidden px-6 py-24 lg:px-10 lg:py-28"
 			>
 				<div
-					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/20 text-cyan-300"
-				>
-					<Scale class="h-8 w-8 transition-transform duration-300 group-hover:scale-110" stroke-width={1.7} />
+					class="pointer-events-none absolute -left-40 top-1/2 h-[480px] w-[480px] -translate-y-1/2 rounded-full bg-blue-600/10 blur-[160px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute -right-40 top-1/2 h-[480px] w-[480px] -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[160px]"
+				></div>
+
+				<div class="relative mx-auto max-w-[1450px]">
+					<div class="mx-auto max-w-3xl text-center">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Industries We Serve
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase leading-tight tracking-[-0.03em] sm:text-5xl"
+						>
+							Technology designed around
+							<span class="block text-yellow-400">
+								the way you work.
+							</span>
+						</h2>
+
+						<p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+							Every industry has different workflows, risks, applications,
+							and security requirements. Our solutions are built around those
+							differences.
+						</p>
+					</div>
+
+					<div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+						{
+							industries.map((industry) => (
+								<a
+									href="/industries"
+									class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/10 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.10)]"
+								>
+									<div
+										class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/20 text-cyan-300 transition duration-300 group-hover:text-yellow-300"
+									>
+										<industry.icon
+											class="h-8 w-8 transition-transform duration-300 group-hover:scale-110"
+											stroke-width={1.7}
+										/>
+									</div>
+
+									<h3 class="mt-5 text-xl font-extrabold uppercase text-white">
+										{industry.title}
+									</h3>
+
+									<p class="mt-3 leading-7 text-slate-300">
+										{industry.description}
+									</p>
+
+									<div
+										class="mt-5 inline-flex items-center gap-2 font-semibold text-cyan-300"
+									>
+										Learn More
+										<ArrowRight class="h-4 w-4" stroke-width={2} />
+									</div>
+								</a>
+							))
+						}
+					</div>
+
+					<div class="mt-12 text-center">
+						<a
+							href="/industries"
+							class="group inline-flex items-center gap-3 rounded-xl border border-cyan-300/30 bg-cyan-500/5 px-8 py-4 font-bold uppercase tracking-[0.14em] text-cyan-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/60 hover:bg-cyan-500/10 hover:text-white"
+						>
+							Explore Industries
+
+							<ArrowRight
+								class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+								stroke-width={2}
+							/>
+						</a>
+					</div>
 				</div>
+			</section>
 
-				<h3 class="mt-5 text-xl font-extrabold uppercase text-white">
-					Legal Firms
-				</h3>
-
-				<p class="mt-3 leading-7 text-slate-300">
-					Secure document access, email protection, reliable backups, and
-					technology support for legal professionals.
-				</p>
-			</a>
-
-			<!-- Financial -->
-			<a
-				href="/contact"
-				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/10 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.10)]"
+			<!-- SERVICE AREA -->
+			<section
+				class="border-y border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10"
 			>
 				<div
-					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/20 text-cyan-300"
+					class="mx-auto grid max-w-[1450px] items-center gap-12 lg:grid-cols-[.85fr_1.15fr]"
 				>
-					<Landmark class="h-8 w-8 transition-transform duration-300 group-hover:scale-110" stroke-width={1.7} />
+					<div>
+						<div
+							class="flex h-14 w-14 items-center justify-center rounded-xl border border-yellow-400/35 bg-yellow-400/5 text-yellow-300"
+						>
+							<MapPin class="h-7 w-7" stroke-width={1.8} />
+						</div>
+
+						<p
+							class="mt-7 text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Local Service. Enterprise Capability.
+						</p>
+
+						<h2
+							class="mt-4 text-4xl font-black uppercase leading-tight tracking-[-0.03em] sm:text-5xl"
+						>
+							Supporting businesses across
+							<span class="block text-yellow-400">
+								New York & New Jersey.
+							</span>
+						</h2>
+
+						<p class="mt-6 max-w-[650px] leading-8 text-slate-300">
+							LionShield Networks provides managed IT and cybersecurity
+							services throughout the greater New York metropolitan area and
+							Northern New Jersey.
+						</p>
+					</div>
+
+					<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+						{
+							locations.map((location) => (
+								<div
+									class="rounded-xl border border-cyan-300/15 bg-black/20 px-5 py-5 text-center font-bold text-slate-200"
+								>
+									{location}
+								</div>
+							))
+						}
+					</div>
 				</div>
+			</section>
 
-				<h3 class="mt-5 text-xl font-extrabold uppercase text-white">
-					Financial Services
-				</h3>
-
-				<p class="mt-3 leading-7 text-slate-300">
-					Secure cloud services, protected client information, business
-					continuity, and dependable technology management.
-				</p>
-			</a>
-
-			<!-- Construction -->
-			<a
-				href="/contact"
-				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/10 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.10)]"
-			>
+			<!-- EMERGENCY SUPPORT -->
+			<section class="px-6 py-20 lg:px-10">
 				<div
-					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/20 text-cyan-300"
+					class="mx-auto max-w-[1450px] overflow-hidden rounded-3xl border border-yellow-400/25 bg-gradient-to-r from-yellow-400/[0.05] via-[#07101d] to-cyan-500/[0.05] p-8 sm:p-10"
 				>
-					<HardHat class="h-8 w-8 transition-transform duration-300 group-hover:scale-110" stroke-width={1.7} />
-				</div>
-
-				<h3 class="mt-5 text-xl font-extrabold uppercase text-white">
-					Construction
-				</h3>
-
-				<p class="mt-3 leading-7 text-slate-300">
-					Connected offices, jobsite access, cloud collaboration, network
-					management, and mobile workforce support.
-				</p>
-			</a>
-
-			<!-- Nonprofits -->
-			<a
-				href="/contact"
-				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/10 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.10)]"
-			>
-				<div
-					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/20 text-cyan-300"
-				>
-					<HandHeart class="h-8 w-8 transition-transform duration-300 group-hover:scale-110" stroke-width={1.7} />
-				</div>
-
-				<h3 class="mt-5 text-xl font-extrabold uppercase text-white">
-					Nonprofits
-				</h3>
-
-				<p class="mt-3 leading-7 text-slate-300">
-					Cost-conscious technology, Microsoft 365 support, cybersecurity,
-					and dependable assistance for mission-driven organizations.
-				</p>
-			</a>
-
-			<!-- Professional offices -->
-			<a
-				href="/contact"
-				class="group relative overflow-hidden rounded-2xl border border-cyan-300/20 bg-black/10 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/55 hover:bg-cyan-950/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.10)]"
-			>
-				<div
-					class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-400/35 bg-black/20 text-cyan-300"
-				>
-					<BriefcaseBusiness class="h-8 w-8 transition-transform duration-300 group-hover:scale-110" stroke-width={1.7} />
-				</div>
-
-				<h3 class="mt-5 text-xl font-extrabold uppercase text-white">
-					Professional Offices
-				</h3>
-
-				<p class="mt-3 leading-7 text-slate-300">
-					Complete IT management for growing offices that depend on secure,
-					reliable, and productive technology.
-				</p>
-			</a>
-		</div>
-
-		<!-- Bottom link -->
-		<div class="mt-12 text-center">
-			<a
-				href="/contact"
-				class="group inline-flex items-center gap-3 rounded-xl border border-cyan-300/30 bg-cyan-500/5 px-8 py-4 font-bold uppercase tracking-[0.14em] text-cyan-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/60 hover:bg-cyan-500/10 hover:text-white"
-			>
-				Discuss Your IT Needs
-
-				<ArrowRight
-					class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
-					stroke-width={2}
-				/>
-			</a>
-		</div>
-	</div>
-</section>
-<!-- TRUST STRIP -->
-<section class="border-y border-cyan-400/10 bg-[#030914] px-6 py-12 lg:px-10">
-	<div class="mx-auto grid max-w-[1450px] gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
-		<div>
-			<p class="text-xl font-black uppercase text-yellow-400">
-				Security First
-			</p>
-			<p class="mt-2 text-sm leading-6 text-slate-300">
-				Protection is built into every solution we deliver.
-			</p>
-		</div>
-
-		<div>
-			<p class="text-xl font-black uppercase text-yellow-400">
-				Fast Support
-			</p>
-			<p class="mt-2 text-sm leading-6 text-slate-300">
-				Responsive help when your team needs it most.
-			</p>
-		</div>
-
-		<div>
-			<p class="text-xl font-black uppercase text-yellow-400">
-				Proactive IT
-			</p>
-			<p class="mt-2 text-sm leading-6 text-slate-300">
-				Monitoring and maintenance that help prevent downtime.
-			</p>
-		</div>
-
-		<div>
-			<p class="text-xl font-black uppercase text-yellow-400">
-				Personal Service
-			</p>
-			<p class="mt-2 text-sm leading-6 text-slate-300">
-				Technology guidance tailored to your business.
-			</p>
-		</div>
-	</div>
-</section>
-			<!-- FINAL CTA -->
-			<section class="relative overflow-hidden px-6 py-20 text-center">
-				<div class="absolute inset-0 opacity-20">
 					<div
-						class="absolute left-1/4 top-0 h-72 w-72 rounded-full bg-blue-600 blur-3xl"
-					></div>
+						class="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center"
+					>
+						<div class="flex items-start gap-5">
+							<div
+								class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-yellow-400/40 bg-yellow-400/5 text-yellow-300"
+							>
+								<Clock3 class="h-7 w-7" stroke-width={1.8} />
+							</div>
+
+							<div>
+								<p
+									class="text-sm font-bold uppercase tracking-[0.28em] text-yellow-300"
+								>
+									24/7 Emergency Support
+								</p>
+
+								<h2 class="mt-2 text-3xl font-black text-white">
+									Critical technology issue after hours?
+								</h2>
+
+								<p class="mt-3 max-w-[760px] leading-7 text-slate-300">
+									Emergency support is available around the clock for critical
+									issues that cannot wait until the next business day.
+								</p>
+							</div>
+						</div>
+
+						<a
+							href="tel:+17182150681"
+							class="inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-yellow-400 px-7 py-4 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-yellow-300"
+						>
+							<PhoneCall class="h-5 w-5" stroke-width={2} />
+							Call 718-215-0681
+						</a>
+					</div>
 				</div>
+			</section>
 
-				<div class="relative mx-auto max-w-4xl">
-					<p class="font-bold uppercase tracking-[0.25em] text-blue-400">
-						IT Solutions That Drive Success
-					</p>
+			<!-- FINAL CTA -->
+			<section class="relative overflow-hidden px-6 pb-28 pt-16 lg:px-10">
+				<div
+					class="relative mx-auto max-w-[1250px] overflow-hidden rounded-3xl border border-cyan-300/20 bg-[#06111e] p-8 text-center shadow-[0_0_60px_rgba(34,211,238,0.08)] sm:p-12"
+				>
+					<div
+						class="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/10 blur-[150px]"
+					></div>
 
-					<h2
-						class="mt-5 text-5xl font-black uppercase leading-tight lg:text-6xl"
-					>
-						Focused on your business.
-						<span class="block text-yellow-400">
-							Protected by us.
-						</span>
-					</h2>
+					<div class="relative">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Strengthen Your Technology
+						</p>
 
-					<p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-						Technology should be an advantage, not a worry. We handle the
-						complexity so you can focus on growing your business.
-					</p>
+						<h2
+							class="mx-auto mt-5 max-w-[900px] text-4xl font-black uppercase tracking-[-0.03em] text-white sm:text-5xl"
+						>
+							IT that helps your business
+							<span class="block text-yellow-400">
+								move forward with confidence.
+							</span>
+						</h2>
 
-					<a
-						href="/services"
-						class="group mt-9 inline-flex items-center gap-3 rounded-xl border border-cyan-300/30 bg-transparent px-8 py-4 font-bold uppercase tracking-[0.15em] text-cyan-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/60 hover:bg-cyan-500/10 hover:text-white hover:shadow-[0_0_30px_rgba(34,211,238,0.18)]"
-					>
-						Discover Our Services
+						<p
+							class="mx-auto mt-6 max-w-[760px] text-lg leading-8 text-slate-300"
+						>
+							Schedule a complimentary technology assessment and discover
+							where LionShield Networks can improve security, reliability,
+							productivity, and business continuity.
+						</p>
 
-						<ArrowRight
-							class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
-							stroke-width={2}
-						/>
-					</a>
+						<div class="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+							<a
+								href="/contact"
+								class="group inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+							>
+								Request My Free Assessment
+
+								<ArrowRight
+									class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+									stroke-width={2}
+								/>
+							</a>
+
+							<a
+								href="/services"
+								class="inline-flex items-center justify-center rounded-xl border border-yellow-400/45 bg-black/20 px-8 py-4 font-bold text-yellow-300 transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+							>
+								Explore Our Services
+							</a>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
