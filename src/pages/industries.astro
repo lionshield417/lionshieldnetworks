@@ -1,0 +1,671 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+import {
+	ArrowRight,
+	Scale,
+	HeartPulse,
+	Calculator,
+	HardHat,
+	Building2,
+	House,
+	Factory,
+	ShoppingCart,
+	GraduationCap,
+	HeartHandshake,
+	Truck,
+	UtensilsCrossed,
+	ShieldCheck,
+	Cloud,
+	DatabaseBackup,
+	Network,
+	PhoneCall,
+	MonitorCog,
+	ChartNoAxesCombined,
+	LockKeyhole,
+	MapPin,
+	Clock3,
+} from 'lucide-astro';
+
+const industries = [
+	{
+		title: 'Law Firms',
+		description:
+			'Secure document access, Microsoft 365, remote work, cybersecurity, backups, and reliable support for legal teams.',
+		icon: Scale,
+	},
+	{
+		title: 'Healthcare',
+		description:
+			'HIPAA-conscious IT support, secure systems, endpoint protection, backup, and business continuity.',
+		icon: HeartPulse,
+	},
+	{
+		title: 'Accounting & CPA Firms',
+		description:
+			'Secure client data, tax software support, Microsoft 365, file protection, backups, and proactive monitoring.',
+		icon: Calculator,
+	},
+	{
+		title: 'Construction',
+		description:
+			'Jobsite connectivity, mobile workforce support, cloud collaboration, device management, and secure communications.',
+		icon: HardHat,
+	},
+	{
+		title: 'Professional Services',
+		description:
+			'Reliable managed IT, cybersecurity, cloud systems, communications, and strategic technology planning.',
+		icon: Building2,
+	},
+	{
+		title: 'Property Management',
+		description:
+			'Multi-site networking, VoIP, cameras, access systems, cloud applications, and reliable office connectivity.',
+		icon: House,
+	},
+	{
+		title: 'Manufacturing',
+		description:
+			'Network reliability, production connectivity, cybersecurity, endpoint protection, and resilient infrastructure.',
+		icon: Factory,
+	},
+	{
+		title: 'Retail',
+		description:
+			'POS support, secure Wi-Fi, payment systems, surveillance, network uptime, and cybersecurity protection.',
+		icon: ShoppingCart,
+	},
+	{
+		title: 'Education',
+		description:
+			'Wireless networks, Microsoft 365, device management, classroom technology, security, and user support.',
+		icon: GraduationCap,
+	},
+	{
+		title: 'Nonprofits',
+		description:
+			'Cost-conscious IT management, Microsoft 365, cybersecurity, cloud collaboration, and dependable support.',
+		icon: HeartHandshake,
+	},
+	{
+		title: 'Logistics & Transportation',
+		description:
+			'Mobile device support, fleet connectivity, secure communications, cloud applications, and reliable networking.',
+		icon: Truck,
+	},
+	{
+		title: 'Hospitality',
+		description:
+			'Guest Wi-Fi, POS systems, cameras, communications, network uptime, and security for hospitality operations.',
+		icon: UtensilsCrossed,
+	},
+];
+
+const services = [
+	{ title: 'Cybersecurity', icon: ShieldCheck },
+	{ title: 'Microsoft 365 & Cloud', icon: Cloud },
+	{ title: 'Backup & Disaster Recovery', icon: DatabaseBackup },
+	{ title: 'Network Infrastructure', icon: Network },
+	{ title: 'VoIP & Communications', icon: PhoneCall },
+	{ title: 'Managed IT Support', icon: MonitorCog },
+	{ title: 'Strategic IT Planning', icon: ChartNoAxesCombined },
+	{ title: 'Endpoint Protection', icon: LockKeyhole },
+];
+
+const reasons = [
+	{
+		title: 'Fast Response',
+		description:
+			'Responsive support designed to reduce downtime and keep your team productive.',
+	},
+	{
+		title: 'Security First',
+		description:
+			'Cybersecurity is built into every solution instead of added as an afterthought.',
+	},
+	{
+		title: 'Proactive Monitoring',
+		description:
+			'We identify issues early and work to resolve them before they become major disruptions.',
+	},
+	{
+		title: 'Microsoft 365 Expertise',
+		description:
+			'Management, security, migrations, licensing assistance, and ongoing Microsoft 365 support.',
+	},
+	{
+		title: '24/7 Emergency Support',
+		description:
+			'Critical technology issues do not always happen during normal business hours.',
+	},
+	{
+		title: 'Personalized Service',
+		description:
+			'Technology strategies built around your organization, workflow, goals, and growth plans.',
+	},
+];
+
+const locations = [
+	'Long Island',
+	'Nassau County',
+	'Suffolk County',
+	'New York City',
+	'Scarsdale',
+	'Westchester County',
+	'Alpine, NJ',
+	'Edgewater, NJ',
+];
+---
+
+<Layout>
+	<div class="min-h-screen bg-[#020611] text-white">
+		<Navbar />
+
+		<main>
+			<!-- HERO -->
+			<section
+				class="relative overflow-hidden border-b border-cyan-400/20 px-6 pb-24 pt-36 lg:px-10 lg:pb-28 lg:pt-40"
+			>
+				<div
+					class="pointer-events-none absolute left-1/2 top-20 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[210px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute -right-32 top-28 h-[520px] w-[520px] rounded-full bg-blue-600/10 blur-[180px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute inset-0 opacity-[0.035]"
+					style="background-image:
+						linear-gradient(rgba(34,211,238,.22) 1px, transparent 1px),
+						linear-gradient(90deg, rgba(34,211,238,.22) 1px, transparent 1px);
+						background-size: 34px 34px;"
+				></div>
+
+				<div
+					class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[1.08fr_.92fr] lg:gap-20"
+				>
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.34em] text-cyan-400 sm:text-base"
+						>
+							Industry-Focused IT
+						</p>
+
+						<div
+							class="mt-5 h-px w-72 bg-gradient-to-r from-cyan-400 via-blue-400 to-transparent"
+						></div>
+
+						<h1
+							class="mt-8 max-w-[850px] text-5xl font-black uppercase leading-[0.97] tracking-[-0.04em] sm:text-6xl lg:text-[4.6rem]"
+						>
+							Technology built for
+							<span class="block text-yellow-400">
+								your industry.
+							</span>
+						</h1>
+
+						<p class="mt-7 max-w-[760px] text-lg leading-8 text-slate-300">
+							Every organization has unique technology, cybersecurity, and
+							compliance needs. LionShield Networks delivers managed IT
+							services designed around the way your business operates.
+						</p>
+
+						<div class="mt-10 flex flex-col gap-4 sm:flex-row">
+							<a
+								href="/contact"
+								class="group inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-7 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+							>
+								Schedule a Free Assessment
+								<ArrowRight
+									class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+									stroke-width={2}
+								/>
+							</a>
+
+							<a
+								href="tel:+17182150681"
+								class="inline-flex items-center justify-center gap-3 rounded-xl border border-yellow-400/50 bg-white/[0.02] px-7 py-4 font-bold text-yellow-300 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+							>
+								<PhoneCall class="h-5 w-5" stroke-width={1.8} />
+								718-215-0681
+							</a>
+						</div>
+					</div>
+
+					<div
+						class="relative overflow-hidden rounded-3xl border border-cyan-300/20 bg-black/25 p-8 shadow-[0_0_60px_rgba(34,211,238,0.08)] backdrop-blur-xl"
+					>
+						<div
+							class="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/8 via-transparent to-blue-600/8"
+						></div>
+
+						<div class="relative">
+							<div
+								class="flex h-16 w-16 items-center justify-center rounded-2xl border border-yellow-400/40 bg-yellow-400/5 text-yellow-300"
+							>
+								<ShieldCheck class="h-8 w-8" stroke-width={1.8} />
+							</div>
+
+							<h2 class="mt-7 text-3xl font-black text-white">
+								Industry-aware technology strategy.
+							</h2>
+
+							<p class="mt-5 leading-7 text-slate-300">
+								We align technology with your workflows, security requirements,
+								business goals, and regulatory environment.
+							</p>
+
+							<div class="mt-8 grid gap-4 sm:grid-cols-2">
+								<div
+									class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4"
+								>
+									<p class="font-bold text-cyan-300">Security</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Protect users, devices, networks, and data.
+									</p>
+								</div>
+
+								<div
+									class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4"
+								>
+									<p class="font-bold text-cyan-300">Productivity</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Keep your team connected and working efficiently.
+									</p>
+								</div>
+
+								<div
+									class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4"
+								>
+									<p class="font-bold text-cyan-300">Reliability</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Reduce downtime with proactive management.
+									</p>
+								</div>
+
+								<div
+									class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4"
+								>
+									<p class="font-bold text-cyan-300">Growth</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Build technology that scales with your business.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- INDUSTRIES -->
+			<section class="px-6 py-24 lg:px-10 lg:py-28">
+				<div class="mx-auto max-w-[1450px]">
+					<div class="max-w-[850px]">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Industries We Serve
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em] text-white sm:text-5xl"
+						>
+							Technology solutions for
+							<span class="text-yellow-400">real business challenges.</span>
+						</h2>
+
+						<p class="mt-6 max-w-[760px] text-lg leading-8 text-slate-300">
+							From highly regulated professional environments to fast-moving
+							operations, we build secure and reliable technology around the
+							needs of your organization.
+						</p>
+					</div>
+
+					<div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+						{
+							industries.map(({ title, description, icon: Icon }) => (
+								<article
+									class="group relative overflow-hidden rounded-2xl border border-cyan-300/15 bg-[#040a14] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:shadow-[0_0_35px_rgba(34,211,238,0.08)]"
+								>
+									<div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/[0.035] via-transparent to-blue-600/[0.035]"></div>
+
+									<div class="relative">
+										<div class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300 transition duration-300 group-hover:border-yellow-400/40 group-hover:text-yellow-300">
+											<Icon class="h-7 w-7" stroke-width={1.7} />
+										</div>
+
+										<h3 class="mt-6 text-2xl font-black text-white">
+											{title}
+										</h3>
+
+										<p class="mt-4 leading-7 text-slate-400">
+											{description}
+										</p>
+
+										<a
+											href="/contact"
+											class="mt-6 inline-flex items-center gap-2 font-bold text-cyan-300 transition hover:text-yellow-300"
+										>
+											Discuss Your Needs
+											<ArrowRight class="h-4 w-4" stroke-width={2} />
+										</a>
+									</div>
+								</article>
+							))
+						}
+					</div>
+				</div>
+			</section>
+
+			<!-- WHY INDUSTRY EXPERTISE MATTERS -->
+			<section
+				class="border-y border-cyan-400/10 bg-[#030914] px-6 py-24 lg:px-10"
+			>
+				<div
+					class="mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-2 lg:gap-20"
+				>
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Why Industry Expertise Matters
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em] text-white sm:text-5xl"
+						>
+							Your business deserves more than
+							<span class="block text-yellow-400">
+								generic IT support.
+							</span>
+						</h2>
+
+						<p class="mt-6 text-lg leading-8 text-slate-300">
+							Technology supports nearly every part of your operation. The
+							right IT partner understands how your people work, which systems
+							are mission-critical, and where security or downtime can create
+							the greatest risk.
+						</p>
+
+						<p class="mt-5 leading-8 text-slate-400">
+							LionShield Networks builds technology strategies around your
+							industry, helping you protect sensitive data, improve
+							productivity, strengthen business continuity, and prepare for
+							future growth.
+						</p>
+					</div>
+
+					<div class="grid gap-5 sm:grid-cols-2">
+						{
+							reasons.map(({ title, description }) => (
+								<div class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6 backdrop-blur-md">
+									<ShieldCheck
+										class="h-7 w-7 text-cyan-300"
+										stroke-width={1.8}
+									/>
+									<h3 class="mt-4 text-xl font-black text-white">{title}</h3>
+									<p class="mt-3 leading-7 text-slate-400">{description}</p>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</section>
+
+			<!-- SERVICES -->
+			<section class="px-6 py-24 lg:px-10">
+				<div class="mx-auto max-w-[1450px]">
+					<div class="text-center">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Core Capabilities
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em] text-white sm:text-5xl"
+						>
+							Essential IT services for
+							<span class="text-yellow-400">every industry.</span>
+						</h2>
+					</div>
+
+					<div
+						class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+					>
+						{
+							services.map(({ title, icon: Icon }) => (
+								<div class="rounded-2xl border border-cyan-300/15 bg-[#040a14] p-6 text-center transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40">
+									<Icon
+										class="mx-auto h-8 w-8 text-cyan-300"
+										stroke-width={1.7}
+									/>
+									<p class="mt-4 font-black text-white">{title}</p>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</section>
+
+			<!-- SERVICE AREA -->
+			<section
+				class="border-y border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10"
+			>
+				<div class="mx-auto max-w-[1450px]">
+					<div
+						class="grid items-center gap-10 lg:grid-cols-[.8fr_1.2fr]"
+					>
+						<div>
+							<div
+								class="flex h-14 w-14 items-center justify-center rounded-xl border border-yellow-400/35 bg-yellow-400/5 text-yellow-300"
+							>
+								<MapPin class="h-7 w-7" stroke-width={1.8} />
+							</div>
+
+							<h2
+								class="mt-6 text-4xl font-black uppercase tracking-[-0.03em] text-white"
+							>
+								Serving businesses across
+								<span class="block text-yellow-400">
+									New York & New Jersey.
+								</span>
+							</h2>
+
+							<p class="mt-5 max-w-[620px] leading-8 text-slate-300">
+								We provide managed IT and cybersecurity services for
+								organizations throughout the greater New York metropolitan
+								area and Northern New Jersey.
+							</p>
+						</div>
+
+						<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+							{
+								locations.map((location) => (
+									<div class="rounded-xl border border-cyan-300/15 bg-black/20 px-5 py-4 text-center font-bold text-slate-200">
+										{location}
+									</div>
+								))
+							}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- EMERGENCY SUPPORT -->
+			<section class="px-6 py-20 lg:px-10">
+				<div
+					class="mx-auto max-w-[1450px] overflow-hidden rounded-3xl border border-yellow-400/25 bg-gradient-to-r from-yellow-400/[0.05] via-[#07101d] to-cyan-500/[0.05] p-8 sm:p-10"
+				>
+					<div
+						class="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center"
+					>
+						<div class="flex items-start gap-5">
+							<div
+								class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-yellow-400/40 bg-yellow-400/5 text-yellow-300"
+							>
+								<Clock3 class="h-7 w-7" stroke-width={1.8} />
+							</div>
+
+							<div>
+								<p
+									class="text-sm font-bold uppercase tracking-[0.28em] text-yellow-300"
+								>
+									24/7 Emergency Support
+								</p>
+
+								<h2 class="mt-2 text-3xl font-black text-white">
+									Critical issue after hours?
+								</h2>
+
+								<p class="mt-3 max-w-[760px] leading-7 text-slate-300">
+									Emergency support is available around the clock for critical
+									technology issues that cannot wait until the next business
+									day.
+								</p>
+							</div>
+						</div>
+
+						<a
+							href="tel:+17182150681"
+							class="inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-yellow-400 px-7 py-4 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-yellow-300"
+						>
+							<PhoneCall class="h-5 w-5" stroke-width={2} />
+							Call 718-215-0681
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ -->
+			<section
+				class="border-t border-cyan-400/10 bg-[#030914] px-6 py-24 lg:px-10"
+			>
+				<div class="mx-auto max-w-[1050px]">
+					<div class="text-center">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Frequently Asked Questions
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em] text-white"
+						>
+							Industry IT questions,
+							<span class="text-yellow-400">answered.</span>
+						</h2>
+					</div>
+
+					<div class="mt-12 space-y-5">
+						<details
+							class="group rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary
+								class="cursor-pointer list-none font-black text-white"
+							>
+								Do you support small and growing businesses?
+							</summary>
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. We support organizations ranging from small professional
+								offices to growing multi-location businesses.
+							</p>
+						</details>
+
+						<details
+							class="group rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary
+								class="cursor-pointer list-none font-black text-white"
+							>
+								Do you provide emergency IT support?
+							</summary>
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. Emergency support is available 24 hours a day for
+								critical technology issues.
+							</p>
+						</details>
+
+						<details
+							class="group rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary
+								class="cursor-pointer list-none font-black text-white"
+							>
+								Do you serve businesses outside Long Island?
+							</summary>
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. We support businesses throughout Long Island, New York
+								City, Westchester County, and Northern New Jersey.
+							</p>
+						</details>
+
+						<details
+							class="group rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary
+								class="cursor-pointer list-none font-black text-white"
+							>
+								Can LionShield Networks manage Microsoft 365?
+							</summary>
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. We provide Microsoft 365 management, security, migrations,
+								licensing assistance, and ongoing user support.
+							</p>
+						</details>
+					</div>
+				</div>
+			</section>
+
+			<!-- FINAL CTA -->
+			<section class="px-6 py-24 lg:px-10">
+				<div
+					class="relative mx-auto max-w-[1250px] overflow-hidden rounded-3xl border border-cyan-300/20 bg-[#06111e] p-8 text-center shadow-[0_0_60px_rgba(34,211,238,0.08)] sm:p-12"
+				>
+					<div
+						class="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/10 blur-[150px]"
+					></div>
+
+					<div class="relative">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Let's Build Your IT Strategy
+						</p>
+
+						<h2
+							class="mx-auto mt-5 max-w-[900px] text-4xl font-black uppercase tracking-[-0.03em] text-white sm:text-5xl"
+						>
+							Your industry has unique IT challenges.
+							<span class="block text-yellow-400">
+								Let's solve them together.
+							</span>
+						</h2>
+
+						<p
+							class="mx-auto mt-6 max-w-[760px] text-lg leading-8 text-slate-300"
+						>
+							Schedule a complimentary technology assessment and discover how
+							LionShield Networks can strengthen your security, reliability,
+							and productivity.
+						</p>
+
+						<a
+							href="/contact"
+							class="group mt-9 inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+						>
+							Request My Free Assessment
+							<ArrowRight
+								class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+								stroke-width={2}
+							/>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
