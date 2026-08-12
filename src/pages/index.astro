@@ -128,14 +128,22 @@ const advantages = [
 ];
 
 const locations = [
-	'Long Island',
-	'Nassau County',
-	'Suffolk County',
-	'New York City',
-	'Scarsdale & Westchester',
-	'Alpine, NJ',
-	'Edgewater, NJ',
-	'Northern New Jersey',
+	{
+		label: 'Long Island',
+		href: '/managed-it-services-long-island/',
+	},
+	{
+		label: 'New York City',
+		href: '/managed-it-services-nyc/',
+	},
+	{
+		label: 'Scarsdale & Westchester',
+		href: '/managed-it-services-westchester/',
+	},
+	{
+		label: 'Northern New Jersey',
+		href: '/managed-it-services-northern-new-jersey/',
+	},
 ];
 ---
 
@@ -565,54 +573,61 @@ const locations = [
 			</section>
 
 			<!-- SERVICE AREA -->
-			<section
-				class="border-y border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10"
+<section
+	class="border-y border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10"
+>
+	<div
+		class="mx-auto grid max-w-[1450px] items-center gap-12 lg:grid-cols-[.85fr_1.15fr]"
+	>
+		<div>
+			<div
+				class="flex h-14 w-14 items-center justify-center rounded-xl border border-yellow-400/35 bg-yellow-400/5 text-yellow-300"
 			>
-				<div
-					class="mx-auto grid max-w-[1450px] items-center gap-12 lg:grid-cols-[.85fr_1.15fr]"
-				>
-					<div>
+				<MapPin class="h-7 w-7" stroke-width={1.8} />
+			</div>
+
+			<p
+				class="mt-7 text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+			>
+				Local Service. Enterprise Capability.
+			</p>
+
+			<h2
+				class="mt-4 text-4xl font-black uppercase leading-tight tracking-[-0.03em] sm:text-5xl"
+			>
+				Supporting businesses across
+				<span class="block text-yellow-400">
+					New York & New Jersey.
+				</span>
+			</h2>
+
+			<p class="mt-6 max-w-[650px] leading-8 text-slate-300">
+				LionShield Networks provides managed IT and cybersecurity
+				services throughout the greater New York metropolitan area and
+				Northern New Jersey.
+			</p>
+		</div>
+
+		<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+			{
+				locations.map((location) => (
+					<a
+						href={location.href}
+						class="group rounded-xl border border-cyan-300/15 bg-black/20 px-5 py-5 text-center font-bold text-slate-200 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/45 hover:bg-cyan-950/20 hover:text-cyan-300"
+					>
+						{location.label}
+
 						<div
-							class="flex h-14 w-14 items-center justify-center rounded-xl border border-yellow-400/35 bg-yellow-400/5 text-yellow-300"
+							class="mt-2 text-sm font-semibold text-cyan-400 opacity-80 transition group-hover:opacity-100"
 						>
-							<MapPin class="h-7 w-7" stroke-width={1.8} />
+							View Managed IT Services →
 						</div>
-
-						<p
-							class="mt-7 text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
-						>
-							Local Service. Enterprise Capability.
-						</p>
-
-						<h2
-							class="mt-4 text-4xl font-black uppercase leading-tight tracking-[-0.03em] sm:text-5xl"
-						>
-							Supporting businesses across
-							<span class="block text-yellow-400">
-								New York & New Jersey.
-							</span>
-						</h2>
-
-						<p class="mt-6 max-w-[650px] leading-8 text-slate-300">
-							LionShield Networks provides managed IT and cybersecurity
-							services throughout the greater New York metropolitan area and
-							Northern New Jersey.
-						</p>
-					</div>
-
-					<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-						{
-							locations.map((location) => (
-								<div
-									class="rounded-xl border border-cyan-300/15 bg-black/20 px-5 py-5 text-center font-bold text-slate-200"
-								>
-									{location}
-								</div>
-							))
-						}
-					</div>
-				</div>
-			</section>
+					</a>
+				))
+			}
+		</div>
+	</div>
+</section>
 
 			<!-- EMERGENCY SUPPORT -->
 			<section class="px-6 py-20 lg:px-10">
