@@ -1,0 +1,778 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+import {
+	ArrowRight,
+	Headphones,
+	MonitorCog,
+	Cloud,
+	Network,
+	ShieldCheck,
+	Laptop,
+	MapPin,
+	Clock3,
+	PhoneCall,
+	CheckCircle2,
+	Wrench,
+	Users,
+	Wifi,
+} from 'lucide-astro';
+
+const supportServices = [
+	{
+		title: 'Help Desk Support',
+		description:
+			'Responsive assistance for employee technology issues, software problems, access requests, and everyday IT needs.',
+		icon: Headphones,
+	},
+	{
+		title: 'Remote IT Support',
+		description:
+			'Fast remote troubleshooting for computers, applications, Microsoft 365, connectivity, printers, and user issues.',
+		icon: MonitorCog,
+	},
+	{
+		title: 'Onsite IT Support',
+		description:
+			'Professional onsite support throughout Long Island when technology issues require hands-on assistance.',
+		icon: Wrench,
+	},
+	{
+		title: 'Microsoft 365 Support',
+		description:
+			'Support for Exchange Online, Outlook, Teams, SharePoint, OneDrive, Entra ID, licensing, and user administration.',
+		icon: Cloud,
+	},
+	{
+		title: 'Network Support',
+		description:
+			'Troubleshooting and support for firewalls, switches, business Wi-Fi, VPNs, internet connectivity, and network performance.',
+		icon: Network,
+	},
+	{
+		title: 'Computer & Device Support',
+		description:
+			'Support for business computers, laptops, workstations, peripherals, printers, and connected devices.',
+		icon: Laptop,
+	},
+];
+
+const benefits = [
+	'Remote troubleshooting',
+	'Onsite technical support',
+	'Microsoft 365 assistance',
+	'Employee help desk support',
+	'Network troubleshooting',
+	'Device and workstation support',
+	'Cybersecurity guidance',
+	'24/7 emergency support',
+];
+
+const areas = [
+	'Nassau County',
+	'Suffolk County',
+	'Hempstead',
+	'Garden City',
+	'Merrick',
+	'Mineola',
+	'Melville',
+	'Farmingdale',
+	'Hicksville',
+	'Massapequa',
+	'Huntington',
+	'Babylon',
+	'And surrounding communities',
+];
+---
+
+<Layout
+	title="IT Support Long Island | Business IT Support | LionShield Networks"
+	description="LionShield Networks provides responsive remote and onsite IT support for businesses throughout Long Island, Nassau County, and Suffolk County, including Microsoft 365, network, computer, and emergency IT support."
+>
+	<div class="min-h-screen bg-[#020611] text-white">
+		<Navbar />
+
+		<main>
+			<!-- HERO -->
+			<section
+				class="relative overflow-hidden border-b border-cyan-400/20 px-6 pb-24 pt-36 lg:px-10 lg:pb-28 lg:pt-40"
+			>
+				<div
+					class="pointer-events-none absolute left-1/2 top-16 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[210px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute -right-32 top-24 h-[520px] w-[520px] rounded-full bg-blue-600/10 blur-[180px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute inset-0 opacity-[0.035]"
+					style="background-image:
+						linear-gradient(rgba(34,211,238,.22) 1px, transparent 1px),
+						linear-gradient(90deg, rgba(34,211,238,.22) 1px, transparent 1px);
+						background-size: 34px 34px;"
+				></div>
+
+				<div
+					class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[1.05fr_.95fr] lg:gap-20"
+				>
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.34em] text-cyan-400 sm:text-base"
+						>
+							IT Support Long Island
+						</p>
+
+						<div
+							class="mt-5 h-px w-72 bg-gradient-to-r from-cyan-400 via-blue-400 to-transparent"
+						></div>
+
+						<h1
+							class="mt-8 max-w-[900px] text-5xl font-black uppercase leading-[0.97] tracking-[-0.04em] sm:text-6xl lg:text-[4.4rem]"
+						>
+							Reliable IT Support
+							<span class="block text-yellow-400">
+								for Long Island Businesses.
+							</span>
+						</h1>
+
+						<p class="mt-7 max-w-[760px] text-lg leading-8 text-slate-300">
+							LionShield Networks provides responsive remote and onsite IT
+							support for businesses throughout Long Island, Nassau County,
+							and Suffolk County. We help your employees stay productive,
+							your systems stay reliable, and your technology problems get
+							resolved quickly.
+						</p>
+
+						<div
+							class="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-slate-300"
+						>
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2
+									class="h-4 w-4 text-cyan-300"
+									stroke-width={2}
+								/>
+								Remote Support
+							</span>
+
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2
+									class="h-4 w-4 text-cyan-300"
+									stroke-width={2}
+								/>
+								Onsite Support
+							</span>
+
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2
+									class="h-4 w-4 text-cyan-300"
+									stroke-width={2}
+								/>
+								24/7 Emergency Support
+							</span>
+						</div>
+
+						<div class="mt-10 flex flex-col gap-4 sm:flex-row">
+							<a
+								href="/contact"
+								class="group inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+							>
+								Request IT Support
+								<ArrowRight
+									class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+									stroke-width={2}
+								/>
+							</a>
+
+							<a
+								href="tel:+17182150681"
+								class="track-phone inline-flex items-center justify-center gap-3 rounded-xl border border-yellow-400/55 bg-black/40 px-8 py-4 font-bold text-yellow-300 transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+							>
+								<PhoneCall class="h-5 w-5" stroke-width={2} />
+								718-215-0681
+							</a>
+						</div>
+					</div>
+
+					<div
+						class="relative overflow-hidden rounded-3xl border border-cyan-300/20 bg-black/25 p-8 shadow-[0_0_60px_rgba(34,211,238,0.08)] backdrop-blur-xl"
+					>
+						<div
+							class="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/8 via-transparent to-blue-600/8"
+						></div>
+
+						<div class="relative">
+							<div
+								class="flex h-16 w-16 items-center justify-center rounded-2xl border border-yellow-400/40 bg-yellow-400/5 text-yellow-300"
+							>
+								<Headphones class="h-8 w-8" stroke-width={1.8} />
+							</div>
+
+							<h2 class="mt-7 text-3xl font-black text-white">
+								Support your team can depend on.
+							</h2>
+
+							<p class="mt-5 leading-7 text-slate-300">
+								From everyday employee questions to urgent technology
+								problems, LionShield Networks helps businesses resolve IT
+								issues quickly and keep operations moving.
+							</p>
+
+							<div class="mt-8 grid gap-4 sm:grid-cols-2">
+								<div
+									class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4"
+								>
+									<p class="font-bold text-cyan-300">Responsive</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Practical support when your employees need help.
+									</p>
+								</div>
+
+								<div
+									class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4"
+								>
+									<p class="font-bold text-cyan-300">Local</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Remote and onsite support throughout Long Island.
+									</p>
+								</div>
+
+								<div
+									class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4"
+								>
+									<p class="font-bold text-cyan-300">Experienced</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Support across Microsoft, networks, devices, and cloud.
+									</p>
+								</div>
+
+								<div
+									class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4"
+								>
+									<p class="font-bold text-cyan-300">Security-Focused</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Technology support with cybersecurity in mind.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- SUPPORT SERVICES -->
+			<section class="px-6 py-24 lg:px-10 lg:py-28">
+				<div class="mx-auto max-w-[1450px]">
+					<div class="mx-auto max-w-4xl text-center">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Business IT Support
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+						>
+							Technology support for
+							<span class="block text-yellow-400">
+								your entire organization.
+							</span>
+						</h2>
+
+						<p
+							class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300"
+						>
+							We support the users, devices, cloud services, applications,
+							and networks your business relies on every day.
+						</p>
+					</div>
+
+					<div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+						{
+							supportServices.map((service) => (
+								<div
+									class="group relative overflow-hidden rounded-2xl border border-cyan-300/15 bg-[#040a14] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:shadow-[0_0_35px_rgba(34,211,238,0.08)]"
+								>
+									<div
+										class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300 transition duration-300 group-hover:text-yellow-300"
+									>
+										<service.icon class="h-7 w-7" stroke-width={1.7} />
+									</div>
+
+									<h3 class="mt-6 text-2xl font-black text-white">
+										{service.title}
+									</h3>
+
+									<p class="mt-4 leading-7 text-slate-400">
+										{service.description}
+									</p>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</section>
+
+			<!-- WHY PROFESSIONAL IT SUPPORT -->
+			<section
+				class="border-y border-cyan-400/10 bg-[#030914] px-6 py-24 lg:px-10"
+			>
+				<div
+					class="mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-2 lg:gap-20"
+				>
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Why Professional IT Support
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+						>
+							Keep technology problems
+							<span class="block text-yellow-400">
+								from slowing your business.
+							</span>
+						</h2>
+
+						<p class="mt-6 text-lg leading-8 text-slate-300">
+							Employees should not lose hours troubleshooting technology,
+							waiting for help, or working around unreliable systems.
+						</p>
+
+						<p class="mt-5 leading-8 text-slate-400">
+							LionShield Networks provides dependable IT support so your
+							team has a trusted resource for troubleshooting, system
+							issues, employee support, Microsoft 365, networking, devices,
+							and ongoing technology needs.
+						</p>
+					</div>
+
+					<div class="grid gap-4 sm:grid-cols-2">
+						{
+							benefits.map((benefit) => (
+								<div
+									class="flex items-center gap-3 rounded-xl border border-cyan-300/15 bg-black/20 px-5 py-4"
+								>
+									<ShieldCheck
+										class="h-5 w-5 shrink-0 text-cyan-300"
+										stroke-width={2}
+									/>
+
+									<span class="font-semibold text-slate-200">
+										{benefit}
+									</span>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</section>
+
+			<!-- EMPLOYEE SUPPORT -->
+			<section class="px-6 py-24 lg:px-10">
+				<div
+					class="mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[.9fr_1.1fr]"
+				>
+					<div
+						class="rounded-3xl border border-cyan-300/15 bg-black/20 p-8"
+					>
+						<Users class="h-12 w-12 text-cyan-300" stroke-width={1.7} />
+
+						<h2 class="mt-6 text-3xl font-black text-white">
+							IT support for your employees.
+						</h2>
+
+						<p class="mt-5 leading-8 text-slate-300">
+							Your employees need dependable technology to communicate,
+							collaborate, access company systems, and serve your customers.
+							When something stops working, they need a reliable place to
+							turn.
+						</p>
+
+						<p class="mt-5 leading-8 text-slate-400">
+							LionShield Networks helps troubleshoot day-to-day technology
+							issues, resolve access problems, support applications and
+							devices, and provide practical guidance to keep your team
+							productive.
+						</p>
+					</div>
+
+					<div
+						class="rounded-3xl border border-cyan-300/15 bg-[#06111e] p-8"
+					>
+						<Wifi class="h-12 w-12 text-yellow-300" stroke-width={1.7} />
+
+						<h2 class="mt-6 text-3xl font-black text-white">
+							Support beyond the desktop.
+						</h2>
+
+						<p class="mt-5 leading-8 text-slate-300">
+							Business IT support involves more than fixing computers. We
+							help troubleshoot the complete technology environment your
+							employees depend on.
+						</p>
+
+						<ul class="mt-6 space-y-3 text-slate-300">
+							<li class="flex gap-3">
+								<CheckCircle2 class="mt-1 h-5 w-5 shrink-0 text-cyan-300" />
+								Microsoft 365 and cloud applications
+							</li>
+
+							<li class="flex gap-3">
+								<CheckCircle2 class="mt-1 h-5 w-5 shrink-0 text-cyan-300" />
+								Internet, Wi-Fi, firewalls, switches, and VPNs
+							</li>
+
+							<li class="flex gap-3">
+								<CheckCircle2 class="mt-1 h-5 w-5 shrink-0 text-cyan-300" />
+								Computers, laptops, printers, and peripherals
+							</li>
+
+							<li class="flex gap-3">
+								<CheckCircle2 class="mt-1 h-5 w-5 shrink-0 text-cyan-300" />
+								User accounts, access, and identity-related issues
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- MANAGED IT CROSS LINK -->
+			<section
+				class="border-y border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10"
+			>
+				<div
+					class="mx-auto flex max-w-[1250px] flex-col items-start justify-between gap-8 rounded-3xl border border-cyan-300/15 bg-black/20 p-8 lg:flex-row lg:items-center"
+				>
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.28em] text-cyan-400"
+						>
+							Need Complete IT Management?
+						</p>
+
+						<h2 class="mt-3 text-3xl font-black text-white">
+							Go beyond support with fully managed IT services.
+						</h2>
+
+						<p class="mt-4 max-w-[760px] leading-7 text-slate-300">
+							If your organization needs proactive monitoring,
+							cybersecurity, patching, technology planning, backup,
+							infrastructure management, and ongoing support, explore our
+							complete managed IT services for Long Island businesses.
+						</p>
+					</div>
+
+					<a
+						href="/managed-it-services-long-island/"
+						class="group inline-flex shrink-0 items-center gap-3 rounded-xl border border-cyan-300/50 bg-cyan-500/5 px-7 py-4 font-bold text-cyan-300 transition duration-300 hover:-translate-y-1 hover:bg-cyan-500/10 hover:text-white"
+					>
+						Managed IT Services
+						<ArrowRight
+							class="h-5 w-5 transition-transform group-hover:translate-x-1"
+						/>
+					</a>
+				</div>
+			</section>
+
+			<!-- LOCAL COVERAGE -->
+			<section class="px-6 py-24 lg:px-10">
+				<div class="mx-auto max-w-[1450px]">
+					<div
+						class="grid items-center gap-12 lg:grid-cols-[.8fr_1.2fr]"
+					>
+						<div>
+							<div
+								class="flex h-14 w-14 items-center justify-center rounded-xl border border-yellow-400/35 bg-yellow-400/5 text-yellow-300"
+							>
+								<MapPin class="h-7 w-7" stroke-width={1.8} />
+							</div>
+
+							<p
+								class="mt-7 text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+							>
+								Long Island IT Support
+							</p>
+
+							<h2
+								class="mt-4 text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+							>
+								Remote and onsite support
+								<span class="block text-yellow-400">
+									across Nassau & Suffolk.
+								</span>
+							</h2>
+
+							<p class="mt-6 max-w-[650px] leading-8 text-slate-300">
+								LionShield Networks supports businesses throughout Long
+								Island with remote assistance and onsite service when
+								hands-on technical support is required.
+							</p>
+						</div>
+
+						<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+							{
+								areas.map((area) => (
+									<div
+										class="rounded-xl border border-cyan-300/15 bg-black/20 px-5 py-5 text-center font-bold text-slate-200"
+									>
+										{area}
+									</div>
+								))
+							}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- EMERGENCY SUPPORT -->
+			<section
+				class="border-y border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10"
+			>
+				<div
+					class="mx-auto max-w-[1450px] overflow-hidden rounded-3xl border border-yellow-400/25 bg-gradient-to-r from-yellow-400/[0.05] via-[#07101d] to-cyan-500/[0.05] p-8 sm:p-10"
+				>
+					<div
+						class="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center"
+					>
+						<div class="flex items-start gap-5">
+							<div
+								class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-yellow-400/40 bg-yellow-400/5 text-yellow-300"
+							>
+								<Clock3 class="h-7 w-7" stroke-width={1.8} />
+							</div>
+
+							<div>
+								<p
+									class="text-sm font-bold uppercase tracking-[0.28em] text-yellow-300"
+								>
+									24/7 Emergency IT Support
+								</p>
+
+								<h2 class="mt-2 text-3xl font-black text-white">
+									Critical technology issue after hours?
+								</h2>
+
+								<p class="mt-3 max-w-[760px] leading-7 text-slate-300">
+									Emergency support is available around the clock for
+									critical technology problems that cannot wait until the
+									next business day.
+								</p>
+							</div>
+						</div>
+
+						<a
+							href="tel:+17182150681"
+							class="track-phone inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-yellow-400 px-7 py-4 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-yellow-300"
+						>
+							<PhoneCall class="h-5 w-5" stroke-width={2} />
+							Call 718-215-0681
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ -->
+			<section class="px-6 py-24 lg:px-10">
+				<div class="mx-auto max-w-[1050px]">
+					<div class="text-center">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Long Island IT Support FAQs
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em]"
+						>
+							Common IT support questions,
+							<span class="text-yellow-400">answered.</span>
+						</h2>
+					</div>
+
+					<div class="mt-12 space-y-5">
+						<details
+							class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary class="cursor-pointer font-black text-white">
+								Do you provide onsite IT support on Long Island?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. LionShield Networks provides both remote and onsite
+								IT support for businesses throughout Nassau and Suffolk
+								Counties.
+							</p>
+						</details>
+
+						<details
+							class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary class="cursor-pointer font-black text-white">
+								What types of business IT problems do you support?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								We support employee computers, Microsoft 365,
+								applications, user accounts, networks, Wi-Fi, printers,
+								VPNs, cloud services, and many other business technology
+								needs.
+							</p>
+						</details>
+
+						<details
+							class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary class="cursor-pointer font-black text-white">
+								Can you support Microsoft 365 and Outlook?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. We support Microsoft 365, Exchange Online, Outlook,
+								Teams, SharePoint, OneDrive, Entra ID, licensing, user
+								accounts, and Microsoft cloud services.
+							</p>
+						</details>
+
+						<details
+							class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary class="cursor-pointer font-black text-white">
+								Do you offer emergency IT support?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. 24/7 emergency support is available for critical
+								technology issues that cannot wait until normal business
+								hours.
+							</p>
+						</details>
+
+						<details
+							class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6"
+						>
+							<summary class="cursor-pointer font-black text-white">
+								Can LionShield become our ongoing IT provider?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. In addition to individual IT support, LionShield
+								Networks provides complete managed IT services including
+								monitoring, cybersecurity, maintenance, backup,
+								infrastructure management, and strategic technology
+								planning.
+							</p>
+						</details>
+					</div>
+				</div>
+			</section>
+
+			<!-- FINAL CTA -->
+			<section class="px-6 pb-28 pt-12 lg:px-10">
+				<div
+					class="relative mx-auto max-w-[1250px] overflow-hidden rounded-3xl border border-cyan-300/20 bg-[#06111e] p-8 text-center shadow-[0_0_60px_rgba(34,211,238,0.08)] sm:p-12"
+				>
+					<div
+						class="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/10 blur-[150px]"
+					></div>
+
+					<div class="relative">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400"
+						>
+							Your Long Island IT Support Partner
+						</p>
+
+						<h2
+							class="mx-auto mt-5 max-w-[900px] text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+						>
+							Need better IT support
+							<span class="block text-yellow-400">
+								for your business?
+							</span>
+						</h2>
+
+						<p
+							class="mx-auto mt-6 max-w-[760px] text-lg leading-8 text-slate-300"
+						>
+							Talk with LionShield Networks about improving support,
+							reliability, security, and technology management for your
+							organization.
+						</p>
+
+						<a
+							href="/contact"
+							class="group mt-9 inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+						>
+							Request IT Support
+							<ArrowRight
+								class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+								stroke-width={2}
+							/>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<!-- IT Support Long Island Structured Data -->
+	<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@type": "Service",
+			"name": "IT Support Long Island",
+			"url": "https://lionshieldnetworks.com/it-support-long-island/",
+			"description": "Remote and onsite business IT support, Microsoft 365 support, network troubleshooting, computer support, and emergency IT support throughout Long Island, Nassau County, and Suffolk County.",
+			"provider": {
+				"@type": "ProfessionalService",
+				"name": "LionShield Networks",
+				"url": "https://lionshieldnetworks.com",
+				"telephone": "+1-718-215-0681",
+				"email": "support@lionshieldnetworks.com"
+			},
+			"areaServed": [
+				{
+					"@type": "Place",
+					"name": "Long Island, NY"
+				},
+				{
+					"@type": "AdministrativeArea",
+					"name": "Nassau County, NY"
+				},
+				{
+					"@type": "AdministrativeArea",
+					"name": "Suffolk County, NY"
+				}
+			],
+			"serviceType": [
+				"Business IT Support",
+				"Remote IT Support",
+				"Onsite IT Support",
+				"Microsoft 365 Support",
+				"Network Support",
+				"Computer Support",
+				"Emergency IT Support"
+			]
+		}
+	</script>
+
+	<!-- GA4 Phone Click Tracking -->
+	<script>
+		document.querySelectorAll('.track-phone').forEach((link) => {
+			link.addEventListener('click', () => {
+				const gtag = (window as any).gtag;
+
+				if (typeof gtag === 'function') {
+					gtag('event', 'phone_click', {
+						event_category: 'lead',
+						event_label: 'long_island_it_support_page',
+					});
+				}
+			});
+		});
+	</script>
+</Layout>
