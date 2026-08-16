@@ -1,0 +1,714 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+import {
+	ArrowRight,
+	ShieldCheck,
+	Mail,
+	KeyRound,
+	Network,
+	Cloud,
+	DatabaseBackup,
+	MonitorCog,
+	MapPin,
+	Clock3,
+	PhoneCall,
+	CheckCircle2,
+	LockKeyhole,
+	BugOff,
+	Users,
+} from 'lucide-astro';
+
+const securityServices = [
+	{
+		title: 'Endpoint Security',
+		description:
+			'Protect business computers, laptops, and devices with layered endpoint protection, monitoring, and threat prevention.',
+		icon: ShieldCheck,
+	},
+	{
+		title: 'Email Security',
+		description:
+			'Reduce phishing, malicious links, spam, spoofing, and business email compromise with stronger email protection.',
+		icon: Mail,
+	},
+	{
+		title: 'Identity & MFA',
+		description:
+			'Strengthen account security with multi-factor authentication, identity protection, access controls, and secure sign-in policies.',
+		icon: KeyRound,
+	},
+	{
+		title: 'Network Security',
+		description:
+			'Secure firewalls, VPNs, business Wi-Fi, segmentation, and network infrastructure against unauthorized access and threats.',
+		icon: Network,
+	},
+	{
+		title: 'Microsoft 365 Security',
+		description:
+			'Improve Microsoft 365 security with identity controls, email protection, secure collaboration, account hardening, and monitoring.',
+		icon: Cloud,
+	},
+	{
+		title: 'Backup & Recovery',
+		description:
+			'Protect critical business data with monitored backups, disaster recovery planning, and recovery options for cyber incidents.',
+		icon: DatabaseBackup,
+	},
+];
+
+const protections = [
+	'Endpoint protection',
+	'Email and phishing security',
+	'Multi-factor authentication',
+	'Microsoft 365 security',
+	'Firewall and network security',
+	'Ransomware protection',
+	'Backup and recovery',
+	'Security monitoring',
+];
+
+const areas = [
+	'Nassau County',
+	'Suffolk County',
+	'Hempstead',
+	'Garden City',
+	'Merrick',
+	'Mineola',
+	'Melville',
+	'Farmingdale',
+	'Hicksville',
+	'Massapequa',
+	'Huntington',
+	'Babylon',
+	'And surrounding communities',
+];
+---
+
+<Layout
+	title="Cybersecurity Long Island | Business Cybersecurity | LionShield Networks"
+	description="LionShield Networks provides business cybersecurity services throughout Long Island, Nassau County, and Suffolk County, including endpoint security, email protection, Microsoft 365 security, ransomware protection, network security, backup, and recovery."
+>
+	<div class="min-h-screen bg-[#020611] text-white">
+		<Navbar />
+
+		<main>
+			<!-- HERO -->
+			<section
+				class="relative overflow-hidden border-b border-cyan-400/20 px-6 pb-24 pt-36 lg:px-10 lg:pb-28 lg:pt-40"
+			>
+				<div
+					class="pointer-events-none absolute left-1/2 top-16 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[210px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute -right-32 top-24 h-[520px] w-[520px] rounded-full bg-blue-600/10 blur-[180px]"
+				></div>
+
+				<div
+					class="pointer-events-none absolute inset-0 opacity-[0.035]"
+					style="background-image:
+						linear-gradient(rgba(34,211,238,.22) 1px, transparent 1px),
+						linear-gradient(90deg, rgba(34,211,238,.22) 1px, transparent 1px);
+						background-size: 34px 34px;"
+				></div>
+
+				<div
+					class="relative mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[1.05fr_.95fr] lg:gap-20"
+				>
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.34em] text-cyan-400 sm:text-base"
+						>
+							Cybersecurity Long Island
+						</p>
+
+						<div
+							class="mt-5 h-px w-72 bg-gradient-to-r from-cyan-400 via-blue-400 to-transparent"
+						></div>
+
+						<h1
+							class="mt-8 max-w-[900px] text-5xl font-black uppercase leading-[0.97] tracking-[-0.04em] sm:text-6xl lg:text-[4.4rem]"
+						>
+							Cybersecurity Protection
+							<span class="block text-yellow-400">
+								for Long Island Businesses.
+							</span>
+						</h1>
+
+						<p class="mt-7 max-w-[760px] text-lg leading-8 text-slate-300">
+							LionShield Networks helps businesses throughout Long Island,
+							Nassau County, and Suffolk County reduce cyber risk with layered
+							security for users, devices, email, identities, networks, cloud
+							services, and business data.
+						</p>
+
+						<div
+							class="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-slate-300"
+						>
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
+								Layered Security
+							</span>
+
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
+								Microsoft 365 Protection
+							</span>
+
+							<span class="inline-flex items-center gap-2">
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
+								Ransomware Defense
+							</span>
+						</div>
+
+						<div class="mt-10 flex flex-col gap-4 sm:flex-row">
+							<a
+								href="/contact"
+								class="group inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+							>
+								Request a Security Assessment
+								<ArrowRight
+									class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+									stroke-width={2}
+								/>
+							</a>
+
+							<a
+								href="tel:+17182150681"
+								class="track-phone inline-flex items-center justify-center gap-3 rounded-xl border border-yellow-400/55 bg-black/40 px-8 py-4 font-bold text-yellow-300 transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-black"
+							>
+								<PhoneCall class="h-5 w-5" stroke-width={2} />
+								718-215-0681
+							</a>
+						</div>
+					</div>
+
+					<div
+						class="relative overflow-hidden rounded-3xl border border-cyan-300/20 bg-black/25 p-8 shadow-[0_0_60px_rgba(34,211,238,0.08)] backdrop-blur-xl"
+					>
+						<div
+							class="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/8 via-transparent to-blue-600/8"
+						></div>
+
+						<div class="relative">
+							<div
+								class="flex h-16 w-16 items-center justify-center rounded-2xl border border-yellow-400/40 bg-yellow-400/5 text-yellow-300"
+							>
+								<LockKeyhole class="h-8 w-8" stroke-width={1.8} />
+							</div>
+
+							<h2 class="mt-7 text-3xl font-black text-white">
+								Security built around your business.
+							</h2>
+
+							<p class="mt-5 leading-7 text-slate-300">
+								Cybersecurity is not one product. Effective protection
+								requires multiple layers working together across your users,
+								devices, identities, email, network, cloud environment, and
+								data.
+							</p>
+
+							<div class="mt-8 grid gap-4 sm:grid-cols-2">
+								<div class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4">
+									<p class="font-bold text-cyan-300">Prevent</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Reduce exposure before an incident occurs.
+									</p>
+								</div>
+
+								<div class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4">
+									<p class="font-bold text-cyan-300">Protect</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Secure users, devices, identities, and data.
+									</p>
+								</div>
+
+								<div class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4">
+									<p class="font-bold text-cyan-300">Detect</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Identify suspicious activity and security threats.
+									</p>
+								</div>
+
+								<div class="rounded-xl border border-cyan-300/15 bg-[#06111e]/80 p-4">
+									<p class="font-bold text-cyan-300">Recover</p>
+									<p class="mt-1 text-sm text-slate-400">
+										Prepare your business to restore operations.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CYBERSECURITY SERVICES -->
+			<section class="px-6 py-24 lg:px-10 lg:py-28">
+				<div class="mx-auto max-w-[1450px]">
+					<div class="mx-auto max-w-4xl text-center">
+						<p class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400">
+							Business Cybersecurity Services
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+						>
+							Layered protection for
+							<span class="block text-yellow-400">
+								your entire technology environment.
+							</span>
+						</h2>
+
+						<p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+							We help protect the systems your employees use every day,
+							from endpoints and email to Microsoft 365, networks,
+							identities, backups, and business data.
+						</p>
+					</div>
+
+					<div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+						{
+							securityServices.map((service) => (
+								<div
+									class="group relative overflow-hidden rounded-2xl border border-cyan-300/15 bg-[#040a14] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:shadow-[0_0_35px_rgba(34,211,238,0.08)]"
+								>
+									<div
+										class="flex h-14 w-14 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300 transition duration-300 group-hover:text-yellow-300"
+									>
+										<service.icon class="h-7 w-7" stroke-width={1.7} />
+									</div>
+
+									<h3 class="mt-6 text-2xl font-black text-white">
+										{service.title}
+									</h3>
+
+									<p class="mt-4 leading-7 text-slate-400">
+										{service.description}
+									</p>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</section>
+
+			<!-- RANSOMWARE -->
+			<section class="border-y border-cyan-400/10 bg-[#030914] px-6 py-24 lg:px-10">
+				<div
+					class="mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-[.9fr_1.1fr] lg:gap-20"
+				>
+					<div>
+						<div
+							class="flex h-14 w-14 items-center justify-center rounded-xl border border-yellow-400/35 bg-yellow-400/5 text-yellow-300"
+						>
+							<BugOff class="h-7 w-7" stroke-width={1.8} />
+						</div>
+
+						<p class="mt-7 text-sm font-bold uppercase tracking-[0.32em] text-cyan-400">
+							Ransomware Protection
+						</p>
+
+						<h2
+							class="mt-4 text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+						>
+							Reduce the risk of
+							<span class="block text-yellow-400">
+								a damaging cyberattack.
+							</span>
+						</h2>
+
+						<p class="mt-6 text-lg leading-8 text-slate-300">
+							Ransomware and account compromise can interrupt operations,
+							lock businesses out of critical systems, and put sensitive
+							information at risk.
+						</p>
+
+						<p class="mt-5 leading-8 text-slate-400">
+							LionShield Networks uses a layered approach that combines
+							endpoint protection, email security, identity controls,
+							network security, backups, monitoring, and user-focused
+							security practices to reduce exposure.
+						</p>
+					</div>
+
+					<div class="grid gap-4 sm:grid-cols-2">
+						{
+							protections.map((item) => (
+								<div
+									class="flex items-center gap-3 rounded-xl border border-cyan-300/15 bg-black/20 px-5 py-4"
+								>
+									<ShieldCheck
+										class="h-5 w-5 shrink-0 text-cyan-300"
+										stroke-width={2}
+									/>
+									<span class="font-semibold text-slate-200">
+										{item}
+									</span>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</section>
+
+			<!-- USERS + IDENTITY -->
+			<section class="px-6 py-24 lg:px-10">
+				<div
+					class="mx-auto grid max-w-[1450px] items-center gap-14 lg:grid-cols-2"
+				>
+					<div class="rounded-3xl border border-cyan-300/15 bg-black/20 p-8">
+						<Users class="h-12 w-12 text-cyan-300" stroke-width={1.7} />
+
+						<h2 class="mt-6 text-3xl font-black text-white">
+							Protect users and identities.
+						</h2>
+
+						<p class="mt-5 leading-8 text-slate-300">
+							Many cyber incidents begin with stolen credentials,
+							phishing, weak passwords, or compromised user accounts.
+						</p>
+
+						<p class="mt-5 leading-8 text-slate-400">
+							We help strengthen identity security with multi-factor
+							authentication, access controls, Microsoft 365 security,
+							account hardening, and secure user practices.
+						</p>
+					</div>
+
+					<div class="rounded-3xl border border-cyan-300/15 bg-[#06111e] p-8">
+						<MonitorCog class="h-12 w-12 text-yellow-300" stroke-width={1.7} />
+
+						<h2 class="mt-6 text-3xl font-black text-white">
+							Security that keeps evolving.
+						</h2>
+
+						<p class="mt-5 leading-8 text-slate-300">
+							Threats change, businesses grow, and technology environments
+							evolve. Security should evolve with them.
+						</p>
+
+						<p class="mt-5 leading-8 text-slate-400">
+							LionShield Networks helps businesses continuously improve
+							their security posture as systems, employees, cloud services,
+							and business requirements change.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- MANAGED IT CROSS LINK -->
+			<section class="border-y border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10">
+				<div
+					class="mx-auto flex max-w-[1250px] flex-col items-start justify-between gap-8 rounded-3xl border border-cyan-300/15 bg-black/20 p-8 lg:flex-row lg:items-center"
+				>
+					<div>
+						<p class="text-sm font-bold uppercase tracking-[0.28em] text-cyan-400">
+							Security + Complete IT Management
+						</p>
+
+						<h2 class="mt-3 text-3xl font-black text-white">
+							Combine cybersecurity with proactive managed IT.
+						</h2>
+
+						<p class="mt-4 max-w-[760px] leading-7 text-slate-300">
+							For organizations that want cybersecurity integrated with
+							monitoring, support, patching, Microsoft 365 management,
+							backup, infrastructure, and technology planning, explore our
+							full managed IT services for Long Island businesses.
+						</p>
+					</div>
+
+					<a
+						href="/managed-it-services-long-island/"
+						class="group inline-flex shrink-0 items-center gap-3 rounded-xl border border-cyan-300/50 bg-cyan-500/5 px-7 py-4 font-bold text-cyan-300 transition duration-300 hover:-translate-y-1 hover:bg-cyan-500/10 hover:text-white"
+					>
+						Managed IT Services
+						<ArrowRight
+							class="h-5 w-5 transition-transform group-hover:translate-x-1"
+						/>
+					</a>
+				</div>
+			</section>
+
+			<!-- LOCAL COVERAGE -->
+			<section class="px-6 py-24 lg:px-10">
+				<div class="mx-auto max-w-[1450px]">
+					<div class="grid items-center gap-12 lg:grid-cols-[.8fr_1.2fr]">
+						<div>
+							<div
+								class="flex h-14 w-14 items-center justify-center rounded-xl border border-yellow-400/35 bg-yellow-400/5 text-yellow-300"
+							>
+								<MapPin class="h-7 w-7" stroke-width={1.8} />
+							</div>
+
+							<p class="mt-7 text-sm font-bold uppercase tracking-[0.32em] text-cyan-400">
+								Long Island Cybersecurity
+							</p>
+
+							<h2
+								class="mt-4 text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+							>
+								Protecting businesses across
+								<span class="block text-yellow-400">
+									Nassau & Suffolk.
+								</span>
+							</h2>
+
+							<p class="mt-6 max-w-[650px] leading-8 text-slate-300">
+								LionShield Networks provides cybersecurity services for
+								businesses throughout Long Island, helping organizations
+								strengthen protection across users, systems, cloud
+								environments, networks, and business data.
+							</p>
+						</div>
+
+						<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+							{
+								areas.map((area) => (
+									<div
+										class="rounded-xl border border-cyan-300/15 bg-black/20 px-5 py-5 text-center font-bold text-slate-200"
+									>
+										{area}
+									</div>
+								))
+							}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- EMERGENCY SUPPORT -->
+			<section class="border-y border-cyan-400/10 bg-[#030914] px-6 py-20 lg:px-10">
+				<div
+					class="mx-auto max-w-[1450px] overflow-hidden rounded-3xl border border-yellow-400/25 bg-gradient-to-r from-yellow-400/[0.05] via-[#07101d] to-cyan-500/[0.05] p-8 sm:p-10"
+				>
+					<div
+						class="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center"
+					>
+						<div class="flex items-start gap-5">
+							<div
+								class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-yellow-400/40 bg-yellow-400/5 text-yellow-300"
+							>
+								<Clock3 class="h-7 w-7" stroke-width={1.8} />
+							</div>
+
+							<div>
+								<p class="text-sm font-bold uppercase tracking-[0.28em] text-yellow-300">
+									24/7 Emergency Support
+								</p>
+
+								<h2 class="mt-2 text-3xl font-black text-white">
+									Security incident or critical issue after hours?
+								</h2>
+
+								<p class="mt-3 max-w-[760px] leading-7 text-slate-300">
+									Emergency support is available around the clock for
+									critical technology and security issues that cannot wait
+									until the next business day.
+								</p>
+							</div>
+						</div>
+
+						<a
+							href="tel:+17182150681"
+							class="track-phone inline-flex shrink-0 items-center justify-center gap-3 rounded-xl bg-yellow-400 px-7 py-4 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-yellow-300"
+						>
+							<PhoneCall class="h-5 w-5" stroke-width={2} />
+							Call 718-215-0681
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ -->
+			<section class="px-6 py-24 lg:px-10">
+				<div class="mx-auto max-w-[1050px]">
+					<div class="text-center">
+						<p class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400">
+							Long Island Cybersecurity FAQs
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black uppercase tracking-[-0.03em]"
+						>
+							Common cybersecurity questions,
+							<span class="text-yellow-400">answered.</span>
+						</h2>
+					</div>
+
+					<div class="mt-12 space-y-5">
+						<details class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6">
+							<summary class="cursor-pointer font-black text-white">
+								What cybersecurity services do you provide?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								LionShield Networks provides endpoint security, email
+								protection, Microsoft 365 security, identity protection,
+								multi-factor authentication, network security, ransomware
+								protection, backup, recovery, and security-focused IT
+								management.
+							</p>
+						</details>
+
+						<details class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6">
+							<summary class="cursor-pointer font-black text-white">
+								Can you help protect Microsoft 365?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. We help secure Microsoft 365 with identity controls,
+								multi-factor authentication, email security, account
+								hardening, secure collaboration, and Microsoft cloud
+								security practices.
+							</p>
+						</details>
+
+						<details class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6">
+							<summary class="cursor-pointer font-black text-white">
+								How do you help protect businesses from ransomware?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								We use a layered security approach that can include endpoint
+								protection, email security, identity controls, network
+								security, security monitoring, backups, recovery planning,
+								and secure user practices.
+							</p>
+						</details>
+
+						<details class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6">
+							<summary class="cursor-pointer font-black text-white">
+								Do small businesses need cybersecurity services?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. Small and midsize businesses depend on email, cloud
+								services, user accounts, devices, and business data that can
+								all be targeted by cyber threats. A layered security strategy
+								helps reduce that risk.
+							</p>
+						</details>
+
+						<details class="rounded-2xl border border-cyan-300/15 bg-black/20 p-6">
+							<summary class="cursor-pointer font-black text-white">
+								Can cybersecurity be included with managed IT services?
+							</summary>
+
+							<p class="mt-4 leading-7 text-slate-400">
+								Yes. LionShield Networks integrates cybersecurity with
+								managed IT services including monitoring, support, Microsoft
+								365 management, patching, backup, infrastructure management,
+								and technology planning.
+							</p>
+						</details>
+					</div>
+				</div>
+			</section>
+
+			<!-- FINAL CTA -->
+			<section class="px-6 pb-28 pt-12 lg:px-10">
+				<div
+					class="relative mx-auto max-w-[1250px] overflow-hidden rounded-3xl border border-cyan-300/20 bg-[#06111e] p-8 text-center shadow-[0_0_60px_rgba(34,211,238,0.08)] sm:p-12"
+				>
+					<div
+						class="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/10 blur-[150px]"
+					></div>
+
+					<div class="relative">
+						<p class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400">
+							Strengthen Your Security
+						</p>
+
+						<h2
+							class="mx-auto mt-5 max-w-[900px] text-4xl font-black uppercase tracking-[-0.03em] sm:text-5xl"
+						>
+							Protect your business
+							<span class="block text-yellow-400">
+								before an incident happens.
+							</span>
+						</h2>
+
+						<p class="mx-auto mt-6 max-w-[760px] text-lg leading-8 text-slate-300">
+							Schedule a complimentary cybersecurity assessment and identify
+							opportunities to improve protection across users, devices,
+							Microsoft 365, networks, and business data.
+						</p>
+
+						<a
+							href="/contact"
+							class="group mt-9 inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
+						>
+							Request a Security Assessment
+							<ArrowRight
+								class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+								stroke-width={2}
+							/>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<!-- Cybersecurity Long Island Structured Data -->
+	<script type="application/ld+json" is:inline>
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Cybersecurity Services Long Island",
+		"url": "https://lionshieldnetworks.com/cybersecurity-long-island/",
+		"description": "Business cybersecurity services including endpoint security, email protection, Microsoft 365 security, identity protection, ransomware protection, network security, backup, and recovery throughout Long Island, Nassau County, and Suffolk County.",
+		"provider": {
+			"@type": "ProfessionalService",
+			"name": "LionShield Networks",
+			"url": "https://lionshieldnetworks.com",
+			"telephone": "+1-718-215-0681",
+			"email": "support@lionshieldnetworks.com"
+		},
+		"areaServed": [
+			{
+				"@type": "Place",
+				"name": "Long Island, NY"
+			},
+			{
+				"@type": "AdministrativeArea",
+				"name": "Nassau County, NY"
+			},
+			{
+				"@type": "AdministrativeArea",
+				"name": "Suffolk County, NY"
+			}
+		],
+		"serviceType": [
+			"Business Cybersecurity",
+			"Endpoint Security",
+			"Email Security",
+			"Microsoft 365 Security",
+			"Identity Protection",
+			"Ransomware Protection",
+			"Network Security",
+			"Backup and Recovery"
+		]
+	}
+	</script>
+
+	<!-- GA4 Phone Click Tracking -->
+	<script>
+		document.querySelectorAll('.track-phone').forEach((link) => {
+			link.addEventListener('click', () => {
+				const gtag = (window as any).gtag;
+
+				if (typeof gtag === 'function') {
+					gtag('event', 'phone_click', {
+						event_category: 'lead',
+						event_label: 'long_island_cybersecurity_page',
+					});
+				}
+			});
+		});
+	</script>
+</Layout>
