@@ -12,7 +12,7 @@ const {
 	description =
 		'LionShield Networks provides managed IT services, cybersecurity, Microsoft 365, cloud solutions, networking, backup, and IT support for businesses throughout Long Island, New York City, and Northern New Jersey.',
 	noindex = false
-	} = Astro.props;
+} = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -21,7 +21,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<!-- Favicons -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -36,11 +36,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 			name="description"
 			content={description}
 		/>
-		{
-			noindex && (
-				<meta name="robots" content="noindex" />
-			)
-		}
+
+		<meta
+			name="robots"
+			content={noindex ? 'noindex, nofollow' : 'index, follow'}
+		/>
+
 		<link
 			rel="canonical"
 			href={canonicalURL}
@@ -92,6 +93,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 			content="LionShield Networks - Managed IT & Cybersecurity"
 		/>
 
+		<meta
+			property="og:locale"
+			content="en_US"
+		/>
+
 		<!-- Twitter / X -->
 		<meta
 			name="twitter:card"
@@ -115,6 +121,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 		<!-- Google Analytics -->
 		<script
+			is:inline
 			async
 			src="https://www.googletagmanager.com/gtag/js?id=G-XJ7T3629LD"
 		></script>
@@ -128,6 +135,23 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 			gtag('js', new Date());
 			gtag('config', 'G-XJ7T3629LD');
+		</script>
+
+		<!-- Microsoft Clarity -->
+		<script is:inline>
+			(function(c,l,a,r,i,t,y){
+				c[a]=c[a]||function(){
+					(c[a].q=c[a].q||[]).push(arguments)
+				};
+
+				t=l.createElement(r);
+				t.async=1;
+				t.src="https://www.clarity.ms/tag/"+i;
+
+				y=l.getElementsByTagName(r)[0];
+				y.parentNode.insertBefore(t,y);
+
+			})(window, document, "clarity", "script", "yfel7ioiby");
 		</script>
 
 		<!-- LionShield Networks Local Business Structured Data -->
