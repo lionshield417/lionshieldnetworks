@@ -9,6 +9,7 @@ import {
 	MapPin,
 	Clock3,
 	ShieldCheck,
+	ContactRound,
 } from 'lucide-astro';
 ---
 
@@ -71,6 +72,8 @@ import {
 						</p>
 
 						<div class="mt-10 space-y-5">
+
+							<!-- Phone -->
 							<div class="flex items-start gap-4">
 								<div
 									class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300"
@@ -80,18 +83,33 @@ import {
 
 								<div>
 									<p class="font-bold text-white">Phone</p>
-	                                <a
-		                                href="tel:+17182150681"
-		                                class="track-phone mt-1 inline-block text-slate-300 transition hover:text-cyan-300"
-	                                >
-		                                718-215-0681
-	                                </a>
-	                                <p class="mt-1 text-sm font-semibold text-yellow-400">
-		                                24/7 Emergency Support Available
-	                                </p>
+
+									<a
+										href="tel:+12124989544"
+										class="track-phone mt-1 inline-block text-slate-300 transition hover:text-cyan-300"
+									>
+										212-498-9544
+									</a>
+
+									<p class="mt-1 text-sm font-semibold text-yellow-400">
+										24/7 Emergency Support Available
+									</p>
+
+									<a
+										href="/jovany-soto.vcf"
+										download="Jovany-Soto-LionShield-Networks.vcf"
+										class="track-vcard group mt-4 inline-flex items-center gap-2 rounded-xl border border-cyan-300/40 bg-cyan-500/10 px-4 py-2.5 text-sm font-bold text-cyan-200 transition duration-300 hover:-translate-y-0.5 hover:border-yellow-400/60 hover:bg-cyan-500/20 hover:text-yellow-300"
+									>
+										<ContactRound
+											class="h-5 w-5"
+											stroke-width={1.8}
+										/>
+										Add to Contacts
+									</a>
 								</div>
 							</div>
 
+							<!-- Email -->
 							<div class="flex items-start gap-4">
 								<div
 									class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300"
@@ -101,15 +119,17 @@ import {
 
 								<div>
 									<p class="font-bold text-white">Email</p>
-	                                <a
-		                                href="mailto:support@lionshieldnetworks.com"
-		                                class="mt-1 inline-block text-slate-300 transition hover:text-cyan-300"
-	                                >
-		                                support@lionshieldnetworks.com
-	                                </a>
+
+									<a
+										href="mailto:support@lionshieldnetworks.com"
+										class="mt-1 inline-block text-slate-300 transition hover:text-cyan-300"
+									>
+										support@lionshieldnetworks.com
+									</a>
 								</div>
 							</div>
 
+							<!-- Service Area -->
 							<div class="flex items-start gap-4">
 								<div
 									class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300"
@@ -125,6 +145,7 @@ import {
 								</div>
 							</div>
 
+							<!-- Business Hours -->
 							<div class="flex items-start gap-4">
 								<div
 									class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-300/25 bg-cyan-500/5 text-cyan-300"
@@ -273,11 +294,13 @@ import {
 										class="w-full resize-none rounded-xl border border-cyan-300/20 bg-[#06111e] px-4 py-3 text-white outline-none transition focus:border-cyan-300/60 focus:ring-2 focus:ring-cyan-400/10"
 									></textarea>
 								</div>
-                                     <div
-	                                     class="cf-turnstile"
-	                                     data-sitekey={import.meta.env.PUBLIC_TURNSTILE_SITE_KEY}
-	                                     data-theme="dark"
-                                    ></div>
+
+								<div
+									class="cf-turnstile"
+									data-sitekey={import.meta.env.PUBLIC_TURNSTILE_SITE_KEY}
+									data-theme="dark"
+								></div>
+
 								<button
 									type="submit"
 									class="group inline-flex w-full items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.45)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500 sm:w-auto"
@@ -289,10 +312,11 @@ import {
 										stroke-width={2}
 									/>
 								</button>
-                                <p
-	                                id="form-status"
-	                                class="mt-4 hidden text-sm font-semibold"
-                                ></p>
+
+								<p
+									id="form-status"
+									class="mt-4 hidden text-sm font-semibold"
+								></p>
 							</form>
 						</div>
 					</div>
@@ -349,118 +373,140 @@ import {
 			</section>
 		</main>
 	</div>
-    <script>
-	const form = document.querySelector('#contact-form');
-	const status = document.querySelector('#form-status');
 
-	if (
-		form instanceof HTMLFormElement &&
-		status instanceof HTMLParagraphElement
-	) {
-		form.addEventListener('submit', async (event) => {
-			event.preventDefault();
+	<!-- Contact Form -->
+	<script>
+		const form = document.querySelector('#contact-form');
+		const status = document.querySelector('#form-status');
 
-			const submitButton = form.querySelector(
-				'button[type="submit"]'
-			);
+		if (
+			form instanceof HTMLFormElement &&
+			status instanceof HTMLParagraphElement
+		) {
+			form.addEventListener('submit', async (event) => {
+				event.preventDefault();
 
-			if (submitButton instanceof HTMLButtonElement) {
-				submitButton.disabled = true;
-				submitButton.textContent = 'Sending...';
-			}
+				const submitButton = form.querySelector(
+					'button[type="submit"]'
+				);
 
-			status.classList.remove(
-				'hidden',
-				'text-green-400',
-				'text-red-400'
-			);
-
-			status.textContent = 'Sending your request...';
-
-			const formData = new FormData(form);
-
-			const payload = {
-				name: formData.get('name'),
-				company: formData.get('company'),
-				email: formData.get('email'),
-				phone: formData.get('phone'),
-				service: formData.get('service'),
-				message: formData.get('message'),
-                turnstileToken: formData.get('cf-turnstile-response'),
-			};
-
-			try {
-				const response = await fetch('/api/contact', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify(payload),
-				});
-
-				const result = await response.json();
-
-				if (!response.ok) {
-					throw new Error(
-						result.message || 'Unable to send request.'
-					);
-				}
-
-				form.reset();
-
-                /* GA4 - successful contact form lead */
-                const gtag = (window as any).gtag;
-
-                if (typeof gtag === 'function') {
-	                gtag('event', 'generate_lead', {
-		                event_category: 'lead',
-		                event_label: 'free_assessment_form',
-		                service_requested: payload.service,
-	                });
-                }
-
-                const turnstile = (window as any).turnstile;
-
-                if (turnstile) {
-	            turnstile.reset();
-            }
-
-				status.classList.add('text-green-400');
-				status.textContent =
-					'Thank you! Your request has been received. We will be in touch shortly.';
-			} catch (error) {
-				console.error(error);
-
-				status.classList.add('text-red-400');
-				status.textContent =
-					'We could not send your request. Please try again or email support@lionshieldnetworks.com.';
-			} finally {
 				if (submitButton instanceof HTMLButtonElement) {
-					submitButton.disabled = false;
-					submitButton.textContent =
-						'Request My Free Assessment';
+					submitButton.disabled = true;
+					submitButton.textContent = 'Sending...';
 				}
-			}
-		});
-	}
-</script>
-<script>
-	document.querySelectorAll('.track-phone').forEach((link) => {
-		link.addEventListener('click', () => {
-			const gtag = (window as any).gtag;
 
-			if (typeof gtag === 'function') {
-				gtag('event', 'phone_click', {
-					event_category: 'lead',
-					event_label: 'contact_page',
-				});
-			}
+				status.classList.remove(
+					'hidden',
+					'text-green-400',
+					'text-red-400'
+				);
+
+				status.textContent = 'Sending your request...';
+
+				const formData = new FormData(form);
+
+				const payload = {
+					name: formData.get('name'),
+					company: formData.get('company'),
+					email: formData.get('email'),
+					phone: formData.get('phone'),
+					service: formData.get('service'),
+					message: formData.get('message'),
+					turnstileToken: formData.get('cf-turnstile-response'),
+				};
+
+				try {
+					const response = await fetch('/api/contact', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify(payload),
+					});
+
+					const result = await response.json();
+
+					if (!response.ok) {
+						throw new Error(
+							result.message || 'Unable to send request.'
+						);
+					}
+
+					form.reset();
+
+					/* GA4 - successful contact form lead */
+					const gtag = (window as any).gtag;
+
+					if (typeof gtag === 'function') {
+						gtag('event', 'generate_lead', {
+							event_category: 'lead',
+							event_label: 'free_assessment_form',
+							service_requested: payload.service,
+						});
+					}
+
+					const turnstile = (window as any).turnstile;
+
+					if (turnstile) {
+						turnstile.reset();
+					}
+
+					status.classList.add('text-green-400');
+					status.textContent =
+						'Thank you! Your request has been received. We will be in touch shortly.';
+				} catch (error) {
+					console.error(error);
+
+					status.classList.add('text-red-400');
+					status.textContent =
+						'We could not send your request. Please try again or email support@lionshieldnetworks.com.';
+				} finally {
+					if (submitButton instanceof HTMLButtonElement) {
+						submitButton.disabled = false;
+						submitButton.textContent =
+							'Request My Free Assessment';
+					}
+				}
+			});
+		}
+	</script>
+
+	<!-- GA4 Phone Click Tracking -->
+	<script>
+		document.querySelectorAll('.track-phone').forEach((link) => {
+			link.addEventListener('click', () => {
+				const gtag = (window as any).gtag;
+
+				if (typeof gtag === 'function') {
+					gtag('event', 'phone_click', {
+						event_category: 'lead',
+						event_label: 'contact_page',
+					});
+				}
+			});
 		});
-	});
-</script>
-<script
-	src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-	async
-	defer
-></script>
+	</script>
+
+	<!-- GA4 vCard Download Tracking -->
+	<script>
+		document.querySelectorAll('.track-vcard').forEach((link) => {
+			link.addEventListener('click', () => {
+				const gtag = (window as any).gtag;
+
+				if (typeof gtag === 'function') {
+					gtag('event', 'vcard_download', {
+						event_category: 'lead',
+						event_label: 'contact_page',
+					});
+				}
+			});
+		});
+	</script>
+
+	<!-- Cloudflare Turnstile -->
+	<script
+		src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+		async
+		defer
+	></script>
 </Layout>

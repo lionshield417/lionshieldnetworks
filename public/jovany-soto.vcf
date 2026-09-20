@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Soto;Jovany;;;
+FN:Jovany Soto
+ORG:LionShield Networks
+TITLE:President
+TEL;TYPE=WORK,VOICE:+12124989544
+TEL;TYPE=CELL,VOICE:+16466484164
+EMAIL;TYPE=WORK:support@lionshieldnetworks.com
+URL:https://lionshieldnetworks.com
+NOTE:Managed IT Services | Cybersecurity | Microsoft 365 | Cloud | Networking | IT Support
+END:VCARD
