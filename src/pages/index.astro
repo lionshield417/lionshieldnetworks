@@ -157,132 +157,79 @@ const locations = [
 		<Navbar />
 
 		<main>
-			<!-- CINEMATIC HERO -->
+			<!-- HERO -->
 			<section
-				id="cinematic-hero"
-				class="hero-intro relative flex min-h-[820px] flex-col overflow-hidden border-b border-cyan-400/20 bg-[#020611] pt-20 xl:min-h-[900px]"
+				class="relative flex min-h-[820px] flex-col overflow-hidden border-b border-cyan-400/20 bg-[#020611] pt-20 xl:min-h-[900px]"
 			>
-				<!-- Hero artwork: starts dark, then reveals -->
-				<div class="hero-art absolute inset-0 overflow-hidden">
-					<img
-						src="/images/lionshield-hero.png"
-						alt="LionShield Networks lion, global network, cybersecurity circuitry, and shield"
-						class="hero-image absolute inset-0 h-full w-full object-contain object-center"
-						fetchpriority="high"
-					/>
+				<!-- Normal hero artwork -->
+				<img
+					src="/images/lionshield-hero.png"
+					alt=""
+					class="absolute inset-0 h-full w-full object-contain object-center"
+					fetchpriority="high"
+				/>
 
-					<!-- Gold glow -->
-					<div
-						class="hero-gold-glow pointer-events-none absolute left-[42%] top-[44%] h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-yellow-400/15 blur-[110px]"
-					></div>
-
-					<!-- Cyber blue glow -->
-					<div
-						class="hero-blue-glow pointer-events-none absolute left-[59%] top-[44%] h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/15 blur-[110px]"
-					></div>
-
-					<!-- Initial darkness that fades away -->
-					<div class="hero-darkness pointer-events-none absolute inset-0 bg-[#020611]"></div>
-				</div>
-
-				<!-- Existing cinematic overlays -->
 				<div
-					class="hero-overlay absolute inset-0 bg-gradient-to-r from-[#020611] via-[#020611]/85 to-[#020611]/15 lg:via-[#020611]/55"
+					class="absolute inset-0 bg-gradient-to-r from-[#020611] via-[#020611]/85 to-[#020611]/15 lg:via-[#020611]/55"
 				></div>
-
 				<div
-					class="hero-overlay absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[#020611] via-[#020611]/80 to-transparent"
+					class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[#020611] via-[#020611]/80 to-transparent"
 				></div>
-
 				<div
-					class="hero-overlay absolute inset-x-0 bottom-0 h-[380px] bg-gradient-to-t from-[#020611] via-[#020611]/95 to-transparent"
+					class="absolute inset-x-0 bottom-0 h-[380px] bg-gradient-to-t from-[#020611] via-[#020611]/95 to-transparent"
 				></div>
-
 				<div
-					class="hero-overlay pointer-events-none absolute -left-32 top-32 h-[560px] w-[560px] rounded-full bg-blue-600/10 blur-[170px]"
+					class="pointer-events-none absolute -left-32 top-32 h-[560px] w-[560px] rounded-full bg-blue-600/10 blur-[170px]"
 				></div>
-
 				<div
-					class="hero-overlay pointer-events-none absolute right-0 top-40 h-[500px] w-[500px] rounded-full bg-cyan-500/5 blur-[180px]"
-				></div>
-
-				<div
-					class="hero-grid pointer-events-none absolute inset-0 opacity-[0.025]"
-					style="background-image:
-						linear-gradient(rgba(34,211,238,.25) 1px, transparent 1px),
-						linear-gradient(90deg, rgba(34,211,238,.25) 1px, transparent 1px);
-						background-size: 40px 40px;"
+					class="pointer-events-none absolute right-0 top-40 h-[500px] w-[500px] rounded-full bg-cyan-500/5 blur-[180px]"
 				></div>
 
 				<!-- Main hero copy -->
 				<div
-					class="hero-copy relative z-10 mx-auto flex w-full max-w-[1580px] flex-1 items-center px-6 pb-20 pt-24 sm:px-8 lg:px-16"
+					class="home-hero-copy relative z-10 mx-auto flex w-full max-w-[1580px] flex-1 items-center px-6 pb-20 pt-24 sm:px-8 lg:px-16"
 				>
 					<div class="max-w-[680px]">
-						<p
-							class="hero-kicker text-sm font-bold uppercase tracking-[0.32em] text-cyan-400 sm:text-base"
-						>
+						<p class="text-sm font-bold uppercase tracking-[0.32em] text-cyan-400 sm:text-base">
 							Managed IT & Cybersecurity
 						</p>
 
-						<div
-							class="hero-line mt-5 h-px w-72 bg-gradient-to-r from-cyan-400 via-blue-400 to-transparent"
-						></div>
+						<div class="mt-5 h-px w-72 bg-gradient-to-r from-cyan-400 via-blue-400 to-transparent"></div>
 
-						<h1
-							class="hero-title mt-7 text-5xl font-black uppercase leading-[0.96] tracking-[-0.045em] sm:text-6xl lg:text-[4.6rem]"
-						>
+						<h1 class="mt-7 text-5xl font-black uppercase leading-[0.96] tracking-[-0.045em] sm:text-6xl lg:text-[4.6rem]">
 							Technology that
 							<span class="block">protects your</span>
-							<span class="block text-yellow-400">
-								business.
-							</span>
+							<span class="block text-yellow-400">business.</span>
 						</h1>
 
-						<p class="hero-description mt-7 max-w-[610px] text-lg leading-8 text-slate-200">
+						<p class="mt-7 max-w-[610px] text-lg leading-8 text-slate-200">
 							LionShield Networks delivers security-first managed IT,
 							cybersecurity, Microsoft 365, cloud, networking, and responsive
 							support for businesses across New York and New Jersey.
 						</p>
 
-						<div
-							class="hero-benefits mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-semibold text-slate-300"
-						>
+						<div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-semibold text-slate-300">
 							<span class="inline-flex items-center gap-2">
-								<CheckCircle2
-									class="h-4 w-4 text-cyan-300"
-									stroke-width={2}
-								/>
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
 								Proactive Monitoring
 							</span>
-
 							<span class="inline-flex items-center gap-2">
-								<CheckCircle2
-									class="h-4 w-4 text-cyan-300"
-									stroke-width={2}
-								/>
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
 								Security-First IT
 							</span>
-
 							<span class="inline-flex items-center gap-2">
-								<CheckCircle2
-									class="h-4 w-4 text-cyan-300"
-									stroke-width={2}
-								/>
+								<CheckCircle2 class="h-4 w-4 text-cyan-300" stroke-width={2} />
 								24/7 Emergency Support
 							</span>
 						</div>
 
-						<div class="hero-actions mt-9 flex flex-col gap-4 sm:flex-row">
+						<div class="mt-9 flex flex-col gap-4 sm:flex-row">
 							<a
 								href="/contact"
 								class="group inline-flex items-center justify-center gap-3 rounded-xl border border-cyan-300/70 bg-blue-600 px-7 py-4 font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.50)] transition duration-300 hover:-translate-y-1 hover:bg-blue-500"
 							>
 								Request a Free Assessment
-								<ArrowRight
-									class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
-									stroke-width={2}
-								/>
+								<ArrowRight class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" stroke-width={2} />
 							</a>
 
 							<a
@@ -294,22 +241,16 @@ const locations = [
 							</a>
 						</div>
 
-						<div
-							class="hero-location mt-8 inline-flex items-center gap-3 rounded-xl border border-cyan-300/15 bg-black/25 px-5 py-3 text-sm text-slate-300 backdrop-blur-md"
-						>
+						<div class="mt-8 inline-flex items-center gap-3 rounded-xl border border-cyan-300/15 bg-black/25 px-5 py-3 text-sm text-slate-300 backdrop-blur-md">
 							<MapPin class="h-5 w-5 text-cyan-300" stroke-width={1.8} />
 							Serving Long Island, NYC, Westchester & Northern New Jersey
 						</div>
 					</div>
 				</div>
 
-				<!-- Advantage strip appears last -->
-				<div
-					class="hero-advantages relative z-20 border-t border-cyan-400/20 bg-[#020611]/90 backdrop-blur-xl"
-				>
-					<div
-						class="mx-auto grid max-w-[1580px] grid-cols-1 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-10"
-					>
+				<!-- Advantage strip -->
+				<div class="home-hero-advantages relative z-20 border-t border-cyan-400/20 bg-[#020611]/90 backdrop-blur-xl">
+					<div class="mx-auto grid max-w-[1580px] grid-cols-1 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-10">
 						{
 							advantages.map((item, index) => (
 								<div
@@ -320,25 +261,29 @@ const locations = [
 											: '',
 									]}
 								>
-									<div
-										class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-300/20 bg-cyan-500/5 text-cyan-300"
-									>
+									<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-cyan-300/20 bg-cyan-500/5 text-cyan-300">
 										<item.icon class="h-7 w-7" stroke-width={1.7} />
 									</div>
-
 									<div>
-										<p class="font-black uppercase text-white">
-											{item.title}
-										</p>
-
-										<p class="mt-1 text-sm leading-5 text-slate-400">
-											{item.description}
-										</p>
+										<p class="font-black uppercase text-white">{item.title}</p>
+										<p class="mt-1 text-sm leading-5 text-slate-400">{item.description}</p>
 									</div>
 								</div>
 							))
 						}
 					</div>
+				</div>
+
+				<!-- Cinematic intro overlay. It is decorative and removes itself after the reveal. -->
+				<div class="ls-intro pointer-events-none absolute inset-0 z-40 bg-[#020611]" aria-hidden="true">
+					<img
+						src="/images/lionshield-hero.png"
+						alt=""
+						class="ls-intro-image absolute inset-0 h-full w-full object-contain object-center"
+					/>
+					<div class="ls-intro-vignette absolute inset-0"></div>
+					<div class="ls-intro-gold absolute left-[48%] top-[47%] h-[380px] w-[380px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-yellow-400/20 blur-[100px]"></div>
+					<div class="ls-intro-blue absolute left-[60%] top-[47%] h-[380px] w-[380px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/20 blur-[100px]"></div>
 				</div>
 			</section>
 
@@ -776,229 +721,104 @@ const locations = [
 		</main>
 	</div>
 
+
 	<style is:global>
-		/* LionShield cinematic homepage entrance */
-		.hero-intro .hero-art {
-			opacity: 0;
-			transform: scale(1.055);
-			animation: heroArtworkReveal 1.7s cubic-bezier(.2,.75,.25,1) .08s forwards;
+		/*
+		 * The intro is a temporary overlay. The normal hero underneath is never
+		 * hidden, so a browser cannot get stuck on an empty hero.
+		 */
+		.ls-intro {
+			animation: lsIntroExit 1200ms ease 5.35s forwards;
 		}
 
-		.hero-intro .hero-image {
-			filter: brightness(.16) saturate(.75) contrast(1.08);
+		.ls-intro-image {
+			opacity: 0;
+			transform: scale(1.08);
+			filter: brightness(.08) saturate(.75) contrast(1.12);
 			animation:
-				heroImageWake 2.15s cubic-bezier(.2,.7,.2,1) .12s forwards,
-				heroImageBreathe 7s ease-in-out 2.5s infinite alternate;
-			will-change: filter, transform;
+				lsLionWake 3.45s cubic-bezier(.16,.75,.22,1) .25s forwards,
+				lsLionSettle 1.45s ease 3.65s forwards;
 		}
 
-		.hero-intro .hero-darkness {
-			opacity: .82;
-			animation: heroDarknessLift 1.75s ease-out .25s forwards;
+		.ls-intro-vignette {
+			background:
+				radial-gradient(circle at 55% 48%, transparent 0%, rgba(2,6,17,.18) 28%, rgba(2,6,17,.78) 62%, #020611 100%);
+			opacity: 1;
+			animation: lsVignetteOpen 3.75s ease .55s forwards;
 		}
 
-		.hero-intro .hero-gold-glow {
+		.ls-intro-gold,
+		.ls-intro-blue {
 			opacity: 0;
-			transform: translate(-50%, -50%) scale(.55);
-			animation:
-				heroGlowReveal 1.3s ease-out .35s forwards,
-				heroGoldPulse 5.5s ease-in-out 1.8s infinite alternate;
+			animation: lsGlowOn 2.25s ease 1.05s forwards;
 		}
 
-		.hero-intro .hero-blue-glow {
-			opacity: 0;
-			transform: translate(-50%, -50%) scale(.55);
-			animation:
-				heroGlowReveal 1.3s ease-out .62s forwards,
-				heroBluePulse 4.8s ease-in-out 1.9s infinite alternate;
+		.home-hero-copy {
+			animation: lsCopyIn 1000ms ease 5.35s both;
 		}
 
-		.hero-intro .hero-overlay,
-		.hero-intro .hero-grid {
-			opacity: 0;
-			animation: heroLayerReveal .9s ease-out 1.05s forwards;
+		.home-hero-advantages {
+			animation: lsCopyIn 950ms ease 5.75s both;
 		}
 
-		.hero-intro .hero-kicker,
-		.hero-intro .hero-line,
-		.hero-intro .hero-title,
-		.hero-intro .hero-description,
-		.hero-intro .hero-benefits,
-		.hero-intro .hero-actions,
-		.hero-intro .hero-location,
-		.hero-intro .hero-advantages {
-			opacity: 0;
-			transform: translateY(18px);
-		}
-
-		.hero-intro .hero-kicker {
-			animation: heroCopyReveal .65s ease-out 1.25s forwards;
-		}
-
-		.hero-intro .hero-line {
-			animation: heroCopyReveal .65s ease-out 1.38s forwards;
-		}
-
-		.hero-intro .hero-title {
-			animation: heroCopyReveal .75s cubic-bezier(.2,.75,.25,1) 1.5s forwards;
-		}
-
-		.hero-intro .hero-description {
-			animation: heroCopyReveal .7s ease-out 1.72s forwards;
-		}
-
-		.hero-intro .hero-benefits {
-			animation: heroCopyReveal .7s ease-out 1.9s forwards;
-		}
-
-		.hero-intro .hero-actions {
-			animation: heroCopyReveal .7s ease-out 2.08s forwards;
-		}
-
-		.hero-intro .hero-location {
-			animation: heroCopyReveal .7s ease-out 2.22s forwards;
-		}
-
-		.hero-intro .hero-advantages {
-			animation: heroCopyReveal .8s ease-out 2.38s forwards;
-		}
-
-		@keyframes heroArtworkReveal {
-			from {
-				opacity: 0;
-				transform: scale(1.055);
-			}
-			to {
-				opacity: 1;
-				transform: scale(1);
-			}
-		}
-
-		@keyframes heroImageWake {
+		@keyframes lsLionWake {
 			0% {
-				filter: brightness(.16) saturate(.75) contrast(1.08);
+				opacity: 0;
+				transform: scale(1.08);
+				filter: brightness(.08) saturate(.75) contrast(1.12);
 			}
-			45% {
-				filter: brightness(.55) saturate(1.05) contrast(1.08);
+			35% {
+				opacity: .92;
+				filter: brightness(.25) saturate(.9) contrast(1.10);
+			}
+			72% {
+				opacity: 1;
+				filter: brightness(.70) saturate(1.02) contrast(1.06);
 			}
 			100% {
-				filter: brightness(1) saturate(1.05) contrast(1.03);
-			}
-		}
-
-		@keyframes heroImageBreathe {
-			from {
-				filter: brightness(.96) saturate(1.02) contrast(1.03);
-				transform: scale(1);
-			}
-			to {
-				filter: brightness(1.05) saturate(1.08) contrast(1.04);
-				transform: scale(1.008);
-			}
-		}
-
-		@keyframes heroDarknessLift {
-			from { opacity: .82; }
-			to { opacity: 0; }
-		}
-
-		@keyframes heroGlowReveal {
-			from {
-				opacity: 0;
-				transform: translate(-50%, -50%) scale(.55);
-			}
-			to {
-				opacity: .78;
-				transform: translate(-50%, -50%) scale(1);
-			}
-		}
-
-		@keyframes heroGoldPulse {
-			from {
-				opacity: .42;
-				filter: blur(110px);
-			}
-			to {
-				opacity: .75;
-				filter: blur(125px);
-			}
-		}
-
-		@keyframes heroBluePulse {
-			from {
-				opacity: .45;
-				filter: blur(105px);
-			}
-			to {
-				opacity: .82;
-				filter: blur(125px);
-			}
-		}
-
-		@keyframes heroLayerReveal {
-			from { opacity: 0; }
-			to { opacity: 1; }
-		}
-
-		@keyframes heroCopyReveal {
-			from {
-				opacity: 0;
-				transform: translateY(18px);
-			}
-			to {
 				opacity: 1;
-				transform: translateY(0);
+				transform: scale(1.018);
+				filter: brightness(1.02) saturate(1.07) contrast(1.03);
 			}
+		}
+
+		@keyframes lsLionSettle {
+			from { transform: scale(1.018); }
+			to { transform: scale(1); }
+		}
+
+		@keyframes lsVignetteOpen {
+			0% { opacity: 1; }
+			65% { opacity: .52; }
+			100% { opacity: .12; }
+		}
+
+		@keyframes lsGlowOn {
+			0% { opacity: 0; transform: translate(-50%,-50%) scale(.55); }
+			55% { opacity: .85; }
+			100% { opacity: .48; transform: translate(-50%,-50%) scale(1); }
+		}
+
+		@keyframes lsIntroExit {
+			0% { opacity: 1; visibility: visible; }
+			99% { opacity: 0; visibility: visible; }
+			100% { opacity: 0; visibility: hidden; }
+		}
+
+		@keyframes lsCopyIn {
+			from { opacity: 0; transform: translateY(16px); }
+			to { opacity: 1; transform: translateY(0); }
 		}
 
 		@media (max-width: 767px) {
-			.hero-intro .hero-image {
+			.ls-intro-image {
 				object-fit: cover;
 				object-position: 58% center;
 			}
-
-			.hero-intro .hero-gold-glow {
-				left: 46%;
-				width: 300px;
-				height: 300px;
-			}
-
-			.hero-intro .hero-blue-glow {
-				left: 64%;
-				width: 300px;
-				height: 300px;
-			}
+			.ls-intro-gold { left: 46%; width: 280px; height: 280px; }
+			.ls-intro-blue { left: 65%; width: 280px; height: 280px; }
 		}
 
-		@media (prefers-reduced-motion: reduce) {
-			.hero-intro .hero-art,
-			.hero-intro .hero-image,
-			.hero-intro .hero-darkness,
-			.hero-intro .hero-gold-glow,
-			.hero-intro .hero-blue-glow,
-			.hero-intro .hero-overlay,
-			.hero-intro .hero-grid,
-			.hero-intro .hero-kicker,
-			.hero-intro .hero-line,
-			.hero-intro .hero-title,
-			.hero-intro .hero-description,
-			.hero-intro .hero-benefits,
-			.hero-intro .hero-actions,
-			.hero-intro .hero-location,
-			.hero-intro .hero-advantages {
-				animation: none !important;
-				opacity: 1 !important;
-				transform: none !important;
-			}
-
-			.hero-intro .hero-image {
-				filter: none !important;
-			}
-
-			.hero-intro .hero-darkness {
-				opacity: 0 !important;
-			}
-		}
 	</style>
 
 	<script>
